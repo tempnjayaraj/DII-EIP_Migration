@@ -1,0 +1,675 @@
+// Control.h: interface for the CControl class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_CONTROL_H__7745013E_D76E_41EF_B609_02DBCECDA572__INCLUDED_)
+#define AFX_CONTROL_H__7745013E_D76E_41EF_B609_02DBCECDA572__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+
+// Compile time parameters
+#define RS485_TRACK_ERRORS              0   // RS485 Error Debugging
+#define LOGGING                         0   // Data collection
+#define WINDOWLOCK_BUTTON_DIGITAL_FOOT  0   // Enable the Window Lock button only when a Digital
+                                            // footswitch is plugged in.
+#define PROFILE_TEST                    0
+
+#include "CommonDefines.h"
+#include "SnTypes.h"
+#include "Driver.h"
+#include "SnWinMsg.h"
+#include "NVRAMFlash.h"
+#include "MotorControlCommands.h"
+#include "ControllerTypes.h"
+#include "CPump.h"
+#include "IntellioShaver.h"
+#include "SoftwareUpgrade.h"
+#include "Port.h"
+#include "Footswitch.h"
+
+#if LOGGING
+#include "Logger.h"
+#define FILE_NAME_DATA_COLLECTION	_T("\\Hard Disk\\Data.csv")
+#define TMP_BUF_SIZE			1024
+#endif
+
+#define LOOP_RATE				5e-3
+
+#define SHAVER_TYPE_DYONICSII	3
+
+#define FOOT_MODE_ON_OFF		0
+#define FOOT_MODE_VARIABLE		1
+#define FOOT_FORWARD_LEFT		0
+#define FOOT_FORWARD_RIGHT		1
+#define FOOT_HAND_OVERRIDE_ON	1
+#define FOOT_HAND_OVERRIDE_OFF	0
+
+#define CTL_THREAD_TERMINATION_WAIT		1000
+
+#define	MAX_TEMPERATURE			2		// Temperature Failure Fatal
+
+#define TAC_TIMER_MOTORA 						1
+#define TAC_TIMER_MOTORB						2
+#define STALL_TIMER_MOTORA 						3
+#define STALL_TIMER_MOTORB						4
+#define CURRENT_LIMIT_TIMER_MOTORA				5
+#define CURRENT_LIMIT_TIMER_MOTORB				6
+#define CURRENT_LIMIT_TIMEOUT_TIMER_MOTORA 		7
+#define CURRENT_LIMIT_TIMEOUT_TIMER_MOTORB		8
+
+#define HAND_BUTTON_FWD         1
+#define HAND_BUTTON_OSC         2
+#define HAND_BUTTON_REV         4
+#define HAND_TRIGGER            8
+
+//
+// Dyonics Power:
+//     Digital ON/OFF threshold:                    1.5V
+//     Variable Footswitch Dead Band:               0.25V
+//     Powered Instrument Trigger Dead Band:        0.196V
+//
+// Dyonics II:
+//     Digital ON/OFF threshold:                ((1.5V/2)/(3.3V/4095))+42   = 973  ADCs
+//     Digital Window Lock threshold:           ((1.175V/2)/(3.3V/4095))+42 = 1500 ADCs
+//     Variable Footswitch Dead Band:           ((0.196V/2)/(3.3V/4095))    = 122  ADCs
+//     Powered Instrument Trigger Dead Band:    ((0.196V/2)/(3.3V/4095))    = 122  ADCs
+//
+#define DIGITAL_ON_OFF_THRESHOLD_VALUE  973     // ADC value for around 1.5V
+#define DIGITAL_LOCK_THRESHOLD_VALUE    1200    // ADC value for Window Lock pressed
+#define PERCENT_START_THRESHOLD         20		// 20% depression for Variable
+#define PERCENT_ON_VALUE                20      // 20% depression for Digital ON/OFF
+
+#define DP_DRILL_MAX_VELOCITY           1800	// Max velocity for DP Drills
+#define DP_SAW_MAX_VELOCITY             32000	// Max velocity for DP Saws
+
+#define DP_DRILL_MIN_VELOCITY           0	    // Min velocity for DP Drills
+#define DP_SAW_MIN_VELOCITY             0	    // Min velocity for DP Saws
+
+#define VARIABLE_FOOTSWITCH_DEAD_BAND   122		// Dead band for Variable Footswitch
+#define DP_DRILL_DEAD_BAND              122		// Dead band for DP Drills
+#define DP_SAW_DEAD_BAND                122		// Dead band for DP Saws
+
+#define VARIABLE_FOOTSWITCH_START_MIN   4095
+#define DP_DRILL_SAW_START_MIN          4095    // 2268    // 50% point of DP range
+
+//
+// Delays in increments ms
+//
+#define SLEEP_PERIOD_20					  20	// Delay in increments of 20 ms
+#define SLEEP_PERIOD_25					  25	// Delay in increments of 25 ms
+#define SLEEP_PERIOD_33					  33	// Delay in increments of 33 ms
+#define SLEEP_PERIOD_100				 100	// Delay in increments of 100 ms
+
+#define HALL_SETTLE_DELAY_MS			2000	// 2.00 Second delay
+#define RS485_HAND_SETTLE_DELAY_MS		 500	// 0.50 Second delay must be >= 300
+#define RS485_HAND_DELAY_OFFSET_MS		 (RS485_HAND_SETTLE_DELAY_MS - 300) // Hold off before first RS485 Read
+
+#define RS485_FOOT_SETTLE_DELAY_MS		 300	// 0.30 Second delay
+#define FOOTSWITCH_CONNECT_DEBOUNCE_MS	 500	// 0.50 Second delay
+#define SPEED_UP_DOWN_DELAY_MS           100	// 0.10 Second delay
+#define SPEED_UP_DOWN_DELAY_LONG_MS      500	// 0.50 Second delay
+#define SHORT_CIRCUIT_TIMEOUT_MS		1000	// 1.00 Second Timeout for test
+#define NEW_DEVICE_DELAY_MS				 200    // 0.20 Second delay
+#define HAND_CTRL_READ_WARNING           100    // 0.10 Second before Warning
+#define HAND_CTRL_READ_TIMEOUT           500    // 0.50 Second before Timeout
+
+// Event update conditions				// Use by GUI to determine update information
+#define CLEAR_ERROR_CONDITION		0
+
+//  Failure Conditions
+#define	COMMUNICATION_ERROR				0x00000003
+#define TEMPERATURE_ERROR				0x00000005	
+#define SYSTEM_RESOURCE_ERROR			0x00000009
+#define WATCHDOG_TIMER_ERROR			0x00000011
+#define FLASH_SAVE_ERROR				0x00000013
+
+// Warnings
+#define MOTORA_SHORT_CIRCUIT			0x00000001
+#define MOTORB_SHORT_CIRCUIT			0x00000002
+#define MOTORA_SHORT_CIRCUIT_TIMEOUT	0x00000004
+#define MOTORB_SHORT_CIRCUIT_TIMEOUT	0x00000008
+#define MOTORA_STALL					0x00000010
+#define MOTORB_STALL					0x00000020
+#define MOTORA_TAC_FAULT				0x00000040
+#define MOTORB_TAC_FAULT				0x00000080
+#define UNKNOWN_BLADE_ID_PORTA			0x00000100
+#define UNKNOWN_BLADE_ID_PORTB			0x00000200
+#define UNKNOWN_DEVICE_ID_PORTA			0x00000400
+#define UNKNOWN_DEVICE_ID_PORTB			0x00000800
+#define HALL_PATTERN_FAULT_PORTA		0x00001000
+#define HALL_PATTERN_FAULT_PORTB		0x00002000
+#define FOOTSWITCH_LOW_BATTERY			0x00004000
+#define FOOTSWITCH_STUCK_PEDAL			0x00008000
+#define	TEMPERATURE_WARNING				0x00010000	
+#define MOTORA_CURRENT_LIMIT			0x00020000
+#define MOTORA_TORQUE_LIMIT				0x00040000
+#define MOTORB_CURRENT_LIMIT			0x00080000
+#define MOTORB_TORQUE_LIMIT				0x00100000
+#define UNKNOWN_FOOTSWITCH_ID			0x00200000
+#define HANDPIECE_STUCK_BUTTON_PORTA	0x00400000
+#define HANDPIECE_STUCK_BUTTON_PORTB	0x00800000
+#define MOTORA_CURRENT_LIMIT_TIMEOUT	0x01000000
+#define MOTORB_CURRENT_LIMIT_TIMEOUT	0x02000000
+#define MOTORA_STALL_AND_CURRENT_LIMIT	0x04000000
+#define MOTORB_STALL_AND_CURRENT_LIMIT	0x08000000
+#define	FOOTSWITCH_REQUIRED_PORTA		0x10000000
+#define FOOTSWITCH_REQUIRED_PORTB		0x40000000
+
+
+typedef union
+{
+	long lType;
+	float fType;
+} L_F_TYPE;
+
+/* Time and position profile for motor move */
+typedef struct {
+	float X;
+	float Y;
+} MyPoint;
+
+
+typedef struct
+{
+	SnByte ucMotorBoardMajor;
+	SnByte ucMotorBoardMinor;
+    SnByte ucMotorBoardBuild;
+	SnByte ucSystemMajor;
+	SnByte ucSystemMinor;
+    SnByte ucSystemBuild;
+	SnByte ucFootswitchMajor;
+	SnByte ucFootswitchMinor;
+	SnByte ucFootswitchBuild;
+	SnByte ucPortAMajor;
+	SnByte ucPortAMinor;
+	SnByte ucPortABuild;
+	SnByte ucPortBMajor;
+	SnByte ucPortBMinor;
+	SnByte ucPortBBuild;
+} SN_SYS_REVISION;
+
+
+typedef struct 
+{
+	SnByte ucSpeedHigh;
+	SnByte ucSpeedLow;
+	SnByte ucOpState;
+	SnByte ucBladeId;
+	SnByte ucCmd;
+}SHAVER_PACKET;
+
+
+
+const SnByte pucCrcTable[] = 
+{
+/*0*/   0, 94,188,226, 97, 63,221,131,194,156,126, 32,163,253, 31, 65,
+/*1*/ 157,195, 33,127,252,162, 64, 30, 95,  1,227,189, 62, 96,130,220,
+/*2*/  35,125,159,193, 66, 28,254,160,225,191, 93,  3,128,222, 60, 98,
+/*3*/ 190,224,  2, 92,223,129, 99, 61,124, 34,192,158, 29, 67,161,255,
+/*4*/  70, 24,250,164, 39,121,155,197,132,218, 56,102,229,187, 89,  7,
+/*5*/ 219,133,103, 57,186,228,  6, 88, 25, 71,165,251,120, 38,196,154,
+/*6*/ 101, 59,217,135,  4, 90,184,230,167,249, 27, 69,198,152,122, 36,
+/*7*/ 248,166, 68, 26,153,199, 37,123, 58,100,134,216, 91,  5,231,185,
+/*8*/ 140,210, 48,110,237,179, 81, 15, 78, 16,242,172, 47,113,147,205,
+/*9*/  17, 79,173,243,112, 46,204,146,211,141,111, 49,178,236, 14, 80,
+/*a*/ 175,241, 19, 77,206,144,114, 44,109, 51,209,143, 12, 82,176,238,
+/*b*/  50,108,142,208, 83, 13,239,177,240,174, 76, 18,145,207, 45,115,
+/*c*/ 202,148,118, 40,171,245, 23, 73,  8, 86,180,234,105, 55,213,139,
+/*d*/  87,  9,235,181, 54,104,138,212,149,203, 41,119,244,170, 72, 22,
+/*e*/ 233,183, 85, 11,136,214, 52,106, 43,117,151,201, 74, 20,246,168,
+/*f*/ 116, 42,200,150, 21, 75,169,247,182,232, 10, 84,215,137,107, 53
+//     0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
+};
+
+typedef union SnWordBytes {
+    struct {
+        SnByte bLS;
+        SnByte bMS;
+    };
+    struct {
+        unsigned B0:1;
+        unsigned B1:1;
+        unsigned B2:1;
+        unsigned B3:1;
+        unsigned B4:1;
+        unsigned B5:1;
+        unsigned B6:1;
+        unsigned B7:1;
+        unsigned B8:1;
+        unsigned B9:1;
+        unsigned B10:1;
+        unsigned B11:1;
+        unsigned B12:1;
+        unsigned B13:1;
+        unsigned B14:1;
+        unsigned B15:1;
+    };
+    struct {
+        unsigned bVariableDataLS: 8;
+        unsigned bVariableDataMS: 2;
+        unsigned yAckNak: 1;
+        unsigned bECC: 4;
+        unsigned yParity: 1;
+    };
+    SnWord w;
+} SnWordFlavors;
+
+//
+// Possible Mux Source Selections for Port A or Port B
+//
+#define MUX_RCV_HAND            4
+#define MUX_XMT_HAND            5
+#define MUX_RCV_FOOT            6
+#define MUX_XMT_FOOT            7
+#define MUX_MASK                0x0700
+#define MUX_SHIFT               8
+
+//
+//  Bitfields for Command Requests
+//
+#define CMD_REQUEST_PORT        0x8000
+#define CMD_REQUEST_BAUD        0x0800
+#define CMD_REQUEST_ENABLE      0x0400
+#define CMD_REQUEST_FOOT        0x0200
+#define CMD_REQUEST_XMT         0x0100
+#define CMD_REQUEST_DATA        0x00ff
+
+#define PORTA					1
+#define PORTB					2
+#define HAND_PORTA				PORTA
+#define HAND_PORTB				PORTB
+
+#define DISABLE_HAND_PORT_CMD(port) (((port)==PORTA)?0:CMD_REQUEST_PORT)
+#define DISABLE_FOOT_CMD            (0)
+#define HAND_PORT_CMD(port, cmd)    ((((port)==PORTA)?0:CMD_REQUEST_PORT)|CMD_REQUEST_BAUD|CMD_REQUEST_ENABLE|CMD_REQUEST_XMT|(cmd))
+#define SLOW_HAND_PORT_CMD(prt,cmd) ((((prt)==PORTA)?0:CMD_REQUEST_PORT)|CMD_REQUEST_ENABLE|CMD_REQUEST_XMT|(cmd))
+#define FOOT_CMD(cmd)               (CMD_REQUEST_ENABLE|CMD_REQUEST_FOOT|CMD_REQUEST_XMT|(cmd))
+
+//
+// end
+//
+
+// Motor Control Board Status and Control offsets
+
+#define MC_REVISION		(offsetof(Status_Control, qVersion))/2		// Motor Board Revision Number
+
+#define MC_PORT_TYPE	(offsetof(Status_Control, wPortType))/2		// Port Type	
+
+// BldcA
+#define MC_BLDCA_MODE			(offsetof(Status_Control, tBldcA.tEx.wMode))/2		// Off = 0, 2 = Clockwise /Reverse/Forward/Oscillate
+#define MC_BLDCA_FAULT			(offsetof(Status_Control, tBldcA.tEx.wFault))/2 	// Error Conditions
+#define MC_BLDCA_PROFILE_CMD	(offsetof(Status_Control, tBldcA.tEx.wProfileCmd))/2
+
+
+// BldcB
+#define MC_BLDCB_MODE			(offsetof(Status_Control, tBldcB.tEx.wMode))/2		// Off/Reverse/Forward/Oscillate
+#define MC_BLDCB_FAULT			(offsetof(Status_Control, tBldcB.tEx.wFault))/2		// Error Conditions
+#define MC_BLDCB_PROFILE_CMD	(offsetof(Status_Control, tBldcB.tEx.wProfileCmd))/2
+
+// BldcX
+#define MC_BLDCX_LASTTAC(iPort)         ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tIn.wLastTac)/2:offsetof(Status_Control,tBldcB.tIn.wLastTac)/2)
+#define MC_BLDCX_FCOMMTABLE7(iPort)     ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wFCommTable[7])/2:offsetof(Status_Control,tBldcB.tEx.wFCommTable[7])/2)
+#define MC_BLDCX_VELOCITY_SET(iPort)    ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.sVelSet)/2:offsetof(Status_Control,tBldcB.tEx.sVelSet)/2)
+#define MC_BLDCX_VEL_ACT_ABS(iPort)     ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tIn.wVelAbs)/2:offsetof(Status_Control,tBldcB.tIn.wVelAbs)/2)
+#define MC_BLDCX_MODE(iPort)            ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wMode)/2:offsetof(Status_Control,tBldcB.tEx.wMode)/2)
+#define MC_BLDCX_FAULT(iPort)           ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wFault)/2:offsetof(Status_Control,tBldcB.tEx.wFault)/2)
+#define MC_BLDCX_DWELL(iPort)           ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wDwell)/2:offsetof(Status_Control,tBldcB.tEx.wDwell)/2)
+#define MC_BLDCX_PERIOD(iPort)          ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.fCycleTime)/2:offsetof(Status_Control,tBldcB.tEx.fCycleTime)/2)
+#define MC_BLDCX_OVERLOAD(iPort)        ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tIn.sOverload)/2:offsetof(Status_Control,tBldcB.tIn.sOverload)/2)
+#define MC_BLDCX_ILIM(iPort)            ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.fIlim)/2:offsetof(Status_Control,tBldcB.tEx.fIlim)/2)
+#define MC_BLDCX_FRPMA(iPort)           ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.fFrpmA)/2:offsetof(Status_Control,tBldcB.tEx.fFrpmA)/2)
+#define MC_BLDCX_KF(iPort)              ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.tKvel.fKf)/2:offsetof(Status_Control,tBldcB.tEx.tKvel.fKf)/2)
+#define MC_BLDCX_TLIMB(iPort)           ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wTlimB)/2:offsetof(Status_Control,tBldcB.tEx.wTlimB)/2)
+#define MC_BLDCX_TACPERREVN(iPort)      ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wTacPerRevN)/2:offsetof(Status_Control,tBldcB.tEx.wTacPerRevN)/2)
+#define MC_BLDCX_TACPERREVD(iPort)      ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.wTacPerRevD)/2:offsetof(Status_Control,tBldcB.tEx.wTacPerRevD)/2)
+#define MC_BLDCX_ACCEL(iPort)           ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.fAccel)/2:offsetof(Status_Control,tBldcB.tEx.fAccel)/2)
+#define MC_BLDCX_VELMAX(iPort)          ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tEx.sVelMax)/2:offsetof(Status_Control,tBldcB.tEx.sVelMax)/2)
+#define MC_BLDCX_CURRENT(iPort)         ((iPort == HAND_PORTA)?offsetof(Status_Control,tBldcA.tIn.fCurrent)/2:offsetof(Status_Control,tBldcB.tIn.fCurrent)/2)
+
+// HallbusA
+#define MC_HALLBUSA_DEVICE_EXIST	(offsetof(Status_Control, tHallBusA.wDeviceExist))/2 // Hall devices present in corresponding bit pattern
+#define MC_HALLBUSA_DEVICE_ACTIVE	(offsetof(Status_Control, tHallBusA.wDeviceActive))/2 // Activated hall devices
+#define MC_HALLBUSA_DEVICE_LATCH	(offsetof(Status_Control, tHallBusA.wDeviceLatch))/2 //
+#define MC_HALLBUSA_HALLBUS_VQ  	(offsetof(Status_Control, tHallBusA.wHallBusVq))/2 //
+#define MC_HALLBUSA_HALLBUS_DELTA  	(offsetof(Status_Control, tHallBusA.wDeltaCnt))/2 //
+
+// HallBusB
+#define MC_HALLBUSB_DEVICE_EXIST	(offsetof(Status_Control, tHallBusB.wDeviceExist))/2 // Hall devices present in corresponding bit pattern
+#define MC_HALLBUSB_DEVICE_ACTIVE	(offsetof(Status_Control, tHallBusB.wDeviceActive))/2 // Activated hall devices
+#define MC_HALLBUSB_DEVICE_LATCH	(offsetof(Status_Control, tHallBusB.wDeviceLatch))/2
+#define MC_HALLBUSB_HALLBUS_VQ  	(offsetof(Status_Control, tHallBusB.wHallBusVq))/2 //
+#define MC_HALLBUSB_HALLBUS_DELTA  	(offsetof(Status_Control, tHallBusB.wDeltaCnt))/2 //
+
+#define MC_HALLBUSX_DEVICE_EXIST(iPort) ((iPort == HAND_PORTA)?MC_HALLBUSA_DEVICE_EXIST:MC_HALLBUSB_DEVICE_EXIST)
+#define MC_HALLBUSX_DEVICE_ACTIVE(iPort) ((iPort == HAND_PORTA)?MC_HALLBUSA_DEVICE_ACTIVE:MC_HALLBUSB_DEVICE_ACTIVE)
+#define MC_HALLBUSX_DEVICE_LATCH(iPort) ((iPort == HAND_PORTA)?MC_HALLBUSA_DEVICE_LATCH:MC_HALLBUSB_DEVICE_LATCH)
+#define MC_HALLBUSX_HALLBUS_VQ(iPort) ((iPort == HAND_PORTA)?MC_HALLBUSA_HALLBUS_VQ:MC_HALLBUSB_HALLBUS_VQ)
+#define MC_HALLBUSX_HALLBUS_DELTA(iPort) ((iPort == HAND_PORTA)?MC_HALLBUSA_HALLBUS_DELTA:MC_HALLBUSB_HALLBUS_DELTA)
+
+// Digital In
+#define MC_DIGITAL_STATE_DATA_B		(offsetof(Status_Control, tDigital.wStateData[1]))/2 // Processed input state data GPIOB
+#define MC_DIGITAL_STATE_DATA_D		(offsetof(Status_Control, tDigital.wStateData[3]))/2 // Processed input state data GPIOD
+#define MC_DIGITAL_STATE_DATA_E		(offsetof(Status_Control, tDigital.wStateData[4]))/2 // Processed input state data GPIOE
+#define MC_DIGITAL_ENABLE_MASK_E	(offsetof(Status_Control, tDigital.wActive[4]))/2 // 1 = active digital input
+
+// Analog In
+#define MC_ANALOG_AVG0				(offsetof(Status_Control, tAnalog.sAverage[0]))/2 // Prescaled Average
+#define MC_ANALOG_AVG4				(offsetof(Status_Control, tAnalog.sAverage[4]))/2 // Prescaled Average
+#define MC_ANALOG_AVG7				(offsetof(Status_Control, tAnalog.sAverage[7]))/2 // Prescaled Average
+#define MC_ANALOG_AVG8				(offsetof(Status_Control, tAnalog.sAverage[8]))/2 // Prescaled Average
+#define MC_ANALOG_AVG10				(offsetof(Status_Control, tAnalog.sAverage[10]))/2 // Prescaled Average
+#define MC_ANALOG_AVG11				(offsetof(Status_Control, tAnalog.sAverage[11]))/2 // Prescaled Average
+#define MC_ANALOG_AVG12				(offsetof(Status_Control, tAnalog.sAverage[12]))/2 // Prescaled Average
+
+#define MC_ANALOG_WCOUNT0			(offsetof(Status_Control, tAnalog.wCount[0]))/2	// Number of samples per average
+#define MC_ANALOG_WCOUNT8			(offsetof(Status_Control, tAnalog.wCount[8]))/2	// Number of sampler per average
+
+#define MC_ANALOG_OFFSET0		(offsetof(Status_Control, tAnalog.sOffset[0]))/2 // Offset value
+#define MC_ANALOG_OFFSET8		(offsetof(Status_Control, tAnalog.sOffset[8]))/2 // Offset value
+
+// Fault In	
+#define MC_FAULT_STATE_DATA			(offsetof(Status_Control, tFault.wStateData))/2 // Fault state data
+#define MC_FAULT_EVENT_MASK			(offsetof(Status_Control, tFault.wEventMask))/2 // 1 = raise event
+
+// Temperature		
+#define MC_TEMPERATURE_FAULT		(offsetof(Status_Control, tTemperature.wEvent))/2 // 1 = raise event	
+#define MC_TEMPERATURE_DSP			(offsetof(Status_Control, tTemperature.fDspTemp))/2 // 1 = raise event
+#define MC_TEMPERATURE_ONBOARD		(offsetof(Status_Control, tTemperature.fOnBoardTemp))/2 // 1 = raise event
+
+// Serial
+#define MC_SERIAL_CMD_RESULTS       (offsetof(Status_Control, tSerial.wCmdResult))/2
+
+// Generic Buffer
+#define MC_BUFFER		            (offsetof(Status_Control, wBuffer[0]))/2
+#define MC_AUXILLARY                (offsetof(Status_Control, wAuxillary))/2
+
+// Heartbeat / Aux
+#define MC_HEARTBEAT                (offsetof(Status_Control, wHeartCount))/2
+
+// Handpiece Serial Numbers
+#define MC_SERIAL_NUMBER_A          (offsetof(Status_Control, pbSerialNumberA[0]))/2
+#define MC_SERIAL_NUMBER_B          (offsetof(Status_Control, pbSerialNumberB[0]))/2
+
+
+class CControl  
+{
+public:
+	CControl();
+	virtual ~CControl();
+
+public:
+	SnBool Init(SnWord* pusTypeFailure, SnWord* pusDetailFailure);
+	void DeInit(SnBool yBuzzer);
+
+public:
+
+    SnBool SetMessageHandler(HWND hWnd);
+	SnBool GetCmdState(SnQByte qMsg, SnWord* pwReturnBuffer, SnQByte qSize);
+	SnBool GetCmdState(SnQByte qMsg, SN_SYS_REVISION* ptReturnBuffer, SnQByte qSize);
+	SnBool SetCmdState(SnQByte qMsg, SnWord* pwInputBuffer, SnQByte qSize);
+	SnBool GetCmdState(SnQByte qMsg, SN_PORT_STATUS* ptReturnBuffer, SnQByte qSize); 
+	SnBool SetCmdState(SnQByte qMsg, SN_PORT_STATUS* ptInputBuffer, SnQByte qSize); 
+	SnBool GetCmdState(SnQByte qMsg, SN_FOOT_STATUS* ptReturnBuffer, SnQByte qSize);
+	SnBool SetCmdState(SnQByte qMsg, SN_FOOT_STATUS* ptInputBuffer, SnQByte qSize); 
+    SnBool SetCmdState(SnQByte qMsg, SAVE_DEVICE_DATA* ptInputBuffer, SnQByte qSize);
+	
+			
+	SnBool PowerOnSelfTest();
+
+	// Accessor functions
+	inline SnBool CheckPowerOnSelfTest(void) {return m_bHardwareReady;}
+	inline SnBool RecallFlashFailed(void) {return m_bRecallFlashFailed;}
+	inline SnBool RecallNvRamFailed(void) {return m_bRecallNvRamFailed;}
+	inline SnWord GetFootPedalType(void) {return m_Footswitch.GetFootPedalType();}
+
+    inline void EnableFootswitch(void) {m_Footswitch.EnableFootswitch();}
+    inline void DisableFootswitch(void) {m_Footswitch.DisableFootswitch();}
+	inline SnWord FootswitchOverride(void){return m_Footswitch.Override();}
+	inline SnWord FootswitchPortAssignment(void){return m_Footswitch.FootAssignedPort();}
+	inline SnBool GoodFootswitch(void){return m_Footswitch.GoodFootswitch();}
+
+    inline void ShutDownThreads(void) {m_bKillThreads = TRUE; SetEvent(m_hKillThreadEvent);}
+
+    inline SnWord GetPortAType(void) {return m_PortA.GetType();}
+    inline SnWord GetPortADeviceMode(void) {return m_PortA.GetDeviceMode();}
+    inline SnWord GetPortAVelocity(void) {return m_PortA.GetVelocity();}
+    inline void SetPortAMaxPercent(void) {m_PortA.SetMaxPercent();}
+
+    inline SnWord GetPortBType(void) {return m_PortB.GetType();}
+    inline SnWord GetPortBDeviceMode(void) {return m_PortB.GetDeviceMode();}
+    inline SnWord GetPortBVelocity(void) {return m_PortB.GetVelocity();}
+    inline void SetPortBMaxPercent(void) {m_PortB.SetMaxPercent();}
+
+    inline SnBool GetFactoryMode(void) {return m_bFactoryMode;}
+    inline SnBool ResetDisplayBase(void) {return m_hDriver->ResetDisplayBase();}
+
+    inline SnBool CanTest(void) {return m_hDriver->CanTest();}
+	
+	SnBool GetTemperatures(float *pfOnBoardTemp, float *pfDspTemp);
+	SnBool WriteDsp( SnQByte qOffset, SnQByte qNumWords, SnWord *pwData);
+	SnBool ReadDsp( SnQByte qOffset, SnQByte qNumWords, SnWord *pwData);
+	void NotifyPump(SnByte bPumpCmd);
+
+    void EraseAndRestoreDefaults(void);
+
+    inline SnQByte GetUsageCnt() {return m_qUsageCnt;}
+    inline void NotifyNewUsage() {if (!m_bSavedNewUsage && !m_bNotifyNewUsage) { m_qUsageCnt++; m_bNotifyNewUsage = TRUE; }}
+
+    inline void NoIntellioShaverHandpiecePresent(DWORD dwPort) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->NoHandpiecePresent(dwPort);}
+    inline void UpdateIntellioShaverPortUnitsAndMode(DWORD dwPort, SnByte bPortUnits, SnByte bPortMode) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePortUnitsAndMode(dwPort, bPortUnits, bPortMode);}
+    inline void UpdateIntellioShaverPortBlade(DWORD dwPort, SnWord wBladeId) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePortBlade(dwPort, wBladeId);}
+    inline void UpdateIntellioShaverPortArrows(DWORD dwPort, SnBool yUpArrow, SnBool yDownArrow) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePortArrows(dwPort, yUpArrow, yDownArrow);}
+    inline void UpdateIntellioShaverPortSetSpeed(DWORD dwPort, SnByte bSetSpeed) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePortSetSpeed(dwPort, bSetSpeed);}
+    inline void UpdateIntellioShaverPortRunState(DWORD dwPort, SnBool yRunning) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePortRunState(dwPort, yRunning);}
+    inline void UpdateIntellioShaverPortErrWarn(DWORD dwPort, SnByte bErrWarn) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePortErrWarn(dwPort, bErrWarn);}
+    inline void UpdateIntellioShaverPopup(SnByte bPopup) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdatePopup(bPopup);}
+    inline void UpdateIntellioShaverNvRamImage(NVRAM_DATA* ptNvRamImage) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdateNvRamImage(ptNvRamImage);}
+    inline void UpdateIntellioShaverFlashImage(SnByte* pbFlashImage, SnQByte qFlashSize) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdateFlashImage(pbFlashImage, qFlashSize);}
+    inline void UpdateIntellioShaverSettingsScreen(SnBool yInSettingsScreen) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdateSettingsScreen(yInSettingsScreen);}
+    inline void SendIntellioShaverUpdateIfChange() {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->SendUpdateIfChange();}
+    inline void SetIntellioShaverReadyStatus(SnBool yReady) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->SetReadyStatus(yReady);}
+    inline void UpdateHandpieceSerialNumber(DWORD dwPort, char *pcSN) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdateHandpieceSerialNumber(dwPort, pcSN);}
+    inline void UpdateCapitalDeviceSerialNumber(char *pcSN) {if(m_pIntellioShaverConnection) m_pIntellioShaverConnection->UpdateCapitalDeviceSerialNumber(pcSN);}
+
+    inline SnBool GetIntellioShaverStatus(void) {if(m_pIntellioShaverConnection) return m_pIntellioShaverConnection->GetConnectionStatus(); return FALSE;}
+    inline SnBool GetPumpStatus(CPump::PumpType *pePumpType)
+    {
+	    CPump::PumpType	ePumpType;
+	    SnBool bRunning = FALSE;
+
+        if(m_pPumpConnection) {
+		    // Check for remote pump connection
+		    bRunning = m_pPumpConnection->GetPumpStatus( &ePumpType);
+
+            // If no remote pump connection try Intellio Shaver pump connection
+            if (ePumpType == CPump::PUMP_TYPE_UNKNOWN && m_pIntellioShaverConnection) {
+		        bRunning = m_pIntellioShaverConnection->GetPumpStatus( &ePumpType);
+            }
+
+            *pePumpType = ePumpType;
+        }
+        return bRunning;
+    }
+
+    SnBool FootPedalStatusUpdate( SnWord usPort, SnBool bOverride, SnWord wPercent, SnWord wMode );
+	SnBool GetFootMode( SnWord usPort, SnWord & usFootMode);
+	SnBool SetFootMode( SnWord usPort, SnWord usFootMode);
+	SnBool IsPoweredInstrument( SnWord usPort);
+
+	SnBool InitShaverPacket(void);
+	SnBool SetOscProfile( DWORD dwProfile, DWORD dwPort);
+	SnBool StartTimer(DWORD dwTimerID);
+	SnBool StopTimer(DWORD dwTimerID);
+    SnBool SendSerialRequests(SnQByte qNumRequests, SnWord *pwResults, SnWord wTimeout);
+    SnBool SendSerialRequest(SnWord *pwResults, SnWord wTimeout);
+	SnBool SendSerialRequestMotorTable(unsigned char ucPort);
+	SnBool SendSerialRequestSerialNumber(unsigned char ucPort);
+
+	SnWord					m_usShaverPacketControl;
+	HANDLE					m_hTacTimerThreadMotorA;
+	DWORD					m_hTacTimerThreadMotorAID;
+	HANDLE					m_hTacTimerThreadMotorB;
+	DWORD					m_hTacTimerThreadMotorBID;
+
+	CPump::PumpType			m_RemotePumpConnectionType;
+
+	void SetShaverBladeId(SnWord usPort, SnWord usPortBladeId);
+	void SetShaverOpState(SnWord ucPort, SnWord usHandMode);
+	void SetShaverSpeed(SnWord usPort, SnWord usHandMode, SnWord wPeriod, SnWord usVelocity);
+
+	inline SnWord GetDelayPeriodMs(void) {return m_wDelayPeriodMs;}
+	inline void	  SetDelayPeriodMs(SnWord wDelayPeriodMs) {m_wDelayPeriodMs = wDelayPeriodMs;}
+
+    void RestoreShaverSerialNumber();
+    SnBool SaveShaverSerialNumber(char *pcSerialNumber);
+    SnBool EraseShaverSerialNumber();
+
+    inline void GetSerialNumber(char *pcSerialNumber) { strcpy(pcSerialNumber, (char *)m_pbSerialNumber); }
+
+private:	
+
+	// Commom helper functions
+	void DeInitHardware(SnBool yBuzzer);
+	SnByte CrcMemChunk(SnByte* pbSrc,SnQByte qLen,SnByte bCrc);
+	SnByte CrcMem(SnByte *pbSrc, SnQByte qLen);
+	SnBool GetRevisionNumbers(SN_SYS_REVISION* ptRevision);
+	void KillThreads();
+ 	
+	// Thread Proc
+	friend DWORD WINAPI TacTimerThreadMotorA(LPVOID pParam);
+	friend DWORD WINAPI TacTimerThreadMotorB(LPVOID pParam);
+	friend DWORD WINAPI StatusThread(LPVOID pParam);
+	friend DWORD WINAPI StatusThread2(LPVOID pParam);
+	friend DWORD WINAPI StorageThread(LPVOID pParam);
+	friend DWORD WINAPI EventHandlerThread(LPVOID pParam);
+	friend DWORD WINAPI RemoteStatusThread(LPVOID pParam);
+	// Driver Callback routine
+	friend void ProcessDriverCmd(SnQByte qCmd);
+	friend SnBool CPort::GetMotorStatus(void);
+
+	
+	SnBool HandleShutDown(void);
+	SnBool GetTemperatureStatus(void);
+	SnBool GetWatchDogStatus();
+
+	SnBool PulseBeeper(SnBool bBeeperState);
+
+	// Shaver helper functions
+	SnBool InitHardwareShaver(SnWord* wTypeFailure, SnWord* wDetailFailure);
+	SnBool SetSystemDefaults();
+    SnBool ErrorCorrectSerialResponse(SnWord *pwResponse);
+    SnBool UpgradeSerialSoftware(SnByte bPort, SnWord wStartPage, SnQByte qPageSize, SnQByte qSize, SnByte *pbUpgradeData);
+	void FootswitchUpdate();
+	void UpdatePortStatus();
+	SnBool GetRemotePumpStatus();
+	SnBool XmtShaverPacket();
+    void DeviceToFlash(DEVICE_DATA ptSrc, SAVE_DEVICE_DATA *ptDst);
+    void FlashToDevice(SAVE_DEVICE_DATA *ptSrc, DEVICE_DATA *ptDst);
+	SnBool SaveNvRamData();
+	SnBool RecallNvRamData();
+	SnBool SaveFlashData();
+	SnBool UpdateUsageCnt();
+	SnBool RecallFlashData();
+
+private:
+	CDriver*				m_hDriver;
+#if LOGGING
+    CLogger*                m_hLogger;
+    SnBool                  m_bSaveToFlash;
+#endif
+	CRITICAL_SECTION		m_csWriteFlashAccess;
+	CRITICAL_SECTION		m_csNVRamAccess;
+	CPump*					m_pPumpConnection;		// Pointer to CPump class
+    CIntellioShaver*		m_pIntellioShaverConnection;	// Pointer to CIntellioShaver object
+	SnByte					m_pucPumpData[5];
+	HANDLE					m_hPersistentStorageThread;
+	DWORD					m_hPersistentStorageThreadID;
+	HANDLE					m_hStatusThread;		// Handle to Status thread object
+	DWORD					m_hStatusThreadID;
+	HANDLE					m_hStatusThread2;		// Handle to Status thread object
+	DWORD					m_hStatusThread2ID;
+	HANDLE					m_hEventHandlerThread;	// Handle to Event Handler thread object
+	DWORD					m_hEventHandlerThreadID;
+	HANDLE					m_hRemoteStatusThread;
+	DWORD					m_hRemoteStatusThreadID;
+	HANDLE					m_hKillThreadEvent;
+	HANDLE					m_hStorageThreadKilledEvent;
+	HANDLE					m_hStatusThreadKilledEvent;		// Handle to event object
+	HANDLE					m_hStatusThread2KilledEvent;		// Handle to event object
+	HANDLE					m_hHandlerThreadKilledEvent;	// Handle to event object
+	HANDLE					m_hRemoteStatusThreadKilledEvent;
+	HANDLE					m_hCommFailureEvent;			// Event
+	HANDLE					m_hTemperatureFailureEvent;		// Event
+	HANDLE					m_hSystemResourceFailureEvent;	// Event
+	HANDLE					m_hIntellioShaverConnectionStatusEvent;
+	HANDLE					m_hIntellioShaverSetEvent;
+	HANDLE					m_hIntellioShaverCmdReadyEvent;
+	HANDLE					m_hWatchDogTimerEvent;
+	HANDLE					m_hDisplayInitializedEvent;
+	HWND					m_hGuiWnd;				// Handle to Update Window (GUI)
+	HWND					m_hIconWnd;				// Handle to Icon Window (GUI)
+	HANDLE					m_hMutex;
+
+	SnWord					m_usCustDefaultMode;	// 0 = Default Mode; 1 = Custom Mode
+	SnBool					m_bKillThreads;			// TRUE = Terminate running threads
+	SnBool					m_bStorageThreadKilled;
+	SnBool					m_bRemoteStatusThreadKilled;
+	SnBool					m_bStatusThreadKilled;	// TRUE = Status Thread has been terminated
+	SnBool					m_bStatusThread2Killed;	// TRUE = Status Thread 2 has been terminated
+	SnBool					m_bEventHandlerThreadKilled; // TRUE = Event Handler thread has been terminated
+	SnBool					m_bPulseBeeper;
+	SnBool					m_bBeepThreeTimes;
+	SnBool					m_bCommunicationFailure;
+	SnBool					m_bTimerExpired;
+	SnBool					m_bTimer2Expired;
+	SnBool					m_bHardwareReady;		// TRUE = Hardware Ready 
+	SnBool					m_bRecallFlashFailed;
+	SnBool					m_bRecallNvRamFailed;
+	SnBool					m_bFlashSaveError;
+   	SnBool					m_bFactoryMode;
+ 	
+	DWORD			        m_dwTemperature;
+	SnWord                  m_wBatteryStatus;
+	SnWord					m_usIntellioShaverStatus;
+	SnWord					m_usPumpStatus;
+	SnWord					m_wDelayPeriodMs;		// Time since last delay counter update (ms)
+				
+	SnQByte					m_ulDeviceID;			// Device ID (SLOT)
+	Status_Control			m_StatusControl;
+
+	SnWord					m_usLanguage;
+	SnWord					m_usPrevShaverPacketControl;
+
+	
+	NVRAM_DATA				m_tNvRamDefaults;
+	SnByte					m_pbFlashImage[FLASH_SAVE_SIZE];
+	CPort					m_PortA;
+	CPort					m_PortB;
+	FootSwitch				m_Footswitch;
+
+	SnBool					m_RemotePumpRunning;
+
+
+	SnBool					m_bShaverPacketDirty;
+	SHAVER_PACKET			m_tOutGoingShaverPacket;
+
+    SnByte                  m_pbSerialNumber[SERIAL_NUMBER_STORE];
+
+    SnQByte                 m_qUsageCnt;            // Estimated Number of Uses (Procedures)
+    SnBool                  m_bNotifyNewUsage;      // Notify the StorageThread to save new UsageCnt
+    SnBool                  m_bSavedNewUsage;       // Set to TRUE once the new UsageCnt is saved to FLASH
+
+#if RS485_TRACK_ERRORS
+    SnQByte                 m_qSerial0Requests;
+    SnQByte                 m_qSerial1Requests;
+    SnQByte                 m_qSerial0Retrys;
+    SnQByte                 m_qSerial1Retrys;
+    SnQByte                 m_qSerial0Errs;
+    SnQByte                 m_qSerial1Errs;
+#endif
+};
+
+#endif // !defined(AFX_CONTROL_H__7745013E_D76E_41EF_B609_02DBCECDA572__INCLUDED_)

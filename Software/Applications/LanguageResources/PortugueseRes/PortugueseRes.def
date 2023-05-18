@@ -1,0 +1,7 @@
+; PortugueseRes.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PORTUGUESERES"
+;DESCRIPTION  'PORTUGUESERES Windows CE Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

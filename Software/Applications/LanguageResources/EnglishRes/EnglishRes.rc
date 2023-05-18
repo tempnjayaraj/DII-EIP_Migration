@@ -1,0 +1,531 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew\0"
+            VALUE "FileDescription", "EnglishRes DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "EnglishRes\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "EnglishRes.dll\0"
+            VALUE "ProductName", "EnglishRes Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_MEDIUM_SPEED         "Medium"
+    SN_PUMPING              "Pumping"
+    SN_SETTINGS             "Settings"
+    SN_SET_SUCTION          "Set Suction"
+    SN_LARGE                "Large"
+    SN_MEDIUM               "Medium"
+    SN_SMALL                "Small"
+    SN_SET_PRESSURE_MMHG    "Set Pressure mmHg"
+    SN_SET_FLOW_LIMIT_LMIN  "\rSet Flow Limit L/min"
+    SN_PRESSURE_MMHG        "Pressure mmHg"
+    SN_FLOW_RATE_LMIN       "Flow Rate L/min"
+    SN_PRESS                "Press"
+    SN_TO_PUMP              "START to pump"
+    SN_LAVAGE               "Lavage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_START         "Lavage Start"
+    SN_NORMAL               "Normal"
+    SN_DONE                 "Done"
+    SN_SET_SUCTION_LEVELS   "Set Suction Levels"
+    SN_SHAVER_NOT_DETECTED  "Shaver Not Detected"
+    SN_PERCENTAGE           "%"
+    SN_SHAVER_ON            "\rShaver On"
+    SN_SHAVER_OFF           "\rShaver Off"
+    SN_LOW_SPEED            "Low"
+    SN_HIGH_SPEED           "High"
+    SN_OTHER                "Other"
+    SN_SET                  "Set"
+    SN_CANCEL               "Cancel"
+    SN_CUSTOM_PRESSURE_MMHG "Custom Pressure mmHg"
+    SN_CANNULA              "Cannula"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD             "Standard"
+    SN_LARGE_DIAMETER       "Large\rDiameter"
+    SN_SMALL_JOINT          "Small\rJoint"
+    SN_SMALL_JOINT_SINGLE_LINE "Small Joint\rCannula"
+    SN_LARGE_DIAMETER_SINGLE_LINE "Large Diameter\rCannula"
+    SN_RESTORE_DEFAULT      "Restore\rDefault"
+    SN_CUSTOM_FLOW_RATE_LIMIT "Custom Flow Rate Limit L/min"
+    SN_CUSTOM_SUCTION       "Custom Suction/Blade Speed"
+    SN_SHAVER               "Shaver"
+    SN_NOT_DETECTED         "Not Detected"
+    SN_SYSTEM_INFORMATION   "System Information"
+    SN_FLUID_MANAGEMENT     "DYONICS 25 Fluid Management System"
+    SN_MODEL                "REF "
+    SN_MODEL_NUMBER         "7211010"
+    SN_VERSION              "Software Version"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PRESSURE             "Pressure"
+    SN_FLOW_RATE_LIMIT      "Flow Rate Limit"
+    SN_SUCTION              "Suction/Blade Speed"
+    SN_CUSTOM_SETTINGS      "Custom Settings"
+    SN_LANGUAGE             "Language"
+    SN_PURGE                "Purge"
+    SN_PURGING              "Purging"
+    SN_PERIOD               "."
+    SN_PURGING_IN_PROCESS   "Purging in progress"
+    SN_PURGE_CASSETTE       "Purge Cassette"
+    SN_SIZE                 "Size"
+    SN_STOP                 "  STOP"
+    SN_START                "   START"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PURGE_DONE           "   DONE"
+    SN_ENGLISH              "English"
+    SN_SELECT_CUSTOM_MODE   "Select\rCustom Mode"
+    SN_SELECT_DEFAULT_MODE  "Select\rDefault Mode"
+    SN_IN_CUSTOM_MODE       "In Custom Mode"
+    SN_IN_DEFAULT_MODE      "In Default Mode"
+    SN_PRESS_DONE_WHEN_FINISHED "Press DONE when finished"
+    SN_OVERPRESSURE         "OVER-PRESSURE"
+    SN_OVERPRESSURE_TIMEOUT "OVER-PRESSURE TIMEOUT"
+    SN_INVALID_CASSETTE_TYPE " Unknown Cassette Type"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_STOP          "Lavage Stop"
+    SN_CUSTOM_CANNULA       "Custom Cannula"
+    SN_GRAVITY_INFLOW       "Gravity inflow"
+    SN_SYSTEM_ERROR         "SYSTEM ERROR"
+    SN_SYSTEM_COMM_ERROR    "Internal Communication Failure"
+    SN_TRANSDUCER_ERROR     "Transducer Failure"
+    SN_PUMP_ERROR           "Pump Motor Failure"
+    SN_AIR_IN_TUBING        "Air in Tube Set"
+    SN_TEMPERATURE_FAULT    "TEMPERATURE-LIMIT"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_TEMPERATURE_ERROR    "Temperature Failure"
+    SN_SYSTEM_RESOURCE_ERROR "System Resource Failure"
+    SN_PINCH_VALVE_ERROR    "Pinch Valve Failure"
+    SN_NO_INSTRUMENT_DETECTED "No Instrument Detected"
+    SN_APPLICATION_VERSION  "Application Version"
+    SN_MOTOR_CONTROLLER_VERSION "Motor Controller Version"
+    SN_REMOTE_CONTROLL_ERROR "Remote Control Error"
+    SN_OUTFLOW_CONTROL      "Outflow Control"
+    SN_LOAD_CASSETTE        " Load Cassette"
+    SN_BLADE_SPEED          "Blade Speed"
+    SN_CUSTOM_SETTINGS_SAVE_FAILURE "Unable to Save Custom Settings"
+    SN_CUSTOM_SETTINGS_RETRIEVE_FAILURE "Unable to Retrieve Custom Settings"
+    SN_BATTERY_FAILURE      "Custom Settings Lost"
+    SN_ERROR                "Error"
+    SN_REMOVE_CASSETTE      "Remove Cassette"
+    SN_NO_CASSETTE          "No Cassette"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_INSERT_CASSETTE      "Insert Cassette"
+    SN_PRESSURE_APPLIED     "Pressure Applied - ZERO FLOW"
+    SN_TEST_COMPLETE        "Test Complete"
+    SN_FLOW_TEST            "Flow Test"
+    SN_PRESSURE_P1_MMHG     "Pressure P1 mmHg"
+    SN_PRESSURE_P2_MMHG     "Pressure P2 mmHg"
+    SN_END_TEST             "  \r PLEASE\r\r      Release Pressure\r      Remove Cassette\r      Remove USB Key\r      Power Unit Off"
+    SN_FRENCH               "Français"
+    SN_GERMAN               "Deutsch"
+    SN_ITALIAN              "Italiano"
+    SN_SPANISH              "Español"
+    SN_WRONG_NO_INSTRUMENT  "Wrong/No Instrument"
+    SN_LANGUAGE_SELECTION   "Language Selection"
+    SN_LANGUAGE_TEXT        "Are you sure that you want to change the displayed language to <?"
+    SN_YES                  "Yes"
+    SN_NO                   "No"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD_SINGLE_LINE "Standard\rCannula"
+    SN_SWEDISH              "Svenska"
+    SN_DANISH               "Dansk"
+    SN_DUTCH                "Nederlands"
+    SN_NORWEGIAN            "Norsk"
+    SN_PORTUGUESE           "Português"
+    SN_INCOMPLETE_CASSETTE_INSERTION 
+                            "CASSETTE INSERTION/PRESSURE OFFSET ERROR"
+    SN_RESTART_CONTROL      "   - REMOVE CASSETTE\r   - RESTART CONTROL UNIT\r   - FULLY INSERT CASSETTE"
+    SN_HIGH_FLOW            "High\rFlow"
+    SN_MEDIUM_FLOW          "Medium\rFlow"
+    SN_LOW_FLOW             "Low\rFlow"
+    SN_LOW_FLOW_CANNULA     "Low Flow\rCannula"
+    SN_MEDIUM_FLOW_CANNULA  "Medium Flow\rCannula"
+    SN_HIGH_FLOW_CANNULA    "High Flow\rCannula"
+    SN_REMOTE_CONTROL_BATTERY_LOW "Remote Control Battery Low"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_SHAVER_MODEL_NUMBER  "72200873"
+    SN_WINDOW               "Window  "
+    SN_RPM                  "RPM"
+    SN_SPEED                "Speed %"
+    SN_DYONICS_POWER_SHAVER "DYONICS POWER II Control System"
+    SN_OSCILLATE_MODE       "Oscillate Mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_BUR                  "Bur"
+    SN_STRAIGHT             "Straight"
+    SN_FAST_BUR             "Fast Bur"
+    SN_CURVED               "Curved"
+    SN_BLADE_INVALID        "Blade Invalid"
+    SN_PORT_CONTROL         "Port Control"
+    SN_PORTA                "Port A"
+    SN_PORTB                "Port B"
+    SN_INTERFACE            "Pump Interface"
+    SN_INVALID_BLADE_ID     "Unknown Blade"
+    SN_INVALID_DEVICE_ID    "Unknown Handpiece"
+    SN_INVALID_HALL_PATTERN "Handpiece Sensor Fault"
+    SN_MOTOR_STALL          "Handpiece Stall"
+    SN_MOTOR_TAC_FAULT      "Handpiece Motor Fault"
+    SN_SHORT_CIRCUIT_DETECTED "Short Circuit Detected"
+    SN_FOOT_STUCK_PEDAL     "Footswitch Error"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_DEFAULT_PAREN        "(Default)"
+    SN_FOOTSWITCH           "Footswitch"
+    SN_DEFAULT              "Default"
+    SN_OSCILLATE_MODE1      "Oscillate Mode 1"
+    SN_OSCILLATE_MODE2      "Oscillate Mode 2"
+    SN_SECONDS              "Seconds"
+    SN_REVOLUTIONS          "Revolutions"
+    SN_MODE                 "  Mode"
+    SN_FORWARD              "Forward"
+    SN_HAND_CONTROL_OVERRIDE "Hand Control\r    Override"
+    SN_ON_OFF               "On/Off"
+    SN_VARIABLE             "Variable"
+    SN_LEFT                 "L"
+    SN_RIGHT                "R"
+    SN_ON                   "On"
+    SN_OFF                  "Off"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_FOOT_LOW_BATTERY     "Footswitch Battery Low"
+    SN_TEMPERATURE_FAULT_DETAIL 
+                            "Unit overheating. Check for blocked ventilation. Check fans."
+    SN_OK                   "OK"
+    SN_WARNING              "Warning"
+    SN_MOTOR_STALL_DETAIL   "Handpiece motor not running. Try a different handpiece."
+    SN_MOTOR_TAC_FAULT_DETAIL 
+                            "Try other port. If problem persists try a different handpiece."
+    SN_MOTOR_CURRENT_LIMIT  "Handpiece Overload"
+    SN_MOTOR_TORQUE_LIMIT   "Motor Torque Limit"
+    SN_SET_SPEEDS_SAVE_FAILURE "Unable to Save Set Speeds."
+    SN_SET_SPEEDS_RETRIEVE_FAILURE "Unable to Retrieve Set Speeds."
+    SN_INVALID_DEVICE_ID_DETAIL 
+                            "Handpiece not recognized/supported. Try a different handpiece."
+    SN_INVALID_BLADE_ID_DETAIL 
+                            "Blade type not supported for connected handpiece. Handpiece is operating in Safe Mode."
+    SN_SHORT_CIRCUIT_DETAIL "Handpiece or port short circuit detected. Try a different handpiece. If problem persists return unit for repair."
+    SN_UNKNOWN_FOOT_ID      "Unknown Footswitch"
+    SN_UNKNOWN_FOOT_ID_DETAIL 
+                            "Unable to communicate with footswitch. Try a different footswitch."
+    SN_HAND_STUCK_BUTTON    "Handpiece Error"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_HAND_STUCK_BUTTON_DETAIL 
+                            "Check handpiece for depressed buttons. If none present try a different handpiece."
+    SN_FOOT_STUCK_PEDAL_DETAIL 
+                            "Check footswitch for depressed pedals or switches. If none present try a different footswitch."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT "Handpiece Overload Timeout."
+    SN_MOTOR_CURRENT_LIMIT_DETAIL "Handpiece overload detected."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT_DETAIL 
+                            "Handpiece overload detected. Try a different handpiece."
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT "Blade Stall"
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT_DETAIL 
+                            "Handpiece or blade is stalled. Stop the handpiece and check the blade."
+    SN_INVALID_HALL_PATTERN_DETAIL 
+                            "Handpiece sensor fault. Handpiece is operating in Safe Mode."
+    SN_FOOT_LOW_BATTERY_DETAIL "Recharge the wireless footswitch battery."
+    SN_FOOTSWITCH_REQUIRED  "Footswitch required"
+    SN_FOOTSWITCH_REQUIRED_DETAIL 
+                            "Handpiece does not have hand controls and requires a footswitch."
+    SN_IN_BLADE_DEFAULT     "In Blade Default"
+    SN_IN_BLADE_RECALL      "In Blade Recall"
+    SN_SELECT_BLADE_DEFAULT "Select\rBlade Default"
+    SN_SELECT_BLADE_RECALL  "Select\rBlade Recall"
+    SN_FOOTSWITCH_VERSION   "Footswitch Version"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_ADJUST               "Adjust"
+    SN_FACTORY_DEFAULT      "System\rReset"
+    SN_ARE_YOU_SURE         "Are you sure you want to reset all saved settings?"
+    SN_SET_OSCILLATE_PERIOD "Set Oscillate Period"
+    SN_SET_NUMBER_REVOLUTIONS "Set Number of Revolutions"
+    SN_MODE1                "Mode 1"
+    SN_MODE2                "Mode 2"
+    SN_RATE                 "RATE"
+    SN_A                    "A"
+    SN_B                    "B"
+    SN_BLADE_RESET          "Blade Reset"
+    SN_SYSTEM_RESET         "System Reset"
+    SN_HANDPIECE_VERSION_PORTA "Handpiece Version Port A"
+    SN_HANDPIECE_VERSION_PORTB "Handpiece Version Port B"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_START_LOWER_CASE     "Start"
+    SN_READING_FLASH_DATA   "Reading Flash Data..."
+    SN_WRITING_FLASH_DATA   "Writing Flash Data..."
+    SN_VERIFYING_FLASH_DATA "Verifying Flash Data..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_FLASH_DATA_FAILED "Reading Flash Data... Failed"
+    SN_WRITING_FLASH_DATA_FAILED "Writing Flash Data... Failed"
+    SN_VERIFYING_FLASH_DATA_FAILED "Verifying Flash Data...Failed"
+    SN_REPAIR_COMPLETE      "Repair Complete."
+    SN_ALL_FLASH_DATA_CORRUPT_REPAIR_NOT_POSSIBLE 
+                            "All of Flash data is corrupt.\rRepair is not possible."
+    SN_LOWER_FLASH_DATA_CORRUPT "Lower flash data is corrupt.\rRepairing..."
+    SN_UPPER_FLASH_DATA_CORRUPT "Upper flash data is corrupt.\rRepairing..."
+    SN_SOFTWARE_UPGRADE_ERROR "Software Upgrade Error"
+    SN_SOFTWARE_UPGRADE     "Software Upgrade"
+    SN_DRIVER_INTERFACE_FAILED "Driver interface failed"
+    SN_ERROR_READING_HEADER_TYPE "Error reading image header type."
+    SN_HEADER_INVALID_CRC   "Image header does not have valid CRC."
+    SN_FAILED_SEEK_END_CE_UPDATE "Failed to seek to end of System update."
+    SN_ERROR_ALLOCATING_MEMORY "Error allocating memory."
+    SN_ERROR_READING_IMAGE_DATA "Error reading image data."
+    SN_SPLASH_DATA_INVALID_CRC "Splash data does not have valid CRC."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_CE_INVALID_CRC       "System data does not have valid CRC."
+    SN_FAILED_SEEK_END_MOTOR_UPDATE "Failed to seek to end of Motor update."
+    SN_ERROR_READING_PROGRAM_FLASH_PAGE "Error reading program flash page."
+    SN_ERROR_WRITING_PROGRAM_FLASH_PAGE "Error writing program flash page."
+    SN_CRC_ERROR_READING_PROGRAM_FLASH "Crc error while reading program flash"
+    SN_ERROR_READING_DATA_FLASH_PAGE "Error reading data flash page."
+    SN_ERROR_WRITING_DATA_FLASH_PAGE "Error writing data flash page."
+    SN_CRC_ERROR_READING_DATA_FLASH "Crc error while reading data flash"
+    SN_UNKNOWN_IMAGE_HEADER_TYPE "Unknown image header type."
+    SN_FLASH_VERIFY_FAILED  "Flash/Verify failed."
+    SN_UPGRADE_SOFTWARE_OK_TO_CONTINUE 
+                            "About to Upgrade Software.\nClick OK to continue."
+    SN_UPGRADE_COMPLETE     "Upgrade Complete"
+    SN_WRITING_LOWER_FLASH_DATA "Writing Lower Flash Data..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_WRITING_UPPER_FLASH_DATA "Writing Upper Flash Data..."
+    SN_VERIFYING_LOWER_FLASH_DATA "Verifying Lower Flash Data..."
+    SN_VERIFYING_UPPER_FLASH_DATA "Verifying Upper Flash Data..."
+    SN_VERIFYING_LOWER_FLASH_DATA_FAILED "Verifying Lower Flash Data...Failed"
+    SN_VERIFYING_UPPER_FLASH_DATA_FAILED "Verifying Upper Flash Data...Failed"
+    SN_WRITING_LOWER_FLASH_DATA_FAILED "Writing Lower Flash Data...Failed"
+    SN_WRITING_UPPER_FLASH_DATA_FAILED "Writing Upper Flash Data...Failed"
+    SN_READING_CE_IMAGE_HEADER "Reading System Image Header..."
+    SN_INVALID_CE_HEADER_CRC "Invalid System Image Header CRC."
+    SN_READING_CE_HEADER_FAILED "Reading System Image Header Failed."
+    SN_ERROR_ALLOCATING_MEM_CE_IMAGE 
+                            "Error allocating memory for System Image."
+    SN_READING_CE_IMAGE_DATA_FAILED "Reading System Image Data Failed."
+    SN_INVALID_SPLASH_DATA_CRC "Invalid Splash Data CRC."
+    SN_INVALID_CE_DATA_CRC  "Invalid System Data CRC."
+    SN_READING_MOTOR_CONTROLLER_HEADER 
+                            "Reading Motor Controller Image Header..."
+    SN_SKIPPING_MOTOR_CONTROLLER_HEADER 
+                            "Skipping Motor Controller Image Header..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MOTOR_CONTROLLER_HEADER_FAILED 
+                            "Reading Motor Controller Header Failed."
+    SN_INVALID_MOTOR_CONTROLLER_HEADER_CRC 
+                            "Invalid Motor Controller Image Header CRC."
+    SN_UPDATING_MOTOR_CONTROLLER_PROGRAM_FLASH 
+                            "Updating Motor Controller Program Flash..."
+    SN_READING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Reading Motor Controller Program Flash Failed."
+    SN_WRITING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Writing Motor Controller Program Flash Failed."
+    SN_INVALED_MOTOR_CONTROLLER_PROGRAM_FLASH_CRC 
+                            "Invalid Motor Controller Program Flash CRC."
+    SN_UPDATING_MOTOR_CONTROLLER_DATA_FLASH 
+                            "Updating Motor Controller Data Flash..."
+    SN_READING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Reading Motor Controller Data Flash Failed."
+    SN_WRITING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Writing Motor Controller Data Flash Failed."
+    SN_INVALID_MOTOR_CONTROLLER_DATA_FLASH_CRC 
+                            "Invalid Motor Controller Data Flash CRC."
+    SN_READING_CE_IMAGE_DATA "Reading System Image Data..."
+    SN_UPDATE_FAILED        "Update Failed.\r"
+    SN_UPDATE_COMPLETE      "Update Complete.\r"
+    SN_PLEASE_REMOVE_USB_DRIVE "Please remove the USB drive."
+    SN_POWER_DOWN_SYSTEM    "Please power down the system."
+    SN_UNKNOWN              "(Unknown)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_SYSTEM_SOFTWARE "Update System Software:\r"
+    SN_TO                   "to"
+    SN_SYSTEM_SOFTWARE      "System Software:\r"
+    SN_NO_CHANGE            "(No Change)"
+    SN_UPDATE_MOTOR_CONTROLLER_SOFTWARE "Update Motor Controller Software:\r"
+    SN_MOTOR_CONTROLLER_SOFTWARE "Motor Controller Software:\r"
+    SN_FLASH_DATA_REPAIR    "Flash Data Repair"
+    SN_CHECK_SERIAL_NUMBER  "Check Serial Number"
+    SN_SERIAL_NUMBER        "Serial Number:\r"
+    SN_VERIFY_SERIAL_NUMBER "Verify the Serial Number matches the one on the back of the unit."
+    SN_ENTER_SERIAL_NUMBER  "Enter Serial Number"
+    SN_SERIAL_NUMBER_INSTRUCTIONS 
+                            "Enter the Serial Number via the keypad on the right.\r\rValid Serial Numbers start at 5001 and contain no more than 7 numeric digits.\r\rPress Enter when you are done."
+    SN_CHANGE               "Change"
+    SN_CONTINUE             "Continue"
+    SN_UPDATE_CANCELLED     "Update Cancelled.\r"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

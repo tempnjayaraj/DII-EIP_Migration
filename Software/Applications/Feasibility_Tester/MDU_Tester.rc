@@ -1,0 +1,708 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE DS_SETFOREGROUND | WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Done",IDC_BUTTON_DONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,343,200,50,21
+    CONTROL         "Custom",IDC_BUTTON_CUSTOM_SETTINGS,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,37,10,50,14
+    CONTROL         "System",IDC_BUTTON_SYSTEM_INFORMATION,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,37,127,50,14
+    CONTROL         "Language",IDC_BUTTON_LANGUAGE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,37,166,50,14
+    LTEXT           "Static",IDC_STATIC_CUSTOM_SETTINGS,88,17,226,25,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "Static",IDC_STATIC_SYSTEM_INFORMATION,88,134,253,25,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "Static",IDC_STATIC_LANGUAGE,88,173,253,25,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CONTROL         "Footswitch",IDC_BUTTON_FOOTSWITCH,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,37,49,50,14
+    LTEXT           "Static",IDC_STATIC_FOOTSWITCH,88,56,253,25,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CONTROL         "Interface",IDC_BUTTON_INTERFACE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,37,88,50,14
+    LTEXT           "Static",IDC_STATIC_INTERFACE,88,95,253,25,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CONTROL         "Mode",IDC_BUTTON_MODE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,348,64,50,14
+    LTEXT           "Static",IDC_STATIC_MODE,332,7,125,40
+    CONTROL         "A",IDC_BUTTON_RESET_BLADE_A,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,345,145,50,14
+    CONTROL         "B",IDC_BUTTON_RESET_BLADE_B,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,399,145,50,14
+    CTEXT           "",IDC_STATIC_RESET,346,120,98,24,SS_CENTERIMAGE
+END
+
+IDD_SYSTEM_INFO DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE DS_SETFOREGROUND | WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Done",IDC_BUTTON_DONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,343,200,50,26
+    CONTROL         "Reset",IDC_BUTTON_RESET,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,358,95,50,14
+    LTEXT           "DYONICS POWER II Control System",IDC_STATIC1,26,14,415,
+                    27,NOT WS_GROUP
+    LTEXT           "REF",IDC_STATIC2,26,47,56,27,NOT WS_GROUP
+    LTEXT           "Software Version",IDC_STATIC3,26,79,213,25,NOT WS_GROUP
+    LTEXT           "72200873",IDC_STATIC_MODEL,94,47,115,27,NOT WS_GROUP
+    LTEXT           "Static",IDC_STATIC_VERSION,252,79,100,25,NOT WS_GROUP
+    LTEXT           "Aplication Version",IDC_STATIC4,42,104,216,19,NOT 
+                    WS_GROUP
+    LTEXT           "Static",IDC_STATIC_VERSION_APP,265,104,76,20,NOT 
+                    WS_GROUP
+    LTEXT           "Motor Controller Version",IDC_STATIC5,42,124,216,20,NOT 
+                    WS_GROUP
+    LTEXT           "Static",IDC_STATIC_VERSION_MC,265,124,75,20,NOT 
+                    WS_GROUP
+    LTEXT           "Handpiece Version Port A",IDC_STATIC6,42,144,216,20,NOT 
+                    WS_GROUP
+    LTEXT           "Static",IDC_STATIC_VERSION_PORTA,265,144,168,20,NOT 
+                    WS_GROUP
+    LTEXT           "Handpiece Version Port B",IDC_STATIC7,42,164,216,20,NOT 
+                    WS_GROUP
+    LTEXT           "Static",IDC_STATIC_VERSION_PORTB,265,164,170,20,NOT 
+                    WS_GROUP
+    LTEXT           "Footswitch Version",IDC_STATIC8,42,184,216,20,NOT 
+                    WS_GROUP
+    LTEXT           "Static",IDC_STATIC_VERSION_FOOT,265,184,75,20,NOT 
+                    WS_GROUP
+    CONTROL         219,IDC_STATIC,"Static",SS_BITMAP,26,214,20,20
+    LTEXT           "2009, 2019 Smith && Nephew",IDC_STATIC_COPYRIGHT,48,215,
+                    217,21,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "SN",IDC_STATIC9,229,47,35,27,NOT WS_GROUP
+    LTEXT           "AAX5001",IDC_STATIC_MODEL2,288,47,115,27,NOT WS_GROUP
+    CONTROL         "",IDC_STATIC_BUTTON_HANDPIECE_SERIALNUMBER_PORTA,"Static",
+                    SS_BITMAP | SS_NOTIFY,14,142,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_HANDPIECE_SERIALNUMBER_PORTB,"Static",
+                    SS_BITMAP | SS_NOTIFY,13,162,15,13
+END
+
+IDD_LANGUAGE DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE DS_SETFOREGROUND | WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Done",IDC_BUTTON_DONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,343,200,50,21
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE1,"Static",SS_BITMAP | 
+                    SS_NOTIFY,34,15,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE2,"Static",SS_BITMAP | 
+                    SS_NOTIFY,34,50,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE3,"Static",SS_BITMAP | 
+                    SS_NOTIFY,34,85,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE4,"Static",SS_BITMAP | 
+                    SS_NOTIFY,34,120,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE5,"Static",SS_BITMAP | 
+                    SS_NOTIFY,34,155,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE6,"Static",SS_BITMAP | 
+                    SS_NOTIFY,240,15,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE7,"Static",SS_BITMAP | 
+                    SS_NOTIFY,240,50,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE8,"Static",SS_BITMAP | 
+                    SS_NOTIFY,240,85,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE9,"Static",SS_BITMAP | 
+                    SS_NOTIFY,240,120,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LANGUAGE10,"Static",SS_BITMAP | 
+                    SS_NOTIFY,240,155,15,13
+    LTEXT           "",IDC_STATIC_LANGUAGE1,95,20,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE2,95,54,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE3,95,89,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE4,95,124,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE5,95,159,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE6,301,20,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE7,301,54,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE8,301,89,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE10,301,159,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_LANGUAGE9,301,124,133,23,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+END
+
+IDD_OSCILLATION_PROFILE DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE DS_SETFOREGROUND | WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Done",IDC_BUTTON_DONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,343,200,50,21
+    CONTROL         "Adjust",IDC_BUTTON_ADJUST_PORTA,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,86,83,50,14
+    CONTROL         "Adjust",IDC_BUTTON_ADJUST_PORTB,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,315,83,50,14
+    CTEXT           "Port A",IDC_STATIC_TEXT1,54,27,134,40,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CTEXT           "Port B",IDC_STATIC_TEXT2,284,26,134,40,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+END
+
+IDD_ICON_STATUS_BAR DIALOG DISCARDABLE  0, 0, 458, 35
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CTEXT           "",IDC_STATIC_TITLE,127,8,181,26,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+END
+
+IDD_LANGUAGE_POPUP DIALOG DISCARDABLE  0, 0, 271, 158
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    LTEXT           "",IDC_STATIC_TITLE,0,0,271,33,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    CONTROL         "Yes",IDC_BUTTON_YES,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    69,107,50,14
+    CONTROL         "No",IDC_BUTTON_NO,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    161,107,50,14
+    LTEXT           "",IDC_STATIC_TEXT,20,36,235,63,NOT WS_GROUP
+END
+
+IDD_PROCEDURE DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Settings",IDC_BUTTON_SETTINGS,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,178,200,50,21
+END
+
+IDD_SYSTEM_ERROR DIALOG DISCARDABLE  0, 0, 458, 274
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    LTEXT           "",IDC_STATIC_TEXT1,52,55,368,24,NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_TEXT2,52,97,368,24,NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_TEXT3,52,138,368,24,NOT WS_GROUP
+END
+
+IDD_FOOTSWITCH DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Set",IDC_BUTTON_SET,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    343,200,50,21
+    CONTROL         "Cancel",IDC_BUTTON_CANCEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,13,200,50,21
+    CTEXT           "Static",IDC_STATIC_TEXT1,9,36,86,19,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "Static",IDC_STATIC_TEXT2,150,154,134,19,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "Static",IDC_STATIC_TEXT3,150,85,133,38,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CONTROL         "",IDC_STATIC_BUTTON_MODE1,"Static",SS_BITMAP | 
+                    SS_NOTIFY,26,64,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_MODE2,"Static",SS_BITMAP | 
+                    SS_NOTIFY,26,111,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_LEFT,"Static",SS_BITMAP | SS_NOTIFY,
+                    298,144,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_RIGHT,"Static",SS_BITMAP | 
+                    SS_NOTIFY,374,144,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_ON,"Static",SS_BITMAP | SS_NOTIFY,
+                    297,81,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_OFF,"Static",SS_BITMAP | SS_NOTIFY,
+                    373,81,15,13
+    LTEXT           "Static",IDC_STATIC_TEXT4,150,24,131,38,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CONTROL         "",IDC_STATIC_BUTTON_PORTA,"Static",SS_BITMAP | 
+                    SS_NOTIFY,297,19,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_PORTB,"Static",SS_BITMAP | 
+                    SS_NOTIFY,373,19,15,13
+END
+
+IDD_OSC_MODE DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Set",IDC_BUTTON_SET,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    343,200,50,21
+    CONTROL         "Cancel",IDC_BUTTON_CANCEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,13,200,50,21
+    CONTROL         "",IDC_STATIC_BUTTON_UP,"Static",SS_BITMAP | SS_NOTIFY,
+                    221,102,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_DOWN,"Static",SS_BITMAP | SS_NOTIFY,
+                    165,102,15,13
+    CTEXT           "Static",IDC_STATIC_TEXT,179,41,70,30,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CONTROL         "Restore Default",IDC_BUTTON_DEFAULT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,178,147,50,21
+    CTEXT           "Static",IDC_STATIC_TEXT2,136,75,155,19,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CTEXT           "Static",IDC_STATIC_TEXT3,21,15,386,19,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+END
+
+IDD_MESSAGE_BOX DIALOG DISCARDABLE  40, 41, 383, 188
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    LTEXT           "",IDC_STATIC_TITLE,0,0,383,33,SS_CENTERIMAGE
+    LTEXT           "",IDC_STATIC_MESSAGE_TEXT,20,40,343,97,SS_CENTERIMAGE
+    CONTROL         "OK",IDC_BUTTON_OK,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    169,145,50,14
+    CONTROL         "Yes",IDC_BUTTON_ACCEPT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,133,145,50,14
+    CONTROL         "No",IDC_BUTTON_CANCEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,206,145,50,14
+END
+
+IDD_REMOTE_SETTINGS DIALOG DISCARDABLE  0, 35, 458, 240
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Set",IDC_BUTTON_SET,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    343,200,50,21
+    CONTROL         "Cancel",IDC_BUTTON_CANCEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,13,200,50,21
+    LTEXT           "Static",IDC_STATIC_TEXT1,33,27,129,19,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CONTROL         "",IDC_STATIC_BUTTON_PORTA,"Static",SS_BITMAP | 
+                    SS_NOTIFY,180,17,15,13
+    CONTROL         "",IDC_STATIC_BUTTON_PORTB,"Static",SS_BITMAP | 
+                    SS_NOTIFY,256,17,15,13
+END
+
+IDD_TEST_MODE DIALOG DISCARDABLE  0, 0, 458, 275
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_LIST1,54,30,118,96,LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    LISTBOX         IDC_LIST2,284,30,118,96,LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    LTEXT           "",IDC_FATAL_ERROR_TEXT,44,222,368,24,NOT WS_GROUP
+    CTEXT           "Static",IDC_STATIC1,54,10,118,18
+    CTEXT           "Static",IDC_STATIC2,284,8,118,18
+    CTEXT           "Static",IDC_STATIC3,54,140,118,18
+    CTEXT           "Static",IDC_STATIC4,284,140,118,18
+    CTEXT           "Static",IDC_STATIC5,54,201,118,18
+END
+
+IDD_FACTORY DIALOG DISCARDABLE  0, 0, 458, 275
+STYLE WS_POPUP | WS_BORDER
+FONT 8, "System"
+BEGIN
+    CTEXT           "Test List",IDC_STATIC_TEST_LIST_TITLE,31,7,106,20,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "Instructions",IDC_STATIC_INSTRUCTIONS_TITLE,253,7,106,
+                    20,SS_CENTERIMAGE
+    CTEXT           "Test Title",IDC_STATIC_TEST_TITLE,245,139,134,20,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_TEST_LIST_TEXT,6,27,162,223,ES_MULTILINE | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_INSTRUCTIONS_TEXT,174,27,276,91,
+                    SS_CENTERIMAGE | NOT WS_GROUP,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CTEXT           "",IDC_STATIC_TEST_TEXT,239,160,151,37,SS_CENTERIMAGE | 
+                    NOT WS_GROUP,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         "Middle",IDC_BUTTON_MIDDLE,"Button",BS_OWNERDRAW,178,235,
+                    50,26
+    CONTROL         "Right",IDC_BUTTON_RIGHT,"Button",BS_OWNERDRAW,343,235,
+                    50,26
+    CONTROL         "Set Default",IDC_BUTTON_SET_DEFAULT,"Button",
+                    BS_OWNERDRAW,260,158,50,26
+END
+
+IDD_SERIAL_NUMBER DIALOG DISCARDABLE  30, 20, 400, 230
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUP
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 8, "System"
+BEGIN
+    CTEXT           "No Serial Number Detected",IDC_STATIC_TITLE,7,5,387,29,
+                    SS_CENTERIMAGE
+    LTEXT           "Enter the Serial Number of the DYONICS POWER II System via the Keypad on the Right. Press Enter when you are done.",
+                    IDC_STATIC_MESSAGE_TEXT,20,93,199,118,0,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         "7",IDC_BUTTON_NUMPAD_7,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,45,43,43
+    CONTROL         "8",IDC_BUTTON_NUMPAD_8,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,45,43,43
+    CONTROL         "9",IDC_BUTTON_NUMPAD_9,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,45,43,43
+    CONTROL         "4",IDC_BUTTON_NUMPAD_4,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,89,43,43
+    CONTROL         "5",IDC_BUTTON_NUMPAD_5,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,89,43,43
+    CONTROL         "6",IDC_BUTTON_NUMPAD_6,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,89,43,43
+    CONTROL         "1",IDC_BUTTON_NUMPAD_1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,131,43,43
+    CONTROL         "2",IDC_BUTTON_NUMPAD_2,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,131,43,43
+    CONTROL         "3",IDC_BUTTON_NUMPAD_3,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,131,43,43
+    CONTROL         "Del",IDC_BUTTON_NUMPAD_DEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,173,43,43
+    CONTROL         "0",IDC_BUTTON_NUMPAD_0,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,173,43,43
+    CONTROL         "Enter",IDC_BUTTON_NUMPAD_ENTER,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,173,43,43
+    CTEXT           "AAX",IDC_STATIC_MESSAGE_TEXT2,48,47,147,32,
+                    SS_CENTERIMAGE,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC2,234,39,150,184,0,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_HANDPIECE_COUNT_POPUP_PORTA DIALOG DISCARDABLE  5, 45, 220, 156
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "OK",IDC_BUTTON_YES,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    83,104,50,14
+    LTEXT           "",IDC_STATIC_TEXT,7,50,206,49,NOT WS_GROUP
+    CTEXT           "",IDC_STATIC_TITLE,7,5,206,33,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+END
+
+IDD_HANDPIECE_COUNT_POPUP_PORTB DIALOG DISCARDABLE  235, 45, 220, 158
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "OK",IDC_BUTTON_YES,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    83,104,50,14
+    LTEXT           "",IDC_STATIC_TEXT,7,50,206,49,NOT WS_GROUP
+    CTEXT           "",IDC_STATIC_TITLE,7,5,206,33,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,1,0
+ PRODUCTVERSION 2,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew, Inc.\0"
+            VALUE "FileDescription", "MDU_Tester WCE MFC Application\0"
+            VALUE "FileVersion", "2, 0, 1, 0\0"
+            VALUE "InternalName", "MDU_Tester\0"
+            VALUE "LegalCopyright", "Copyright © 2009, 2019\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MDU_Tester.exe\0"
+            VALUE "ProductName", "MDU_Tester Application\0"
+            VALUE "ProductVersion", "2, 0, 1, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+    END
+
+    IDD_SYSTEM_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+    END
+
+    IDD_LANGUAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+    END
+
+    IDD_OSCILLATION_PROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 449
+        TOPMARGIN, 7
+    END
+
+    IDD_LANGUAGE_POPUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_PROCEDURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_SYSTEM_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_FOOTSWITCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_OSC_MODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_MESSAGE_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 376
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_REMOTE_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_TEST_MODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_FACTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_SERIAL_NUMBER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 394
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_HANDPIECE_COUNT_POPUP_PORTA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_HANDPIECE_COUNT_POPUP_PORTB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        BOTTOMMARGIN, 156
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_BK_BUTTON    BITMAP  DISCARDABLE     "Graphics\\BlackBtn.bmp"
+IDB_BITMAP_BK_BUTTON_PRESSED BITMAP  DISCARDABLE     "Graphics\\BlackBtnPressed.bmp"
+IDB_BITMAP_BUTTON_ARROW_UP BITMAP  DISCARDABLE     "Graphics\\BtnArrowUp.bmp"
+IDB_BITMAP_BUTTON_ARROW_UP_PRESSED BITMAP  DISCARDABLE     "Graphics\\BtnArrowUpPressed.bmp"
+IDB_BITMAP_BUTTON_ARROW_DOWN BITMAP  DISCARDABLE     "Graphics\\BtnArrowDown.bmp"
+IDB_BITMAP_BUTTON_ARROW_DOWN_PRESSED BITMAP  DISCARDABLE     "Graphics\\BtnArrowDownPressed.bmp"
+IDB_BITMAP_BUTTON_GRAY  BITMAP  DISCARDABLE     "Graphics\\GrayBtn.bmp"
+IDB_BITMAP_BUTTON_GRAY_PRESSED BITMAP  DISCARDABLE     "Graphics\\GrayBtnPressed.bmp"
+IDB_BITMAP_BUTTON_WINDOW BITMAP  DISCARDABLE     "Graphics\\BtnWindow.bmp"
+IDB_BITMAP_BUTTON_WINDOW_PRESSED BITMAP  DISCARDABLE     "Graphics\\BtnWindowPressed.bmp"
+IDB_BITMAP_GRAY_BUTTON_ROUND BITMAP  DISCARDABLE     "Graphics\\GrayBtnRound.bmp"
+IDB_BITMAP_GRAY_BUTTON_ROUND_PRESSED BITMAP  DISCARDABLE     "Graphics\\GrayBtnRoundPressed.bmp"
+IDB_BITMAP_ARROW_LEFT   BITMAP  DISCARDABLE     "Graphics\\ArrowLeft.bmp"
+IDB_BITMAP_ARROW_RIGHT  BITMAP  DISCARDABLE     "Graphics\\ArrowRight.bmp"
+IDB_BITMAP_BLANK        BITMAP  DISCARDABLE     "Graphics\\Blank.bmp"
+IDB_BITMAP_SHAVER_ICON_PORTA BITMAP  DISCARDABLE     "Graphics\\ShaverPortA.bmp"
+IDB_BITMAP_PUMP_BLUE_ICON BITMAP  DISCARDABLE     "Graphics\\ImpellerBlue.bmp"
+IDB_BITMAP_PUMP_ROTATE_30 BITMAP  DISCARDABLE     "Graphics\\ImpellerBlue30.bmp"
+IDB_BITMAP_PUMP_ROTATE_60 BITMAP  DISCARDABLE     "Graphics\\ImpellerBlue60.bmp"
+IDB_BITMAP_SAW_ICON_PORTA BITMAP  DISCARDABLE     "Graphics\\SawPortA.bmp"
+IDB_BITMAP_DRILL_ICON_PORTA BITMAP  DISCARDABLE     "Graphics\\DrillPortA.bmp"
+IDB_BITMAP_FOOT_PEDAL_ICON_PORTA BITMAP  DISCARDABLE     "Graphics\\FootPedalPortA.bmp"
+IDB_BITMAP_GRAY_BUTTON_ON BITMAP  DISCARDABLE     "Graphics\\GrayBtnOn.bmp"
+IDB_BITMAP_GRAY_BUTTON_OFF BITMAP  DISCARDABLE     "Graphics\\GrayBtnOff.bmp"
+IDB_BITMAP_GRAY_BUTTON_SMALL_OFF BITMAP  DISCARDABLE     "Graphics\\GrayBtnSmallOff.bmp"
+IDB_BITMAP_GRAY_BUTTON_SMALL_ON BITMAP  DISCARDABLE     "Graphics\\GrayBtnSmallOn.bmp"
+IDB_BITMAP_GRAY_BUTTON_ROUND_WHITEBK BITMAP  DISCARDABLE     "Graphics\\GrayBtnRoundWhiteBackground.bmp"
+IDB_BITMAP_GRAY_BUTTON_ROUND_PRESSED_WHITEBK BITMAP  DISCARDABLE     "Graphics\\GrayBtnRoundWhiteBackgroundPressed.bmp"
+IDB_BITMAP_CONNECTED_BRIDGE_ICON BITMAP  DISCARDABLE     "Graphics\\IntellioLinkIcon.bmp"
+IDB_BITMAP_ARROW_LEFT_WHITE BITMAP  DISCARDABLE     "Graphics\\ArrowLeftWhite.bmp"
+IDB_BITMAP_ARROW_RIGHT_WHITE BITMAP  DISCARDABLE     "Graphics\\ArrowRightWhite.bmp"
+IDB_BITMAP_PUMP_GRAY_ICON BITMAP  DISCARDABLE     "Graphics\\ImpellerGray.bmp"
+IDB_BITMAP_GRAY_BUTTON_DISABLED BITMAP  DISCARDABLE     "Graphics\\GrayBtnDisabled.bmp"
+IDB_BITMAP_DRILL_ICON_PORTB BITMAP  DISCARDABLE     "Graphics\\DrillPortB.bmp"
+IDB_BITMAP_FOOT_PEDAL_ICON_PORTB BITMAP  DISCARDABLE     "Graphics\\FootPedalPortB.bmp"
+IDB_BITMAP_SHAVER_ICON_PORTB BITMAP  DISCARDABLE     "Graphics\\ShaverPortB.bmp"
+IDB_BITMAP_SAW_ICON_PORTB BITMAP  DISCARDABLE     "Graphics\\SawPortB.bmp"
+IDB_BITMAP_GRAY_BUTTON_LARGE BITMAP  DISCARDABLE     "Graphics\\GrayBtnLarge.bmp"
+IDB_BITMAP_GRAY_BUTTON_LARGE_PRESSED BITMAP  DISCARDABLE     "Graphics\\GrayBtnLargePressed.bmp"
+IDB_COPYRIGHT           BITMAP  DISCARDABLE     "Graphics\\CopyRight.bmp"
+IDB_BITMAP_GRAY_BUTTON_LARGE_ON BITMAP  DISCARDABLE     "Graphics\\GrayBtnLargeOn.bmp"
+IDB_BITMAP_GRAY_BUTTON_LARGE_OFF BITMAP  DISCARDABLE     "Graphics\\GrayBtnLargeOff.bmp"
+IDB_BITMAP_BUTTON_DELTA_MODE BITMAP  DISCARDABLE     "Graphics\\BtnDeltaMode.bmp"
+IDB_BITMAP_BUTTON_DELTA_MODE_PRESSED BITMAP  DISCARDABLE     "Graphics\\BtnDeltaModePressed.bmp"
+IDB_BITMAP_GRAY_ROUND_BLUE_RING BITMAP  DISCARDABLE     "Graphics\\BtnBlueRing.bmp"
+IDB_BITMAP_GRAY_ROUND_YELLOW_RING BITMAP  DISCARDABLE     "Graphics\\BtnYellowRing.bmp"
+IDB_BITMAP_BTN_CHECK_MARK BITMAP  DISCARDABLE     "Graphics\\BtnCheckMark.bmp"
+IDB_BITMAP_BTN_X_MARK   BITMAP  DISCARDABLE     "Graphics\\BtnXMark.bmp"
+IDB_BITMAP_CONNECTOR_PORTA BITMAP  DISCARDABLE     "Graphics\\ConnectorPortA.bmp"
+IDB_BITMAP_CONNECTOR_PORTB BITMAP  DISCARDABLE     "Graphics\\ConnectorPortB.bmp"
+IDB_BITMAP_TESTDOT      BITMAP  DISCARDABLE     "Graphics\\testDot.bmp"
+IDB_BITMAP_TESTDOT_BLUE BITMAP  DISCARDABLE     "Graphics\\testDotBlue.bmp"
+IDB_BITMAP_TESTDOT_ORANGE BITMAP  DISCARDABLE     "Graphics\\testDotOrange.bmp"
+IDB_BITMAP_TESTDOT_YELLOW BITMAP  DISCARDABLE     "Graphics\\testDotYellow.bmp"
+IDB_BITMAP_BUTTON_HANDPIECE_COUNT BITMAP  DISCARDABLE     "Graphics\\BtnHandpieceCount.bmp"
+IDB_BITMAP_BUTTON_HANDPIECE_SERIALNUMBER_RESET BITMAP  DISCARDABLE     "graphics\\bitmap_b.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

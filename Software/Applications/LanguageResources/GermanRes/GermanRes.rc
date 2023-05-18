@@ -1,0 +1,546 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew\0"
+            VALUE "FileDescription", "GermanRes DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "GermanRes\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "GermanRes.dll\0"
+            VALUE "ProductName", "GermanRes Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_MEDIUM_SPEED         "Mittel"
+    SN_PUMPING              "Pumpen"
+    SN_SETTINGS             "Einstellungen"
+    SN_SET_SUCTION          "Saugung\reinstellen"
+    SN_LARGE                "Groß"
+    SN_MEDIUM               "Mittel"
+    SN_SMALL                "Klein"
+    SN_SET_PRESSURE_MMHG    "Solldruck in mmHg"
+    SN_SET_FLOW_LIMIT_LMIN  "\rSollflussgrenzwert in l/min"
+    SN_PRESSURE_MMHG        "Druck in mmHg"
+    SN_FLOW_RATE_LMIN       "Flussrate in l/min"
+    SN_PRESS                "Pumpen"
+    SN_TO_PUMP              "START drücken"
+    SN_LAVAGE               "Lavage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_START         "Lavage starten"
+    SN_NORMAL               "Normal"
+    SN_DONE                 "Fertig"
+    SN_SET_SUCTION_LEVELS   "Saugstärken einstellen"
+    SN_SHAVER_NOT_DETECTED  "Kein Shaver festgestellt"
+    SN_PERCENTAGE           "%"
+    SN_SHAVER_ON            "Shaver\reingeschaltet"
+    SN_SHAVER_OFF           "Shaver\rabgeschaltet"
+    SN_LOW_SPEED            "Niedrig"
+    SN_HIGH_SPEED           "Hoch"
+    SN_OTHER                "Sonstige"
+    SN_SET                  "Einstellen"
+    SN_CANCEL               "Abbrechen"
+    SN_CUSTOM_PRESSURE_MMHG "Benutzerdefinierter Druck in mmHg"
+    SN_CANNULA              "Kanüle"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD             "Standard"
+    SN_LARGE_DIAMETER       "Großer\rDurchmesser"
+    SN_SMALL_JOINT          "Kleines\rGelenk"
+    SN_SMALL_JOINT_SINGLE_LINE "Kanüle\rmit kleinem Gelenk"
+    SN_LARGE_DIAMETER_SINGLE_LINE "Kanüle\rmit großem Durchmesser"
+    SN_RESTORE_DEFAULT      "Standard\rsetzen"
+    SN_CUSTOM_FLOW_RATE_LIMIT "Benutzerdefinierte Flussrate in l/min"
+    SN_CUSTOM_SUCTION       "Benutzerdef. Saugstärke/Klingengeschw."
+    SN_SHAVER               "Shaver"
+    SN_NOT_DETECTED         "Nicht festgestellt"
+    SN_SYSTEM_INFORMATION   "Systemdaten"
+    SN_FLUID_MANAGEMENT     "DYONICS 25-Flüssigkeitsverwaltungssystem"
+    SN_MODEL                "REF"
+    SN_MODEL_NUMBER         "7211010"
+    SN_VERSION              "Software-Version"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PRESSURE             "Druck"
+    SN_FLOW_RATE_LIMIT      "Flussratengrenzwert"
+    SN_SUCTION              "Saugstärke/Klingengeschwindigkeit"
+    SN_CUSTOM_SETTINGS      "Benutzerdefinierte Einstellungen"
+    SN_LANGUAGE             "Sprache"
+    SN_PURGE                "Entleeren"
+    SN_PURGING              "Entleerung"
+    SN_PERIOD               "."
+    SN_PURGING_IN_PROCESS   "Entleerung wird ausgeführt"
+    SN_PURGE_CASSETTE       "Purge Cassette"
+    SN_SIZE                 "Größe"
+    SN_STOP                 "   STOPP"
+    SN_START                "   START"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PURGE_DONE           "   FERTIG"
+    SN_ENGLISH              "English"
+    SN_SELECT_CUSTOM_MODE   "Benutzerdef.\r Modus wählen"
+    SN_SELECT_DEFAULT_MODE  "Standardmodus\rwählen"
+    SN_IN_CUSTOM_MODE       "Im benutzerdefinierten Modus"
+    SN_IN_DEFAULT_MODE      "Im Standard-Modus"
+    SN_PRESS_DONE_WHEN_FINISHED "Nach Abschluss FERTIG drücken"
+    SN_OVERPRESSURE         "ÜBERDRUCK"
+    SN_OVERPRESSURE_TIMEOUT "ÜBERDRUCK ZEITLIMIT"
+    SN_INVALID_CASSETTE_TYPE " Unbekannter Kassettentyp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_STOP          "Lavage\rstoppen"
+    SN_CUSTOM_CANNULA       "Benutzerdefinierte Kanüle"
+    SN_GRAVITY_INFLOW       "Schwerkraftzufluss"
+    SN_SYSTEM_ERROR         "SYSTEMFEHLER"
+    SN_SYSTEM_COMM_ERROR    "Interner Kommunikationsfehler"
+    SN_TRANSDUCER_ERROR     "Druckwandlerfehler"
+    SN_PUMP_ERROR           "Pumpenmotorfehler"
+    SN_AIR_IN_TUBING        "Luft in Leitungssatz"
+    SN_TEMPERATURE_FAULT    "TEMPERATURGRENZWERT"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_TEMPERATURE_ERROR    "Temperaturfehler"
+    SN_SYSTEM_RESOURCE_ERROR "Systemressourcenfehler"
+    SN_PINCH_VALVE_ERROR    "Quetschventilfehler"
+    SN_NO_INSTRUMENT_DETECTED "Kein Instrument festgestellt"
+    SN_APPLICATION_VERSION  "Anwendungsversion"
+    SN_MOTOR_CONTROLLER_VERSION "Motorsteuerungsversion"
+    SN_REMOTE_CONTROLL_ERROR "Fernbedienungsfehler"
+    SN_OUTFLOW_CONTROL      "Abflussteuerung"
+    SN_LOAD_CASSETTE        " Kassette laden"
+    SN_BLADE_SPEED          "Klingengeschwindigkeit"
+    SN_CUSTOM_SETTINGS_SAVE_FAILURE "Benutzerdef. Einst. nicht speicherbar"
+    SN_CUSTOM_SETTINGS_RETRIEVE_FAILURE "Benutzerdef. Einst. nicht abrufbar"
+    SN_BATTERY_FAILURE      "Benutzerdef. Einstellungen verloren"
+    SN_ERROR                "Fehler"
+    SN_REMOVE_CASSETTE      "Kassette entnehmen"
+    SN_NO_CASSETTE          "Keine Kassette"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_INSERT_CASSETTE      "Kassette einlegen"
+    SN_PRESSURE_APPLIED     "Angelegter Druck – NULL FLUSS"
+    SN_TEST_COMPLETE        "Test abgeschlossen"
+    SN_FLOW_TEST            "Flusstest"
+    SN_PRESSURE_P1_MMHG     "Druck P1 in mmHg"
+    SN_PRESSURE_P2_MMHG     "Druck P2 in mmHg"
+    SN_END_TEST             "  \r      Druck abl\r      Kass entn\r      USB-Schlüssel abz\r      Gerät absch"
+    SN_FRENCH               "Français"
+    SN_GERMAN               "Deutsch"
+    SN_ITALIAN              "Italiano"
+    SN_SPANISH              "Español"
+    SN_WRONG_NO_INSTRUMENT  "Falsches/Kein Instrument"
+    SN_LANGUAGE_SELECTION   "Sprachenauswahl"
+    SN_LANGUAGE_TEXT        "Möchten Sie die Anzeigesprache wirklich auf < ändern?"
+    SN_YES                  "Ja"
+    SN_NO                   "Nein"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD_SINGLE_LINE "Standard\rkanüle"
+    SN_SWEDISH              "Svenska"
+    SN_DANISH               "Dansk"
+    SN_DUTCH                "Nederlands"
+    SN_NORWEGIAN            "Norsk"
+    SN_PORTUGUESE           "Português"
+    SN_INCOMPLETE_CASSETTE_INSERTION "FEHLER, KASSETTENEINLEGUNG/DRUCK-OFFSET"
+    SN_RESTART_CONTROL      "   – KASSETTE ENTNEHMEN\r   – STEUEREINHEIT NEU STARTEN\r   – KASSETTE VOLLSTÄNDIG EINLEGEN"
+    SN_HIGH_FLOW            "Starker\rFluss"
+    SN_MEDIUM_FLOW          "Mittlerer\rFluss"
+    SN_LOW_FLOW             "Schwacher\rFluss"
+    SN_LOW_FLOW_CANNULA     "Schwachfluss-\rKanüle"
+    SN_MEDIUM_FLOW_CANNULA  "Mittelfluss-\rKanüle"
+    SN_HIGH_FLOW_CANNULA    "Starkfluss-\rKanüle"
+    SN_REMOTE_CONTROL_BATTERY_LOW "Fernsteuerungsbatterie niedrig"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_SHAVER_MODEL_NUMBER  "72200873"
+    SN_WINDOW               "Fenster"
+    SN_RPM                  "U/min"
+    SN_SPEED                "Geschw./Drehzahl %"
+    SN_DYONICS_POWER_SHAVER "DYONICS POWER II-Steuersystem"
+    SN_OSCILLATE_MODE       "Oszillierender Modus"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_BUR                  "Fräse"
+    SN_STRAIGHT             "gerade"
+    SN_FAST_BUR             "Schnelle Fräse"
+    SN_CURVED               "gebogen"
+    SN_BLADE_INVALID        "Klinge ungültig"
+    SN_PORT_CONTROL         "Anschlusskontrolle"
+    SN_PORTA                "Anschluss\rA"
+    SN_PORTB                "Anschluss\rB"
+    SN_INTERFACE            "Pumpen-Benutzeroberfläche"
+    SN_INVALID_BLADE_ID     "Unbekannte Klinge"
+    SN_INVALID_DEVICE_ID    "Unbekanntes Handstück"
+    SN_INVALID_HALL_PATTERN "Handstück-Sensorfehler"
+    SN_MOTOR_STALL          "Handstück ausgefallen"
+    SN_MOTOR_TAC_FAULT      "Handstück-Motorfehler"
+    SN_SHORT_CIRCUIT_DETECTED "Kurzschluss aufgetreten"
+    SN_FOOT_STUCK_PEDAL     "Fußschalter-Fehler"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_DEFAULT_PAREN        "(Standard)"
+    SN_FOOTSWITCH           "Fußschalter"
+    SN_DEFAULT              "Standard"
+    SN_OSCILLATE_MODE1      "Oszillierender Modus 1"
+    SN_OSCILLATE_MODE2      "Oszillierender Modus 2"
+    SN_SECONDS              "Sekunden"
+    SN_REVOLUTIONS          "Umdrehungen"
+    SN_MODE                 "  Modus"
+    SN_FORWARD              "Vorwärts"
+    SN_HAND_CONTROL_OVERRIDE "Handsteuerung\r    Korrektur"
+    SN_ON_OFF               "Ein/Aus"
+    SN_VARIABLE             "Variable"
+    SN_LEFT                 "L"
+    SN_RIGHT                "R"
+    SN_ON                   "Ein"
+    SN_OFF                  "Aus"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_FOOT_LOW_BATTERY     "Fußschalter – Batterie niedrig"
+    SN_TEMPERATURE_FAULT_DETAIL 
+                            "Gerät überhitzt. Auf blockierte Luftzufuhr prüfen. Ventilatoren prüfen."
+    SN_OK                   "OK"
+    SN_WARNING              "Warnung"
+    SN_MOTOR_STALL_DETAIL   "Handstückmotor läuft nicht. Anderes Handstück verwenden."
+    SN_MOTOR_TAC_FAULT_DETAIL 
+                            "Anderen Anschluss verwenden. Liegt das Problem weiterhin vor, anderes Handstück verwenden."
+    SN_MOTOR_CURRENT_LIMIT  "Handstücküberlastung"
+    SN_MOTOR_TORQUE_LIMIT   "Motorkraftgrenze"
+    SN_SET_SPEEDS_SAVE_FAILURE 
+                            "Eingestellte Drehzahlen können nicht gespeichert werden."
+    SN_SET_SPEEDS_RETRIEVE_FAILURE 
+                            "Eingestellte Drehzahlen können nicht abgerufen werden."
+    SN_INVALID_DEVICE_ID_DETAIL 
+                            "Handstück wird nicht erkannt/unterstützt. Anderes Handstück verwenden."
+    SN_INVALID_BLADE_ID_DETAIL 
+                            "Klingenart wird für angeschlossenes Handstück nicht unterstützt. Handstück wird im Modus „SAFE“ (gesichert) verwendet."
+    SN_SHORT_CIRCUIT_DETAIL "Kurzschluss bei Handstück oder Anschluss aufgetreten. Anderes Handstück verwenden. Liegt Problem weiterhin vor, Gerät zur Reparatur einsenden."
+    SN_UNKNOWN_FOOT_ID      "Unbekannter Fußschalter"
+    SN_UNKNOWN_FOOT_ID_DETAIL 
+                            "Keine Kommunikation mit Fußschalter möglich. Anderen Fußschalter verwenden."
+    SN_HAND_STUCK_BUTTON    "Handstück-Fehler"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_HAND_STUCK_BUTTON_DETAIL 
+                            "Handstück auf gedrückte Tasten prüfen. Sind keine Tasten gedrückt, anderes Handstück verwenden."
+    SN_FOOT_STUCK_PEDAL_DETAIL 
+                            "Fußschalter auf gedrückte Pedale oder Schalter prüfen. Sind keine gedrückt, anderen Fußschalter verwenden."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT "Handstücküberlastungs-Zeitüberschreitung"
+    SN_MOTOR_CURRENT_LIMIT_DETAIL "Handstücküberlastung aufgetreten."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT_DETAIL 
+                            "Handstücküberlastung aufgetreten. Anderes Handstück verwenden."
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT "Klinge ausgefallen"
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT_DETAIL 
+                            "Handstück oder Klinge ausgefallen. Handstück außer Betrieb nehmen und Klinge prüfen."
+    SN_INVALID_HALL_PATTERN_DETAIL 
+                            "Handstück-Sensorfehler. Handstück wird im Modus „SAFE“ (gesichert) verwendet."
+    SN_FOOT_LOW_BATTERY_DETAIL 
+                            "Batterie des kabellosen Fußschalters neu laden."
+    SN_FOOTSWITCH_REQUIRED  "Fußschalter erforderlich"
+    SN_FOOTSWITCH_REQUIRED_DETAIL 
+                            "Handstück hat keine Steuerung und erfordert einen Fußschalter."
+    SN_IN_BLADE_DEFAULT     "Stand-Kli-Geschw"
+    SN_IN_BLADE_RECALL      "Gesp-Kli-Geschw"
+    SN_SELECT_BLADE_DEFAULT "Stand.\rKlinge wählen"
+    SN_SELECT_BLADE_RECALL  "Gesp.\rKlinge wählen"
+    SN_FOOTSWITCH_VERSION   "Fußschalter Vers."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_ADJUST               "Einstell"
+    SN_FACTORY_DEFAULT      "System\rReset"
+    SN_ARE_YOU_SURE         "Alle gespeicherten Einstellungen zurücksetzen?"
+    SN_SET_OSCILLATE_PERIOD "Oszill-Zeit einst."
+    SN_SET_NUMBER_REVOLUTIONS "Umdrehungszahl einst."
+    SN_MODE1                "Modus1"
+    SN_MODE2                "Modus2"
+    SN_RATE                 "RATE"
+    SN_A                    "A"
+    SN_B                    "B"
+    SN_BLADE_RESET          "Kli. Reset"
+    SN_SYSTEM_RESET         "System Reset"
+    SN_HANDPIECE_VERSION_PORTA "Handstückversion Anschluss A"
+    SN_HANDPIECE_VERSION_PORTB "Handstückversion Anschluss B"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_START_LOWER_CASE     "Start"
+    SN_READING_FLASH_DATA   "Lesen der Flash-Daten..."
+    SN_WRITING_FLASH_DATA   "Schreiben der Flash-Daten..."
+    SN_VERIFYING_FLASH_DATA "Überprüfen der Flash-Daten..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_FLASH_DATA_FAILED "Lesen der Flash-Daten... fehlgeschlagen"
+    SN_WRITING_FLASH_DATA_FAILED "Schreiben der Flash-Daten... fehlgeschlagen"
+    SN_VERIFYING_FLASH_DATA_FAILED 
+                            "Überprüfen der Flash-Daten...fehlgeschlagen"
+    SN_REPAIR_COMPLETE      "Reparatur abgeschlossen."
+    SN_ALL_FLASH_DATA_CORRUPT_REPAIR_NOT_POSSIBLE 
+                            "Alle Flash-Daten sind beschädigt.\rReparatur nicht möglich."
+    SN_LOWER_FLASH_DATA_CORRUPT "Untere Flash-Daten beschädigt.\rReparatur..."
+    SN_UPPER_FLASH_DATA_CORRUPT "Obere Flash-Daten beschädigt.\rReparatur..."
+    SN_SOFTWARE_UPGRADE_ERROR "Software-Upgrade-Fehler"
+    SN_SOFTWARE_UPGRADE     "Software-Upgrade"
+    SN_DRIVER_INTERFACE_FAILED "Treiberschnittstelle ausgefallen"
+    SN_ERROR_READING_HEADER_TYPE "Fehler beim Lesen des Bildüberschrifttyps"
+    SN_HEADER_INVALID_CRC   "Bildüberschrift ohne gültiges CRC"
+    SN_FAILED_SEEK_END_CE_UPDATE 
+                            "Suche bis zum Ende der Systemaktualisierung fehlgeschlagen."
+    SN_ERROR_ALLOCATING_MEMORY "Fehler bei der Speicherzuweisung"
+    SN_ERROR_READING_IMAGE_DATA "Fehler beim Lesen der Bilddaten."
+    SN_SPLASH_DATA_INVALID_CRC "Splash-Daten ohne gültiges CRC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_CE_INVALID_CRC       "Systemdaten ohne gültiges CRC"
+    SN_FAILED_SEEK_END_MOTOR_UPDATE 
+                            "Suche bis zum Ende der Motoraktualisierung fehlgeschlagen."
+    SN_ERROR_READING_PROGRAM_FLASH_PAGE 
+                            "Fehler beim Lesen der Programm-Flash-Seite"
+    SN_ERROR_WRITING_PROGRAM_FLASH_PAGE 
+                            "Fehler beim Schreiben der Programm-Flash-Seite"
+    SN_CRC_ERROR_READING_PROGRAM_FLASH 
+                            "CRC-Fehler beim Lesen von Programm-Flash"
+    SN_ERROR_READING_DATA_FLASH_PAGE "Fehler beim Lesen der Daten-Flash-Seite"
+    SN_ERROR_WRITING_DATA_FLASH_PAGE 
+                            "Fehler beim Schreiben der Daten-Flash-Seite"
+    SN_CRC_ERROR_READING_DATA_FLASH "CRC-Fehler beim Lesen von Daten-Flash"
+    SN_UNKNOWN_IMAGE_HEADER_TYPE "Unbekannter Bildüberschrifttyp"
+    SN_FLASH_VERIFY_FAILED  "Flash/Überprüfung fehlgeschlagen"
+    SN_UPGRADE_SOFTWARE_OK_TO_CONTINUE 
+                            "Info über Upgrade-Software.\nZum Fortfahren auf OK klicken."
+    SN_UPGRADE_COMPLETE     "Upgrade abgeschlossen"
+    SN_WRITING_LOWER_FLASH_DATA "Schreiben der unteren Flash-Daten..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_WRITING_UPPER_FLASH_DATA "Schreiben der oberen Flash-Daten..."
+    SN_VERIFYING_LOWER_FLASH_DATA "Überprüfen der unteren Flash-Daten..."
+    SN_VERIFYING_UPPER_FLASH_DATA "Überprüfen der oberen Flash-Daten..."
+    SN_VERIFYING_LOWER_FLASH_DATA_FAILED 
+                            "Überprüfen der unteren Flash-Daten...fehlgeschlagen"
+    SN_VERIFYING_UPPER_FLASH_DATA_FAILED 
+                            "Überprüfen der oberen Flash-Daten...fehlgeschlagen"
+    SN_WRITING_LOWER_FLASH_DATA_FAILED 
+                            "Schreiben der unteren Flash-Daten...fehlgeschlagen"
+    SN_WRITING_UPPER_FLASH_DATA_FAILED 
+                            "Schreiben der oberen Flash-Daten...fehlgeschlagen"
+    SN_READING_CE_IMAGE_HEADER "Lesen der Systembildüberschrift..."
+    SN_INVALID_CE_HEADER_CRC "Systembildüberschrift-CRC ungültig"
+    SN_READING_CE_HEADER_FAILED 
+                            "Lesen der Systembildüberschrift fehlgeschlagen."
+    SN_ERROR_ALLOCATING_MEM_CE_IMAGE 
+                            "Fehler bei der Speicherzuweisung für Systembild"
+    SN_READING_CE_IMAGE_DATA_FAILED "Lesen der Systembilddaten fehlgeschlagen"
+    SN_INVALID_SPLASH_DATA_CRC "Splash-Daten-CRC ungültig"
+    SN_INVALID_CE_DATA_CRC  "Systemdaten-CRC ungültig"
+    SN_READING_MOTOR_CONTROLLER_HEADER 
+                            "Lesen der Motorsteuerung-Bildüberschrift..."
+    SN_SKIPPING_MOTOR_CONTROLLER_HEADER 
+                            "Motorsteuerung-Bildüberschrift wird übersprungen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MOTOR_CONTROLLER_HEADER_FAILED 
+                            "Lesen der Motorsteuerung-Überschrift fehlgeschlagen"
+    SN_INVALID_MOTOR_CONTROLLER_HEADER_CRC 
+                            "Motorsteuerung-Bildüberschrift-CRC ungültig"
+    SN_UPDATING_MOTOR_CONTROLLER_PROGRAM_FLASH 
+                            "Aktualisieren von Motorsteuerung-Programm-Flash..."
+    SN_READING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Lesen von Motorsteuerung-Programm-Flash fehlgeschlagen."
+    SN_WRITING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Schreiben von Motorsteuerung-Programm-Flash fehlgeschlagen."
+    SN_INVALED_MOTOR_CONTROLLER_PROGRAM_FLASH_CRC 
+                            "Motorsteuerung-Programm-Flash-CRC ungültig"
+    SN_UPDATING_MOTOR_CONTROLLER_DATA_FLASH 
+                            "Aktualisieren von Motorsteuerung-Daten-Flash..."
+    SN_READING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Lesen von Motorsteuerung-Daten-Flash fehlgeschlagen"
+    SN_WRITING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Schreiben von Motorsteuerung-Daten-Flash fehlgeschlagen"
+    SN_INVALID_MOTOR_CONTROLLER_DATA_FLASH_CRC 
+                            "Motorsteuerung-Daten-Flash-CRC ungültig"
+    SN_READING_CE_IMAGE_DATA "Lesen der Systembilddaten..."
+    SN_UPDATE_FAILED        "Aktualisierung fehlgeschlagen\r"
+    SN_UPDATE_COMPLETE      "Aktualisierung abgeschlossen\r"
+    SN_PLEASE_REMOVE_USB_DRIVE "Bitte entfernen Sie das USB-Laufwerk."
+    SN_POWER_DOWN_SYSTEM    "Bitte fahren Sie das System herunter."
+    SN_UNKNOWN              "(Unbekannt)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_SYSTEM_SOFTWARE "Systemsoftware aktualisieren:\r"
+    SN_TO                   "auf"
+    SN_SYSTEM_SOFTWARE      "Systemsoftware:\r"
+    SN_NO_CHANGE            "(Keine Änderung)"
+    SN_UPDATE_MOTOR_CONTROLLER_SOFTWARE 
+                            "Motorsteuerungssoftware aktualisieren:\r"
+    SN_MOTOR_CONTROLLER_SOFTWARE "Motorsteuerungssoftware:\r"
+    SN_FLASH_DATA_REPAIR    "Flash-Daten Reparatur"
+    SN_CHECK_SERIAL_NUMBER  "Seriennummer prüfen"
+    SN_SERIAL_NUMBER        "Seriennummer:\r"
+    SN_VERIFY_SERIAL_NUMBER "Vergewissern Sie sich, dass die Seriennummer mit der Nummer auf der Geräterückseite übereinstimmt."
+    SN_ENTER_SERIAL_NUMBER  "Seriennummer eingeben"
+    SN_SERIAL_NUMBER_INSTRUCTIONS 
+                            "Geben Sie die Seriennummer über die Tastatur auf der rechten Seite ein.\rGültige Seriennummern beginnen bei 5001 und enthalten höchstens 7 Ziffern.\rDrücken Sie auf die Eingabeschaltfläche, wenn Sie fertig sind."
+    SN_CHANGE               "Ändern"
+    SN_CONTINUE             "Fortfahren"
+    SN_UPDATE_CANCELLED     "Aktualisierung abgebrochen.\r"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
