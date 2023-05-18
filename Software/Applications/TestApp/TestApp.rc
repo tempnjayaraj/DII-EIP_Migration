@@ -1,0 +1,382 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TESTAPP_DIALOG DIALOG DISCARDABLE  0, 0, 458, 272
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "TestApp"
+FONT 8, "System"
+BEGIN
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_1,16,66,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_1_STATIC,35,66,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG1,91,66,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW1,164,66,23,14
+    PUSHBUTTON      "Calibrate Touch Screen",IDC_BUTTON_CAL,117,15,72,24,
+                    BS_CENTER | BS_VCENTER | BS_MULTILINE
+    GROUPBOX        "",IDC_STATIC,11,56,179,29
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_2,16,92,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_2_STATIC,35,92,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG2,91,92,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW2,164,92,23,14
+    GROUPBOX        "",IDC_STATIC,11,82,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_3,16,122,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_3_STATIC,35,122,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG3,91,122,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW3,164,122,23,14
+    GROUPBOX        "",IDC_STATIC,11,111,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_4,16,151,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_4_STATIC,35,151,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG4,91,151,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW4,164,151,23,14
+    GROUPBOX        "",IDC_STATIC,11,140,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_5,16,179,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_5_STATIC,35,179,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG5,91,179,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW5,164,179,23,14
+    GROUPBOX        "",IDC_STATIC,11,170,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_6,16,210,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_6_STATIC,35,210,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG6,91,210,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW6,164,210,23,14
+    GROUPBOX        "",IDC_STATIC,11,198,179,31
+    PUSHBUTTON      "Save Configuration",IDC_BUTTON_SAVE_CONFIGURATION,11,15,
+                    72,24
+    PUSHBUTTON      "Start",IDC_BUTTON_START_DATA_COLLECTION,291,15,50,24
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP_DATA_COLLECTION,368,15,50,24
+    GROUPBOX        "Data Collection",IDC_STATIC,277,2,151,45,BS_CENTER
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_7,256,66,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_7_STATIC,275,66,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG7,331,66,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW7,404,66,23,14
+    GROUPBOX        "",IDC_STATIC,251,56,179,29
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_8,256,92,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_8_STATIC,275,92,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG8,331,92,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW8,404,92,23,14
+    GROUPBOX        "",IDC_STATIC,251,82,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_9,256,122,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_9_STATIC,275,122,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG9,331,122,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW9,404,122,23,14
+    GROUPBOX        "",IDC_STATIC,251,111,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_10,256,151,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_10_STATIC,275,151,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG10,331,151,68,14,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW10,404,151,23,14
+    GROUPBOX        "",IDC_STATIC,251,140,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_11,256,179,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_11_STATIC,275,179,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG11,331,179,68,14,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW11,404,179,23,14
+    GROUPBOX        "",IDC_STATIC,251,170,179,31
+    PUSHBUTTON      "C",IDC_BUTTON_CONFIG_12,256,210,14,14
+    EDITTEXT        IDC_EDIT_CONFIG_12_STATIC,275,210,46,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_READ_WRITE_CONFIG12,331,210,68,14,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTTON_WRITE_WINDOW12,404,210,23,14
+    GROUPBOX        "",IDC_STATIC,251,198,179,31
+    EDITTEXT        IDC_EDIT_TIME,357,239,84,17,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DOWN_TIME,208,22,52,14,ES_AUTOHSCROLL
+    CTEXT           "Acquisition Time",IDC_STATIC,198,8,69,11
+    PUSHBUTTON      "Set Time",IDC_BUTTON_SET_TIME,306,237,50,14
+END
+
+IDD_DIALOG_KEYPAD DIALOG DISCARDABLE  0, 0, 199, 174
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,154,50,14
+    PUSHBUTTON      "Clear",ID_CLEAR,13,154,50,14
+    PUSHBUTTON      "0",IDC_BUTTON_0,84,72,30,14
+    PUSHBUTTON      "1",IDC_BUTTON_1,42,8,30,14
+    PUSHBUTTON      "2",IDC_BUTTON_2,84,8,30,14
+    PUSHBUTTON      "6",IDC_BUTTON_6,126,29,30,14
+    PUSHBUTTON      "9",IDC_BUTTON_9,126,51,30,14
+    PUSHBUTTON      "3",IDC_BUTTON_3,126,8,30,14
+    PUSHBUTTON      "4",IDC_BUTTON_4,42,29,30,14
+    PUSHBUTTON      "5",IDC_BUTTON_5,84,29,30,14
+    PUSHBUTTON      "7",IDC_BUTTON_7,42,51,30,14
+    PUSHBUTTON      "8",IDC_BUTTON_8,84,51,30,14
+    PUSHBUTTON      ".",IDC_BUTTON1_DECIMAL,126,72,30,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "-",IDC_BUTTON_MINUS,42,72,30,14
+    PUSHBUTTON      "A",IDC_BUTTON_A,42,93,30,14
+    PUSHBUTTON      "B",IDC_BUTTON_B,84,93,30,14
+    PUSHBUTTON      "C",IDC_BUTTON_C,126,93,30,14
+    PUSHBUTTON      "D",IDC_BUTTON_D,42,114,30,14
+    PUSHBUTTON      "E",IDC_BUTTON_E,84,114,30,14
+    PUSHBUTTON      "F",IDC_BUTTON_F,126,114,30,14
+    PUSHBUTTON      "0x",IDC_BUTTON_HEX,83,134,30,14
+END
+
+IDD_DIALOG_CONFIG DIALOG DISCARDABLE  0, 0, 189, 173
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,149,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,33,149,50,14
+    CTEXT           "Name:",IDC_STATIC,8,14,56,11
+    EDITTEXT        IDC_EDIT_NAME,95,14,80,14,ES_AUTOHSCROLL
+    CTEXT           "Offset:",IDC_STATIC,8,35,56,11
+    EDITTEXT        IDC_EDIT_OFFSET,95,33,80,14,ES_AUTOHSCROLL
+    CTEXT           "Read/Write",IDC_STATIC,8,59,56,11
+    CTEXT           "16/32 Bit",IDC_STATIC,8,80,56,11
+    LISTBOX         IDC_LIST_READ_WRITE,95,53,80,20,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_BITS,95,76,79,21,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_FORMAT,95,100,80,35,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Format",IDC_STATIC,25,116,39,13
+END
+
+IDD_DIALOG_KEYPAD_ALPHA DIALOG DISCARDABLE  0, 0, 171, 183
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,103,157,45,14
+    DEFPUSHBUTTON   "Clear",IDCLEAR,33,157,43,14
+    PUSHBUTTON      "A",IDC_BUTTON_A,13,15,30,14
+    PUSHBUTTON      "B",IDC_BUTTON_B,51,15,30,14
+    PUSHBUTTON      "C",IDC_BUTTON_C,89,15,30,14
+    PUSHBUTTON      "D",IDC_BUTTON_D,127,15,30,14
+    PUSHBUTTON      "E",IDC_BUTTON_E,13,35,30,14
+    PUSHBUTTON      "F",IDC_BUTTON_F,51,35,30,14
+    PUSHBUTTON      "G",IDC_BUTTON_G,89,35,30,14
+    PUSHBUTTON      "H",IDC_BUTTON_H,127,35,30,14
+    PUSHBUTTON      "Q",IDC_BUTTON_Q,13,95,30,14
+    PUSHBUTTON      "R",IDC_BUTTON_R,51,95,30,14
+    PUSHBUTTON      "I",IDC_BUTTON_I,13,55,30,14
+    PUSHBUTTON      "J",IDC_BUTTON_J,51,55,30,14
+    PUSHBUTTON      "K",IDC_BUTTON_K,89,55,30,14
+    PUSHBUTTON      "L",IDC_BUTTON_L,127,55,30,14
+    PUSHBUTTON      "M",IDC_BUTTON_M,13,75,30,14
+    PUSHBUTTON      "N",IDC_BUTTON_N,51,75,30,14
+    PUSHBUTTON      "O",IDC_BUTTON_O,89,75,30,14
+    PUSHBUTTON      "P",IDC_BUTTON_P,127,75,30,14
+    PUSHBUTTON      "S",IDC_BUTTON_S,89,95,30,14
+    PUSHBUTTON      "T",IDC_BUTTON_T,127,95,30,14
+    PUSHBUTTON      "U",IDC_BUTTON_U,13,115,30,14
+    PUSHBUTTON      "V",IDC_BUTTON_V,51,115,30,14
+    PUSHBUTTON      "W",IDC_BUTTON_W,89,115,30,14
+    PUSHBUTTON      "X",IDC_BUTTON_X,127,115,30,14
+    PUSHBUTTON      "Z",IDC_BUTTON_Z,51,135,30,14
+    PUSHBUTTON      "Y",IDC_BUTTON_Y,13,135,30,14
+END
+
+IDD_DIALOG_DATE_TIME DIALOG DISCARDABLE  0, 0, 196, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 12, "Courier"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TIME,
+                    "SysDateTimePick32",DTS_UPDOWN | WS_TABSTOP | 0x8,101,15,
+                    73,29
+    CONTROL         "DateTimePicker2",IDC_DATETIMEPICKER_DATE,
+                    "SysDateTimePick32",DTS_UPDOWN | WS_TABSTOP,28,15,63,28
+    DEFPUSHBUTTON   "OK",IDOK,107,61,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,35,61,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Smith & Nephew, Inc.\0"
+            VALUE "FileDescription", "TestApp WCE MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TestApp\0"
+            VALUE "LegalCopyright", "Copyright © 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TestApp.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "TestApp Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TESTAPP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 449
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_DIALOG_KEYPAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_DIALOG_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 11
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DIALOG_KEYPAD_ALPHA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DIALOG_DATE_TIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
