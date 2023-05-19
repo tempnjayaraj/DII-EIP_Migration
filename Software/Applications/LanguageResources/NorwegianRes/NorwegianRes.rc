@@ -1,0 +1,542 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew\0"
+            VALUE "FileDescription", "NorwegianRes DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "NorwegianRes\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "NorwegianRes.dll\0"
+            VALUE "ProductName", "NorwegianRes Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_MEDIUM_SPEED         "Medium"
+    SN_PUMPING              "Pumper"
+    SN_SETTINGS             "Innstillinger"
+    SN_SET_SUCTION          "Still aspir"
+    SN_LARGE                "Stor"
+    SN_MEDIUM               "Medium"
+    SN_SMALL                "Liten"
+    SN_SET_PRESSURE_MMHG    "Still inn trykk mmHg"
+    SN_SET_FLOW_LIMIT_LMIN  "Still inn strømningsgrense l/min"
+    SN_PRESSURE_MMHG        "Trykk mmHg"
+    SN_FLOW_RATE_LMIN       "Strømningshastighet l/min"
+    SN_PRESS                "Trykk"
+    SN_TO_PUMP              "START pumping"
+    SN_LAVAGE               "Skylling"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_START         "Start skylling"
+    SN_NORMAL               "Normal"
+    SN_DONE                 "Ferdig"
+    SN_SET_SUCTION_LEVELS   "Still inn aspirasjonsnivåer"
+    SN_SHAVER_NOT_DETECTED  "Høvel ikke detektert"
+    SN_PERCENTAGE           "%"
+    SN_SHAVER_ON            "\rHøvel på"
+    SN_SHAVER_OFF           "\rHøvel av"
+    SN_LOW_SPEED            "Lav"
+    SN_HIGH_SPEED           "Høy"
+    SN_OTHER                "Annet"
+    SN_SET                  "Still inn"
+    SN_CANCEL               "Avbryt"
+    SN_CUSTOM_PRESSURE_MMHG "Brukerdefinert trykk mmHg"
+    SN_CANNULA              "Kanyle"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD             "Standard"
+    SN_LARGE_DIAMETER       "Stor\rdiameter"
+    SN_SMALL_JOINT          "Lite\rledd"
+    SN_SMALL_JOINT_SINGLE_LINE "Lite ledd\rkanyle"
+    SN_LARGE_DIAMETER_SINGLE_LINE "Stor diameter\rkanyle"
+    SN_RESTORE_DEFAULT      "Gjenopp\rstand"
+    SN_CUSTOM_FLOW_RATE_LIMIT 
+                            "Brukerdefinert strømningshastighetsgrense l/min"
+    SN_CUSTOM_SUCTION       "Brukerdefinert aspirasjon/bladhastighet"
+    SN_SHAVER               "Høvel"
+    SN_NOT_DETECTED         "Ikke detektert"
+    SN_SYSTEM_INFORMATION   "Systeminformasjon"
+    SN_FLUID_MANAGEMENT     "DYONICS 25 væskehåndteringssystem"
+    SN_MODEL                "REF"
+    SN_MODEL_NUMBER         "7211010"
+    SN_VERSION              "Programvareversjon"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PRESSURE             "Trykk"
+    SN_FLOW_RATE_LIMIT      "Hastighetsgrense for strømning"
+    SN_SUCTION              "Aspirasjon/bladhastighet"
+    SN_CUSTOM_SETTINGS      "Brukerdefinerte innstillinger"
+    SN_LANGUAGE             "Språk"
+    SN_PURGE                "Tøm"
+    SN_PURGING              "Tømmer"
+    SN_PERIOD               "."
+    SN_PURGING_IN_PROCESS   "Tømming pågår"
+    SN_PURGE_CASSETTE       "Purge Cassette"
+    SN_SIZE                 "Størrelse"
+    SN_STOP                 "  STOPP"
+    SN_START                "   START"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PURGE_DONE           "   FERDIG"
+    SN_ENGLISH              "English"
+    SN_SELECT_CUSTOM_MODE   "Velg\rbrukermodus"
+    SN_SELECT_DEFAULT_MODE  "Velg\rstand.modus"
+    SN_IN_CUSTOM_MODE       "I brukermodus"
+    SN_IN_DEFAULT_MODE      "I standardmodus"
+    SN_PRESS_DONE_WHEN_FINISHED "Trykk på FERDIG når du er klar"
+    SN_OVERPRESSURE         "OVERTRYKK"
+    SN_OVERPRESSURE_TIMEOUT "TIDSAVBRUDD FOR OVERTRYKK"
+    SN_INVALID_CASSETTE_TYPE "Ukjent kassettype"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_STOP          "Stopp skylling"
+    SN_CUSTOM_CANNULA       "Brukerdefinert kanyle"
+    SN_GRAVITY_INFLOW       "Tilstrømning, gravitasjon"
+    SN_SYSTEM_ERROR         "SYSTEMFEIL"
+    SN_SYSTEM_COMM_ERROR    "Intern kommunikasjonssvikt"
+    SN_TRANSDUCER_ERROR     "Transduktorsvikt"
+    SN_PUMP_ERROR           "Pumpemotorsvikt"
+    SN_AIR_IN_TUBING        "Luft i slanger"
+    SN_TEMPERATURE_FAULT    "TEMPERATURGRENSE"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_TEMPERATURE_ERROR    "Temperatursvikt"
+    SN_SYSTEM_RESOURCE_ERROR "Systemressurssvikt"
+    SN_PINCH_VALVE_ERROR    "Klemventilsvikt"
+    SN_NO_INSTRUMENT_DETECTED "Instrument ikke detektert"
+    SN_APPLICATION_VERSION  "Programversjon"
+    SN_MOTOR_CONTROLLER_VERSION "Motorkontrollerversjon"
+    SN_REMOTE_CONTROLL_ERROR "Fjernkontrollfeil"
+    SN_OUTFLOW_CONTROL      "Utstrømningskontroll"
+    SN_LOAD_CASSETTE        "Sett i kassett"
+    SN_BLADE_SPEED          "Bladhastighet"
+    SN_CUSTOM_SETTINGS_SAVE_FAILURE 
+                            "Kan ikke lagre brukerdefinerte innstillinger"
+    SN_CUSTOM_SETTINGS_RETRIEVE_FAILURE 
+                            "Kan ikke gjenfinne brukerdefinerte innstillinger"
+    SN_BATTERY_FAILURE      "Brukerdefinerte innstillinger tapt"
+    SN_ERROR                "Feil"
+    SN_REMOVE_CASSETTE      "Ta ut kassett"
+    SN_NO_CASSETTE          "Ingen kassett"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_INSERT_CASSETTE      "Sett i kassett"
+    SN_PRESSURE_APPLIED     "Gjeldende trykk - NULL STRØMNING"
+    SN_TEST_COMPLETE        "Test fullført"
+    SN_FLOW_TEST            "Strømningstest"
+    SN_PRESSURE_P1_MMHG     "Trykk P1 mmHg"
+    SN_PRESSURE_P2_MMHG     "Trykk P2 mmHg"
+    SN_END_TEST             "  \r \r\r      Slå av trykk\r      Ta ut kassett\r      Fjern USB-nøkkel\r      Slå av strømmen"
+    SN_FRENCH               "Français"
+    SN_GERMAN               "Deutsch"
+    SN_ITALIAN              "Italiano"
+    SN_SPANISH              "Español"
+    SN_WRONG_NO_INSTRUMENT  "Feil/manglende instrument"
+    SN_LANGUAGE_SELECTION   "Språkvalg"
+    SN_LANGUAGE_TEXT        "Er du sikker på at du vil endre vist språk til <?"
+    SN_YES                  "Ja"
+    SN_NO                   "Nei"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD_SINGLE_LINE "Standard\rkanyle"
+    SN_SWEDISH              "Svenska"
+    SN_DANISH               "Dansk"
+    SN_DUTCH                "Nederlands"
+    SN_NORWEGIAN            "Norsk"
+    SN_PORTUGUESE           "Português"
+    SN_INCOMPLETE_CASSETTE_INSERTION 
+                            "FEIL VED KASSETTINNSETTING/TRYKKFORSKYVING"
+    SN_RESTART_CONTROL      "   - TA UT KASSETTEN\r   – START STYREENHET PÅ NYTT\r   – SETT KASSETT HELT INN"
+    SN_HIGH_FLOW            "Høy\rstrømning"
+    SN_MEDIUM_FLOW          "Middels\rstrømning"
+    SN_LOW_FLOW             "Lav\rstrømning"
+    SN_LOW_FLOW_CANNULA     "Kanyle for\rlav strømning"
+    SN_MEDIUM_FLOW_CANNULA  "Kanyle for\rmiddels strømning"
+    SN_HIGH_FLOW_CANNULA    "Kanyle for\rhøy strømning"
+    SN_REMOTE_CONTROL_BATTERY_LOW "Svakt batteri i fjernkontroll"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_SHAVER_MODEL_NUMBER  "72200873"
+    SN_WINDOW               "Vindu"
+    SN_RPM                  "OPM"
+    SN_SPEED                "Hastighets-%"
+    SN_DYONICS_POWER_SHAVER "DYONICS POWER II-kontrollsystem"
+    SN_OSCILLATE_MODE       "Oscilleringsmodus"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_BUR                  "Bor"
+    SN_STRAIGHT             "Rett"
+    SN_FAST_BUR             "Hurtig bor"
+    SN_CURVED               "Kurvet"
+    SN_BLADE_INVALID        "Ugyldig blad"
+    SN_PORT_CONTROL         "Portkontroll"
+    SN_PORTA                "Port A"
+    SN_PORTB                "Port B"
+    SN_INTERFACE            "Grensesnitt for pumpe"
+    SN_INVALID_BLADE_ID     "Ukjent blad"
+    SN_INVALID_DEVICE_ID    "Ukjent håndtak"
+    SN_INVALID_HALL_PATTERN "Følerfeil for håndtak"
+    SN_MOTOR_STALL          "Håndtakstans"
+    SN_MOTOR_TAC_FAULT      "Motorfeil for håndtak"
+    SN_SHORT_CIRCUIT_DETECTED "Kortslutning påvist"
+    SN_FOOT_STUCK_PEDAL     "Fotbryterfeil"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_DEFAULT_PAREN        "(standard)"
+    SN_FOOTSWITCH           "Fotbryter"
+    SN_DEFAULT              "Standard"
+    SN_OSCILLATE_MODE1      "Oscilleringsmodus 1"
+    SN_OSCILLATE_MODE2      "Oscilleringsmodus 2"
+    SN_SECONDS              "Sekunder"
+    SN_REVOLUTIONS          "Omdreininger"
+    SN_MODE                 "  Modus"
+    SN_FORWARD              "Forover"
+    SN_HAND_CONTROL_OVERRIDE "Håndkontroll\r    Overstyr"
+    SN_ON_OFF               "Av/på"
+    SN_VARIABLE             "Variabel"
+    SN_LEFT                 "L"
+    SN_RIGHT                "R"
+    SN_ON                   "På"
+    SN_OFF                  "Av"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_FOOT_LOW_BATTERY     "Svakt batteri i fotbryter"
+    SN_TEMPERATURE_FAULT_DETAIL 
+                            "Enhet overopphetet. Se etter om ventilasjon er tilstoppet. Kontroller viftene."
+    SN_OK                   "OK"
+    SN_WARNING              "Advarsel"
+    SN_MOTOR_STALL_DETAIL   "Håndtakmotor ute av drift. Prøv et annet håndtak."
+    SN_MOTOR_TAC_FAULT_DETAIL 
+                            "Prøv en annen port. Hvis problemet vedvarer, prøv et annet håndtak."
+    SN_MOTOR_CURRENT_LIMIT  "Håndtak overbelastet"
+    SN_MOTOR_TORQUE_LIMIT   "Dreiemomentsbegrensning for motor"
+    SN_SET_SPEEDS_SAVE_FAILURE "Kan ikke lagre innstilte hastigheter."
+    SN_SET_SPEEDS_RETRIEVE_FAILURE "Kan ikke hente inn innstilte hastigheter."
+    SN_INVALID_DEVICE_ID_DETAIL 
+                            "Håndtaket gjenkjennes/støttes ikke. Prøv et annet håndtak."
+    SN_INVALID_BLADE_ID_DETAIL 
+                            "Bladtypen støttes ikke med tilkoblet håndtak. Håndtaket går i sikkerhetsmodus."
+    SN_SHORT_CIRCUIT_DETAIL "Kortslutning påvist i håndtak eller port. Prøv et annet håndtak. Hvis problemet vedvarer, send enheten til reparasjon."
+    SN_UNKNOWN_FOOT_ID      "Ukjent fotbryter"
+    SN_UNKNOWN_FOOT_ID_DETAIL 
+                            "Kan ikke kommunisere med fotbryter. Prøv en annen fotbryter."
+    SN_HAND_STUCK_BUTTON    "Feil på håndtak"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_HAND_STUCK_BUTTON_DETAIL 
+                            "Se om noen knapper er trykket inn på håndtaket. Hvis ikke, prøv et annet håndtak."
+    SN_FOOT_STUCK_PEDAL_DETAIL 
+                            "Se om noen brytere eller pedaler er trykket inn på fotbryteren. Hvis ikke, prøv en annen fotbryter."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT "Tidsavbrudd for håndtakoverbelastning."
+    SN_MOTOR_CURRENT_LIMIT_DETAIL "Håndtakoverbelastning påvist."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT_DETAIL 
+                            "Håndtakoverbelastning påvist. Prøv et annet håndtak."
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT "Bladstans"
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT_DETAIL 
+                            "Håndtak eller blad er stanset. Stopp håndtaket og sjekk bladet."
+    SN_INVALID_HALL_PATTERN_DETAIL 
+                            "Følerfeil for håndtak. Håndtaket går i sikkerhetsmodus."
+    SN_FOOT_LOW_BATTERY_DETAIL "Lad opp det trådløse fotbryterbatteriet."
+    SN_FOOTSWITCH_REQUIRED  "Fotpedal er påkrevd"
+    SN_FOOTSWITCH_REQUIRED_DETAIL 
+                            "Motorhåndstykket har ikke kontrollknapper og må styres av fotpedal"
+    SN_IN_BLADE_DEFAULT     "I blad standard"
+    SN_IN_BLADE_RECALL      "I blad minne"
+    SN_SELECT_BLADE_DEFAULT "Velg blad\rstandard"
+    SN_SELECT_BLADE_RECALL  "Velg blad\rminne"
+    SN_FOOTSWITCH_VERSION   "Fotbryterversjon"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_ADJUST               "Juster"
+    SN_FACTORY_DEFAULT      "Syst\rnullst."
+    SN_ARE_YOU_SURE         "Sikker på at du vil nullstille alle innstillinger?"
+    SN_SET_OSCILLATE_PERIOD "Innst. svingeperiode"
+    SN_SET_NUMBER_REVOLUTIONS "Innst. ant. omdreininger"
+    SN_MODE1                "Mod. 1"
+    SN_MODE2                "Mod. 2"
+    SN_RATE                 "HAST"
+    SN_A                    "A"
+    SN_B                    "B"
+    SN_BLADE_RESET          "Blad nullst."
+    SN_SYSTEM_RESET         "Syst nullst."
+    SN_HANDPIECE_VERSION_PORTA "Håndstykke versjon port A"
+    SN_HANDPIECE_VERSION_PORTB "Håndstykke versjon port B"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_START_LOWER_CASE     "Start"
+    SN_READING_FLASH_DATA   "Leser flashdata..."
+    SN_WRITING_FLASH_DATA   "Skriver flashdata..."
+    SN_VERIFYING_FLASH_DATA "Verifiserer flashdata..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_FLASH_DATA_FAILED "Lesing av flashdata... Mislykket"
+    SN_WRITING_FLASH_DATA_FAILED "Skriving flashdata... Mislykket"
+    SN_VERIFYING_FLASH_DATA_FAILED "Verifisering av flashdata...mislykket"
+    SN_REPAIR_COMPLETE      "Reparasjon fullført."
+    SN_ALL_FLASH_DATA_CORRUPT_REPAIR_NOT_POSSIBLE 
+                            "Alle flashdata er skadd.\rKan ikke repareres."
+    SN_LOWER_FLASH_DATA_CORRUPT "Nederste flashdata er skadd.\rReparerer..."
+    SN_UPPER_FLASH_DATA_CORRUPT "Øverste flashdata er skadd.\rReparerer..."
+    SN_SOFTWARE_UPGRADE_ERROR "Programvareoppgraderingsfeil"
+    SN_SOFTWARE_UPGRADE     "Programvareoppgradering"
+    SN_DRIVER_INTERFACE_FAILED "Drivergrensesnitt mislykket"
+    SN_ERROR_READING_HEADER_TYPE "Feil ved lesing av bildetoppteksttype."
+    SN_HEADER_INVALID_CRC   "Bildetopptekst har ikke gyldig CRC."
+    SN_FAILED_SEEK_END_CE_UPDATE 
+                            "Kunne ikke søke til slutten av systemoppdateringen."
+    SN_ERROR_ALLOCATING_MEMORY "Feil ved minneallokering."
+    SN_ERROR_READING_IMAGE_DATA "Feil ved lesing av bildedata."
+    SN_SPLASH_DATA_INVALID_CRC "Splashdata har ikke gyldig CRC."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_CE_INVALID_CRC       "Systemdata har ikke gyldig CRC."
+    SN_FAILED_SEEK_END_MOTOR_UPDATE 
+                            "Kunne ikke søke til slutten av motoroppdateringen."
+    SN_ERROR_READING_PROGRAM_FLASH_PAGE "Feil ved lesing av programflashside."
+    SN_ERROR_WRITING_PROGRAM_FLASH_PAGE 
+                            "Feil ved skriving av programflashside."
+    SN_CRC_ERROR_READING_PROGRAM_FLASH "CRC-feil ved lesing av programflash"
+    SN_ERROR_READING_DATA_FLASH_PAGE "Feil ved lesing av dataflashside."
+    SN_ERROR_WRITING_DATA_FLASH_PAGE "Feil ved skriving av dataflashside."
+    SN_CRC_ERROR_READING_DATA_FLASH "CRC-feil ved lesing av dataflash"
+    SN_UNKNOWN_IMAGE_HEADER_TYPE "Ukjent bildetoppteksttype."
+    SN_FLASH_VERIFY_FAILED  "Flash/verifiser mislykket."
+    SN_UPGRADE_SOFTWARE_OK_TO_CONTINUE 
+                            "Programvaren vil nå oppgraderes.\nKlikk på OK for å fortsette."
+    SN_UPGRADE_COMPLETE     "Oppgradering fullført"
+    SN_WRITING_LOWER_FLASH_DATA "Skriver nederste flashdata..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_WRITING_UPPER_FLASH_DATA "Skriver øverste flashdata..."
+    SN_VERIFYING_LOWER_FLASH_DATA "Verifiserer nederste flashdata..."
+    SN_VERIFYING_UPPER_FLASH_DATA "Verifiserer øverste flashdata..."
+    SN_VERIFYING_LOWER_FLASH_DATA_FAILED 
+                            "Verifisering av nederste flashdata...mislykket"
+    SN_VERIFYING_UPPER_FLASH_DATA_FAILED 
+                            "Verifisering av øvre flashdata...mislykket"
+    SN_WRITING_LOWER_FLASH_DATA_FAILED 
+                            "Skriving av nederste flashdata...mislykket"
+    SN_WRITING_UPPER_FLASH_DATA_FAILED 
+                            "Skriving av øverste flashdata...mislykket"
+    SN_READING_CE_IMAGE_HEADER "Leser systembildetopptekst..."
+    SN_INVALID_CE_HEADER_CRC "Ugyldig systembildetopptekst-CRC."
+    SN_READING_CE_HEADER_FAILED "Lesing av systembildetopptekst mislykket."
+    SN_ERROR_ALLOCATING_MEM_CE_IMAGE 
+                            "Feil ved minneallokering for systembilde."
+    SN_READING_CE_IMAGE_DATA_FAILED "Lesing av systembildedata mislykket."
+    SN_INVALID_SPLASH_DATA_CRC "Ugyldig splashdata-CRC."
+    SN_INVALID_CE_DATA_CRC  "Ugyldig systemdata-CRC."
+    SN_READING_MOTOR_CONTROLLER_HEADER 
+                            "Leser motorkontrollerbildetopptekst..."
+    SN_SKIPPING_MOTOR_CONTROLLER_HEADER 
+                            "Hopper over motorkontrollerbildetopptekst..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MOTOR_CONTROLLER_HEADER_FAILED 
+                            "Lesing av motorkontrollertopptekst mislykket."
+    SN_INVALID_MOTOR_CONTROLLER_HEADER_CRC 
+                            "Ugyldig motorkontrollertopptekst-CRC."
+    SN_UPDATING_MOTOR_CONTROLLER_PROGRAM_FLASH 
+                            "Oppdaterer motorkontrollerprogramflash..."
+    SN_READING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Lesing av motorkontrollerprogramflash mislykket."
+    SN_WRITING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Skriving av motorkontrollerprogramflash mislykket."
+    SN_INVALED_MOTOR_CONTROLLER_PROGRAM_FLASH_CRC 
+                            "Ugyldig motorkontrollerprogramflash-CRC."
+    SN_UPDATING_MOTOR_CONTROLLER_DATA_FLASH 
+                            "Oppdaterer motorkontrollerdataflash..."
+    SN_READING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Lesing av motorkontrollerdataflash mislykket."
+    SN_WRITING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Skriving av motorkontrollerdataflash mislykket."
+    SN_INVALID_MOTOR_CONTROLLER_DATA_FLASH_CRC 
+                            "Ugyldig motorkontrollerdataflash-CRC."
+    SN_READING_CE_IMAGE_DATA "Leser systembildedata..."
+    SN_UPDATE_FAILED        "Oppdatering mislykket.\r"
+    SN_UPDATE_COMPLETE      "Oppdatering fullført.\r"
+    SN_PLEASE_REMOVE_USB_DRIVE "Fjern USB-driveren."
+    SN_POWER_DOWN_SYSTEM    "Slå av strømmen på systemet."
+    SN_UNKNOWN              "(Ukjent)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_SYSTEM_SOFTWARE "Oppdater systemprogramvare:\r"
+    SN_TO                   "til"
+    SN_SYSTEM_SOFTWARE      "Systemprogramvare:\r"
+    SN_NO_CHANGE            "(Ingen endring)"
+    SN_UPDATE_MOTOR_CONTROLLER_SOFTWARE 
+                            "Oppdater motorkontrollerprogramvare:\r"
+    SN_MOTOR_CONTROLLER_SOFTWARE "Motorkontrollerprogramvare:\r"
+    SN_FLASH_DATA_REPAIR    "Flashdata reparasjon"
+    SN_CHECK_SERIAL_NUMBER  "Sjekk serienummer"
+    SN_SERIAL_NUMBER        "Serienummer:\r"
+    SN_VERIFY_SERIAL_NUMBER "Sjekk at serienummeret matcher det på baksiden av enheten."
+    SN_ENTER_SERIAL_NUMBER  "Oppgi serienummer"
+    SN_SERIAL_NUMBER_INSTRUCTIONS 
+                            "Skriv inn serienummeret ved hjelp av tastaturet til høyre.\r\rGyldige serienumre starter på 5001 og inneholder maksimalt 7 sifre.\r\rTrykk på Enter når du er ferdig."
+    SN_CHANGE               "Bytt"
+    SN_CONTINUE             "Fortsett"
+    SN_UPDATE_CANCELLED     "Oppdateringen er avbrutt.\r"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

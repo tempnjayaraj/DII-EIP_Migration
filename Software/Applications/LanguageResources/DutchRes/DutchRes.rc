@@ -1,0 +1,549 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew\0"
+            VALUE "FileDescription", "DutchRes DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DutchRes\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "DutchRes.dll\0"
+            VALUE "ProductName", "DutchRes Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_MEDIUM_SPEED         "Medium"
+    SN_PUMPING              "Bezig met pompen"
+    SN_SETTINGS             "Instelling"
+    SN_SET_SUCTION          "Suctie inst."
+    SN_LARGE                "Groot"
+    SN_MEDIUM               "Medium"
+    SN_SMALL                "Klein"
+    SN_SET_PRESSURE_MMHG    "Druk instellen mmHg"
+    SN_SET_FLOW_LIMIT_LMIN  "\rStroomlimiet instellen L/min"
+    SN_PRESSURE_MMHG        "Druk mmHg"
+    SN_FLOW_RATE_LMIN       "Stroomsnelheid L/min"
+    SN_PRESS                "Druk"
+    SN_TO_PUMP              "START -> pompen"
+    SN_LAVAGE               "Lavage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_START         "Start lavage"
+    SN_NORMAL               "Normaal"
+    SN_DONE                 "Klaar"
+    SN_SET_SUCTION_LEVELS   "Suctieniveaus instellen"
+    SN_SHAVER_NOT_DETECTED  "Shaver niet gevonden"
+    SN_PERCENTAGE           "%"
+    SN_SHAVER_ON            "\rShaver aan"
+    SN_SHAVER_OFF           "\rShaver uit"
+    SN_LOW_SPEED            "Laag"
+    SN_HIGH_SPEED           "Hoog"
+    SN_OTHER                "Overig"
+    SN_SET                  "Instellen"
+    SN_CANCEL               "Annuleren"
+    SN_CUSTOM_PRESSURE_MMHG "Aangepaste druk mmHg"
+    SN_CANNULA              "Canule"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD             "Standaard"
+    SN_LARGE_DIAMETER       "Grote\rdiameter"
+    SN_SMALL_JOINT          "Klein\rgewricht"
+    SN_SMALL_JOINT_SINGLE_LINE "Canule met\rklein gewricht"
+    SN_LARGE_DIAMETER_SINGLE_LINE "Canule met\rgrote diameter"
+    SN_RESTORE_DEFAULT      "Standaard\rherst."
+    SN_CUSTOM_FLOW_RATE_LIMIT "Aangepaste stroomsnelheidslimiet L/min"
+    SN_CUSTOM_SUCTION       "Aangepaste suctie/lemmettoerental"
+    SN_SHAVER               "Shaver"
+    SN_NOT_DETECTED         "Niet gevonden"
+    SN_SYSTEM_INFORMATION   "Systeeminformatie"
+    SN_FLUID_MANAGEMENT     "DYONICS 25 vloeistofsysteem"
+    SN_MODEL                "REF"
+    SN_MODEL_NUMBER         "7211010"
+    SN_VERSION              "Softwareversie"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PRESSURE             "Druk"
+    SN_FLOW_RATE_LIMIT      "Stroomsnelheidslimiet"
+    SN_SUCTION              "Suctie/lemmettoerental"
+    SN_CUSTOM_SETTINGS      "Aangepaste instellingen"
+    SN_LANGUAGE             "Taal"
+    SN_PURGE                "Purgeren"
+    SN_PURGING              "Bezig met purgeren"
+    SN_PERIOD               "."
+    SN_PURGING_IN_PROCESS   "Purgeren in uitvoering"
+    SN_PURGE_CASSETTE       "Purge Cassette"
+    SN_SIZE                 "Grootte"
+    SN_STOP                 "  STOP"
+    SN_START                "   START"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PURGE_DONE           "   KLAAR"
+    SN_ENGLISH              "English"
+    SN_SELECT_CUSTOM_MODE   "Aangep mod\rkiezen"
+    SN_SELECT_DEFAULT_MODE  "Stand mod\rkiezen"
+    SN_IN_CUSTOM_MODE       "In aangepaste modus"
+    SN_IN_DEFAULT_MODE      "In standaardmodus"
+    SN_PRESS_DONE_WHEN_FINISHED "Druk op KLAAR als u klaar bent"
+    SN_OVERPRESSURE         "OVERDRUK"
+    SN_OVERPRESSURE_TIMEOUT "TIME-OUT OVERDRUK"
+    SN_INVALID_CASSETTE_TYPE "Onbekend cassettetype"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_STOP          "Stop lavage"
+    SN_CUSTOM_CANNULA       "Aangepaste canule"
+    SN_GRAVITY_INFLOW       "Instroming zwaartekracht"
+    SN_SYSTEM_ERROR         "SYSTEEMFOUT"
+    SN_SYSTEM_COMM_ERROR    "Interne communicatiestoring"
+    SN_TRANSDUCER_ERROR     "Transducerstoring"
+    SN_PUMP_ERROR           "Pompmotorstoring"
+    SN_AIR_IN_TUBING        "Lucht in slangset"
+    SN_TEMPERATURE_FAULT    "TEMPERATUURLIMIET"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_TEMPERATURE_ERROR    "Temperatuurstoring"
+    SN_SYSTEM_RESOURCE_ERROR "Systeembronstoring"
+    SN_PINCH_VALVE_ERROR    "Knijpkraanstoring"
+    SN_NO_INSTRUMENT_DETECTED "Geen instrument gevonden"
+    SN_APPLICATION_VERSION  "Applicatieversie"
+    SN_MOTOR_CONTROLLER_VERSION "Versie motor-controller"
+    SN_REMOTE_CONTROLL_ERROR "Afstandbedieningsfout"
+    SN_OUTFLOW_CONTROL      "Uitstroomregeling"
+    SN_LOAD_CASSETTE        "Cassette laden"
+    SN_BLADE_SPEED          "Lemmettoerental"
+    SN_CUSTOM_SETTINGS_SAVE_FAILURE 
+                            "Aangepaste instellingen kunnen niet opgeslagen worden"
+    SN_CUSTOM_SETTINGS_RETRIEVE_FAILURE 
+                            "Aangepaste instellingen kunnen niet opgehaald worden"
+    SN_BATTERY_FAILURE      "Aangepaste instellingen zijn verloren gegaan"
+    SN_ERROR                "Fout"
+    SN_REMOVE_CASSETTE      "Cassette verwijderen"
+    SN_NO_CASSETTE          "Geen cassette"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_INSERT_CASSETTE      "Cassette plaatsen"
+    SN_PRESSURE_APPLIED     "Druk aangelegd – STROMING NUL"
+    SN_TEST_COMPLETE        "Test voltooid."
+    SN_FLOW_TEST            "Stroomtest"
+    SN_PRESSURE_P1_MMHG     "Druk P1 mmHg"
+    SN_PRESSURE_P2_MMHG     "Druk P2 mmHg"
+    SN_END_TEST             "  \r AUB\r\r      Druk afnemen\r      Cassette erwijderen\r      USB-sleutel verwijderen\r      Apparaat uitzetten"
+    SN_FRENCH               "Français"
+    SN_GERMAN               "Deutsch"
+    SN_ITALIAN              "Italiano"
+    SN_SPANISH              "Español"
+    SN_WRONG_NO_INSTRUMENT  "Fout/Geen instrument"
+    SN_LANGUAGE_SELECTION   "Taalselectie"
+    SN_LANGUAGE_TEXT        "Weet u zeker dat u de weergegeven taal wilt wijzigen in <?"
+    SN_YES                  "Ja"
+    SN_NO                   "Nee"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD_SINGLE_LINE "Standard\rCannula"
+    SN_SWEDISH              "Svenska"
+    SN_DANISH               "Dansk"
+    SN_DUTCH                "Nederlands"
+    SN_NORWEGIAN            "Norsk"
+    SN_PORTUGUESE           "Português"
+    SN_INCOMPLETE_CASSETTE_INSERTION "CASSETTE-INSTALLATIE/DRUKAFWIJKINGSFOUT"
+    SN_RESTART_CONTROL      "   - VERWIJDER CASSETTE\r   - HERSTART BEDIENINGSUNIT\r   - STEEK CASSETTE HELEMAAL IN"
+    SN_HIGH_FLOW            "Hoge\rFlow"
+    SN_MEDIUM_FLOW          "Medium\rFlow"
+    SN_LOW_FLOW             "Lage\rFlow"
+    SN_LOW_FLOW_CANNULA     "Canule voor lage\rstromingssnelheid"
+    SN_MEDIUM_FLOW_CANNULA  "Canule voor medium\rstromingssnelheid"
+    SN_HIGH_FLOW_CANNULA    "Canule voor hoge\rstromingssnelheid"
+    SN_REMOTE_CONTROL_BATTERY_LOW "Batterij afstandsbediening laag"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_SHAVER_MODEL_NUMBER  "72200873"
+    SN_WINDOW               "Venster"
+    SN_RPM                  "tpm"
+    SN_SPEED                "Snelheid %"
+    SN_DYONICS_POWER_SHAVER "DYONICS POWER II -regelsysteem"
+    SN_OSCILLATE_MODE       "Modus Oscilleren"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_BUR                  "Slijpkop"
+    SN_STRAIGHT             "Recht"
+    SN_FAST_BUR             "Snelle slijpkop"
+    SN_CURVED               "Gebogen"
+    SN_BLADE_INVALID        "Lemmet ongeldig"
+    SN_PORT_CONTROL         "Poortregeling"
+    SN_PORTA                "Poort A"
+    SN_PORTB                "Poort B"
+    SN_INTERFACE            "Pompinterface"
+    SN_INVALID_BLADE_ID     "Onbekend lemmet"
+    SN_INVALID_DEVICE_ID    "Onbekend handstuk"
+    SN_INVALID_HALL_PATTERN "Storing handstuksensor"
+    SN_MOTOR_STALL          "Handstuk gestopt"
+    SN_MOTOR_TAC_FAULT      "Storing handstukmotor"
+    SN_SHORT_CIRCUIT_DETECTED "Kortsluiting aangetroffen"
+    SN_FOOT_STUCK_PEDAL     "Voetschakelaarfout"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_DEFAULT_PAREN        "(Standaard)"
+    SN_FOOTSWITCH           "Voetschakelaar"
+    SN_DEFAULT              "Standaard"
+    SN_OSCILLATE_MODE1      "Modus Oscilleren 1"
+    SN_OSCILLATE_MODE2      "Modus Oscilleren 2"
+    SN_SECONDS              "Seconden"
+    SN_REVOLUTIONS          "Omwentelingen"
+    SN_MODE                 "  Modus"
+    SN_FORWARD              "Vooruit"
+    SN_HAND_CONTROL_OVERRIDE "Handbediening\r    opheffen"
+    SN_ON_OFF               "Aan/uit"
+    SN_VARIABLE             "Variabel"
+    SN_LEFT                 "L"
+    SN_RIGHT                "R"
+    SN_ON                   "Aan"
+    SN_OFF                  "Uit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_FOOT_LOW_BATTERY     "Batterij voetschakelaar laag"
+    SN_TEMPERATURE_FAULT_DETAIL 
+                            "Unit raakt oververhit. Controleer of ventilatie belemmerd is. Inspecteer ventilators."
+    SN_OK                   "OK"
+    SN_WARNING              "Waarschuwing"
+    SN_MOTOR_STALL_DETAIL   "Handstukmotor draait niet. Probeer een ander handstuk."
+    SN_MOTOR_TAC_FAULT_DETAIL 
+                            "Probeer een andere poort. Probeer een ander handstuk als het probleem aanhoudt."
+    SN_MOTOR_CURRENT_LIMIT  "Handstuk overbelast"
+    SN_MOTOR_TORQUE_LIMIT   "Motorkoppellimiet"
+    SN_SET_SPEEDS_SAVE_FAILURE 
+                            "Ingestelde toerentallen kunnen niet opgeslagen worden"
+    SN_SET_SPEEDS_RETRIEVE_FAILURE 
+                            "Ingestelde toerentallen kunnen niet opgehaald worden"
+    SN_INVALID_DEVICE_ID_DETAIL 
+                            "Handstuk niet herkend/ondersteund. Probeer een ander handstuk."
+    SN_INVALID_BLADE_ID_DETAIL 
+                            "Lemmettype niet ondersteund voor aangesloten handstuk. Handstuk werkt in modus Veilig."
+    SN_SHORT_CIRCUIT_DETAIL "Kortsluiting handstuk of poort aangetroffen. Probeer een ander handstuk. Retourneer unit ter reparatie als probleem aanhoudt."
+    SN_UNKNOWN_FOOT_ID      "Onbekende voetschakelaar"
+    SN_UNKNOWN_FOOT_ID_DETAIL 
+                            "Communicatie met voetschakelaar onmogelijk. Probeer een andere voetschakelaar."
+    SN_HAND_STUCK_BUTTON    "Handstukfout"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_HAND_STUCK_BUTTON_DETAIL 
+                            "Controleer of knoppen op handstuk zijn ingedrukt. Zo niet, probeer dan een ander handstuk."
+    SN_FOOT_STUCK_PEDAL_DETAIL 
+                            "Controleer of pedalen/schakelaars voetstuk zijn ingedrukt. Zo niet, probeer dan een andere voetschakelaar."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT "Time-out overbelasting handstuk"
+    SN_MOTOR_CURRENT_LIMIT_DETAIL "Overbelasting handstuk geconstateerd"
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT_DETAIL 
+                            "Overbelasting handstuk geconstateerd Probeer een ander handstuk."
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT "Lemmet gestopt"
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT_DETAIL 
+                            "Het handstuk of lemmet is gestopt. Stop het handstuk en controleer het lemmet."
+    SN_INVALID_HALL_PATTERN_DETAIL 
+                            "Storing handstuksensor. Handstuk werkt in modus Veilig."
+    SN_FOOT_LOW_BATTERY_DETAIL 
+                            "Laad de batterij van de draadloze voetschakelaar."
+    SN_FOOTSWITCH_REQUIRED  "voetschakelaar benodigd"
+    SN_FOOTSWITCH_REQUIRED_DETAIL 
+                            "handstuk heeft geen handbediening en vereist voetschakelaar."
+    SN_IN_BLADE_DEFAULT     "Mes in default"
+    SN_IN_BLADE_RECALL      "Mes in recall"
+    SN_SELECT_BLADE_DEFAULT "Kies\rmes-default"
+    SN_SELECT_BLADE_RECALL  "Kies\rmes-recall"
+    SN_FOOTSWITCH_VERSION   "Voetschak.versie"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_ADJUST               "Wijzigen"
+    SN_FACTORY_DEFAULT      "Systeemreset"
+    SN_ARE_YOU_SURE         "Alle opgeslagen instellingen resetten?"
+    SN_SET_OSCILLATE_PERIOD "Trillingstijd"
+    SN_SET_NUMBER_REVOLUTIONS "Aantal omwentelingen"
+    SN_MODE1                "Modus1"
+    SN_MODE2                "Modus2"
+    SN_RATE                 "RATE"
+    SN_A                    "A"
+    SN_B                    "B"
+    SN_BLADE_RESET          "Reset mes"
+    SN_SYSTEM_RESET         "Systeemreset"
+    SN_HANDPIECE_VERSION_PORTA "Poort A voor handstukversie"
+    SN_HANDPIECE_VERSION_PORTB "Poort B voor handstukversie"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_START_LOWER_CASE     "Start"
+    SN_READING_FLASH_DATA   "Flash-gegevens worden gelezen..."
+    SN_WRITING_FLASH_DATA   "Flash-gegevens worden geschreven..."
+    SN_VERIFYING_FLASH_DATA "Flash-gegevens worden geverifieerd..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_FLASH_DATA_FAILED "Lezen Flash-gegevens...Mislukt"
+    SN_WRITING_FLASH_DATA_FAILED "Schrijven Flash-gegevens...Mislukt"
+    SN_VERIFYING_FLASH_DATA_FAILED "Verifiëren Flash-gegevens...Mislukt"
+    SN_REPAIR_COMPLETE      "Reparatieprogramma voltooid."
+    SN_ALL_FLASH_DATA_CORRUPT_REPAIR_NOT_POSSIBLE 
+                            "Alle Flashgegevens zijn beschadigd.\rReparatie is onmogelijk."
+    SN_LOWER_FLASH_DATA_CORRUPT 
+                            "Onderste Flash-gegevens beschadigd.\rBezig met reparatie..."
+    SN_UPPER_FLASH_DATA_CORRUPT 
+                            "Bovenste Flash-gegevens beschadigd.\rBezig met reparatie..."
+    SN_SOFTWARE_UPGRADE_ERROR "Fout bij bijwerken software"
+    SN_SOFTWARE_UPGRADE     "Software-bijwerking"
+    SN_DRIVER_INTERFACE_FAILED "Interface stuurprogramma mislukt"
+    SN_ERROR_READING_HEADER_TYPE "Fout bij lezen beeldkopteksttype."
+    SN_HEADER_INVALID_CRC   "Beeldkoptekst heeft geen geldige CRC."
+    SN_FAILED_SEEK_END_CE_UPDATE 
+                            "Er is niet tot het einde van de systeembijwerking gezocht."
+    SN_ERROR_ALLOCATING_MEMORY "Fout bij geheugentoewijzing."
+    SN_ERROR_READING_IMAGE_DATA "Fout bij lezen beeldgegevens."
+    SN_SPLASH_DATA_INVALID_CRC "Splashgegevens hebben geen geldige CRC."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_CE_INVALID_CRC       "Systeemgegevens hebben geen geldige CRC."
+    SN_FAILED_SEEK_END_MOTOR_UPDATE 
+                            "Er is niet tot het einde van de motorbijwerking gezocht."
+    SN_ERROR_READING_PROGRAM_FLASH_PAGE 
+                            "Fout bij lezen flashpagina programma."
+    SN_ERROR_WRITING_PROGRAM_FLASH_PAGE 
+                            "Fout bij schrijven flashpagina programma."
+    SN_CRC_ERROR_READING_PROGRAM_FLASH "CRC-fout bij lezen programma-flash."
+    SN_ERROR_READING_DATA_FLASH_PAGE "Fout bij lezen flashpagina gegevens."
+    SN_ERROR_WRITING_DATA_FLASH_PAGE 
+                            "Fout bij schrijven flashpagina gegevens."
+    SN_CRC_ERROR_READING_DATA_FLASH "CRC-fout bij lezen gegevens-flash."
+    SN_UNKNOWN_IMAGE_HEADER_TYPE "Onbekend beeldkopteksttype."
+    SN_FLASH_VERIFY_FAILED  "Flash/verificatie mislukt."
+    SN_UPGRADE_SOFTWARE_OK_TO_CONTINUE 
+                            "Software zal bijgewerkt worden.\nKlik op OK om verder te gaan."
+    SN_UPGRADE_COMPLETE     "Bijwerking voltooid."
+    SN_WRITING_LOWER_FLASH_DATA "Onderste flash-gegevens worden geschreven..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_WRITING_UPPER_FLASH_DATA "Bovenste flash-gegevens worden geschreven..."
+    SN_VERIFYING_LOWER_FLASH_DATA 
+                            "Onderste flash-gegevens worden geverifieerd..."
+    SN_VERIFYING_UPPER_FLASH_DATA 
+                            "Bovenste flash-gegevens worden geverifieerd..."
+    SN_VERIFYING_LOWER_FLASH_DATA_FAILED 
+                            "Verifiëren onderste flash-gegevens...Mislukt"
+    SN_VERIFYING_UPPER_FLASH_DATA_FAILED 
+                            "Verifiëren bovenste flash-gegevens...Mislukt"
+    SN_WRITING_LOWER_FLASH_DATA_FAILED 
+                            "Schrijven onderste flash-gegevens...Mislukt"
+    SN_WRITING_UPPER_FLASH_DATA_FAILED 
+                            "Schrijven bovenste flash-gegevens...Mislukt"
+    SN_READING_CE_IMAGE_HEADER "Systeembeeldkoptekst wordt gelezen."
+    SN_INVALID_CE_HEADER_CRC "CRC systeembeeldkoptekst ongeldig."
+    SN_READING_CE_HEADER_FAILED "Lezen systeembeeldkoptekst mislukt."
+    SN_ERROR_ALLOCATING_MEM_CE_IMAGE 
+                            "Fout bij geheugentoewijzing voor systeembeeld."
+    SN_READING_CE_IMAGE_DATA_FAILED "Lezen systeembeeldgegevens mislukt."
+    SN_INVALID_SPLASH_DATA_CRC "CRC splash-gegevens ongeldig."
+    SN_INVALID_CE_DATA_CRC  "CRC systeemgegevens ongeldig."
+    SN_READING_MOTOR_CONTROLLER_HEADER 
+                            "Beeldkoptekst motorcontroller wordt gelezen..."
+    SN_SKIPPING_MOTOR_CONTROLLER_HEADER 
+                            "Beeldkoptekst motorcontroller wordt overgeslagen..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MOTOR_CONTROLLER_HEADER_FAILED 
+                            "Lezen beeldkoptekst motorcontroller mislukt."
+    SN_INVALID_MOTOR_CONTROLLER_HEADER_CRC 
+                            "CRC beeldkoptekst motorcontroller ongeldig."
+    SN_UPDATING_MOTOR_CONTROLLER_PROGRAM_FLASH 
+                            "Programmaflash motorcontroller wordt gelezen."
+    SN_READING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Lezen programmaflash motorcontroller mislukt."
+    SN_WRITING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Schrijven programmaflash motorcontroller mislukt."
+    SN_INVALED_MOTOR_CONTROLLER_PROGRAM_FLASH_CRC 
+                            "CRC van programmaflash motorcontroller ongeldig."
+    SN_UPDATING_MOTOR_CONTROLLER_DATA_FLASH 
+                            "Gegevensflash motorcontroller wordt bijgewerkt..."
+    SN_READING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Lezen gegevensflash motorcontroller mislukt."
+    SN_WRITING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Schrijven gegevensflash motorcontroller mislukt."
+    SN_INVALID_MOTOR_CONTROLLER_DATA_FLASH_CRC 
+                            "CRC van gegevensflash motorcontroller ongeldig."
+    SN_READING_CE_IMAGE_DATA "Systeembeeldkoptekst wordt gelezen..."
+    SN_UPDATE_FAILED        "Bijwerking mislukt.\r"
+    SN_UPDATE_COMPLETE      "Bijwerking voltooid.\r"
+    SN_PLEASE_REMOVE_USB_DRIVE "Verwijder het USB-station."
+    SN_POWER_DOWN_SYSTEM    "Zet het systeem uit."
+    SN_UNKNOWN              "(Onbekend)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_SYSTEM_SOFTWARE "Werk de systeemsoftware bij:\r"
+    SN_TO                   "naar"
+    SN_SYSTEM_SOFTWARE      "Systeemsoftware:\r"
+    SN_NO_CHANGE            "(Geen wijziging)"
+    SN_UPDATE_MOTOR_CONTROLLER_SOFTWARE 
+                            "Werk de motorcontroller-software bij:\r"
+    SN_MOTOR_CONTROLLER_SOFTWARE "Motorcontroller -software:\r"
+    SN_FLASH_DATA_REPAIR    "Flash-gegevens reparatieprogramma"
+    SN_CHECK_SERIAL_NUMBER  "Serienummer controleren"
+    SN_SERIAL_NUMBER        "Serienummer:\r"
+    SN_VERIFY_SERIAL_NUMBER "Controleer of het serienummer overeenkomt met het serienummer op de achterzijde van de eenheid."
+    SN_ENTER_SERIAL_NUMBER  "Serienummer invoeren"
+    SN_SERIAL_NUMBER_INSTRUCTIONS 
+                            "Voer met het toetsenbord aan de rechterzijde het serienummer in.\r\rGeldige serienummers beginnen bij 5001 en bevatten niet meer dan 7 cijfers.\r\rDruk op Enter wanneer u klaar bent."
+    SN_CHANGE               "Wijzigen"
+    SN_CONTINUE             "Doorgaan"
+    SN_UPDATE_CANCELLED     "Update geannuleerd.\r"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

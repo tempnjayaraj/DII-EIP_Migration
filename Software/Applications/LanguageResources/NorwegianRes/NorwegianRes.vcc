@@ -1,0 +1,16 @@
+; CLW file contains information for the WCE MFC ClassWizard
+
+[General Info]
+Version=1
+ClassCount=1
+Class1=CNorwegianResApp
+LastClass=CNorwegianResApp
+NewFileInclude2=#include "NorwegianRes.h"
+ResourceCount=0
+NewFileInclude1=#include "stdafx.h"
+
+[CLS:CNorwegianResApp]
+Type=0
+HeaderFile=NorwegianRes.h
+ImplementationFile=NorwegianRes.cpp
+Filter=N

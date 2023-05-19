@@ -1,0 +1,542 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew\0"
+            VALUE "FileDescription", "SwedishRes DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SwedishRes\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SwedishRes.dll\0"
+            VALUE "ProductName", "SwedishRes Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_MEDIUM_SPEED         "Medel"
+    SN_PUMPING              "Pumpar"
+    SN_SETTINGS             "Inställningar"
+    SN_SET_SUCTION          "Ställ in sug"
+    SN_LARGE                "Kraftigt"
+    SN_MEDIUM               "Medel"
+    SN_SMALL                "Svagt"
+    SN_SET_PRESSURE_MMHG    "Ställ in tryck mmHg"
+    SN_SET_FLOW_LIMIT_LMIN  "\rStäll in flödesgräns L/min"
+    SN_PRESSURE_MMHG        "Tryck mmHg"
+    SN_FLOW_RATE_LMIN       "Flödeshastighet L/min"
+    SN_PRESS                "Tryck"
+    SN_TO_PUMP              "START för pumpa"
+    SN_LAVAGE               "Lavage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_START         "Lavagestart"
+    SN_NORMAL               "Normal"
+    SN_DONE                 "Klar"
+    SN_SET_SUCTION_LEVELS   "Ställ in sugnivåer"
+    SN_SHAVER_NOT_DETECTED  "Hyveln ej detekterad"
+    SN_PERCENTAGE           "%"
+    SN_SHAVER_ON            "\rHyveln på"
+    SN_SHAVER_OFF           "\rHyveln av"
+    SN_LOW_SPEED            "Låg"
+    SN_HIGH_SPEED           "Hög"
+    SN_OTHER                "Annan"
+    SN_SET                  "Ställ in"
+    SN_CANCEL               "Avbryt"
+    SN_CUSTOM_PRESSURE_MMHG "Anpassat tryck mmHg"
+    SN_CANNULA              "Kanyl"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD             "Standard"
+    SN_LARGE_DIAMETER       "Stor\rdiameter"
+    SN_SMALL_JOINT          "Liten\rled"
+    SN_SMALL_JOINT_SINGLE_LINE "Kanyl för\rliten led"
+    SN_LARGE_DIAMETER_SINGLE_LINE "Kanyl med stor\rdiameter"
+    SN_RESTORE_DEFAULT      "Återstl\rstndard"
+    SN_CUSTOM_FLOW_RATE_LIMIT "Anpassad flödeshastighetsgräns L/min"
+    SN_CUSTOM_SUCTION       "Anpassad sug-/bladhastighet"
+    SN_SHAVER               "Hyvel"
+    SN_NOT_DETECTED         "Ej detekterad"
+    SN_SYSTEM_INFORMATION   "Systeminformation"
+    SN_FLUID_MANAGEMENT     "DYONICS 25 vätskehanteringssystem"
+    SN_MODEL                "REF "
+    SN_MODEL_NUMBER         "7211010"
+    SN_VERSION              "Programvaruversion"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PRESSURE             "Tryck"
+    SN_FLOW_RATE_LIMIT      "Flödeshastighetsgräns"
+    SN_SUCTION              "Sug-/bladhastighet"
+    SN_CUSTOM_SETTINGS      "Anpassade inställningar"
+    SN_LANGUAGE             "Språk"
+    SN_PURGE                "Rensa"
+    SN_PURGING              "Rensar"
+    SN_PERIOD               "."
+    SN_PURGING_IN_PROCESS   "Rensning pågår"
+    SN_PURGE_CASSETTE       "Purge Cassette"
+    SN_SIZE                 "Storlek"
+    SN_STOP                 "  STOPP"
+    SN_START                "   START"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_PURGE_DONE           "   KLAR"
+    SN_ENGLISH              "English"
+    SN_SELECT_CUSTOM_MODE   "Välj\ranpassat läge"
+    SN_SELECT_DEFAULT_MODE  "Välj\rstandardläge"
+    SN_IN_CUSTOM_MODE       "I anpassat läge"
+    SN_IN_DEFAULT_MODE      "I standardläge"
+    SN_PRESS_DONE_WHEN_FINISHED "Tryck på KLAR när du är klar"
+    SN_OVERPRESSURE         "ÖVERTRYCK"
+    SN_OVERPRESSURE_TIMEOUT "ÖVERTRYCKS-TIMEOUT"
+    SN_INVALID_CASSETTE_TYPE "Okänd kassettyp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_LAVAGE_STOP          "Lavagestopp"
+    SN_CUSTOM_CANNULA       "Anpassad kanyl"
+    SN_GRAVITY_INFLOW       "Självtryckstillflöde"
+    SN_SYSTEM_ERROR         "SYSTEMFEL"
+    SN_SYSTEM_COMM_ERROR    "Internt kommunikationsfel"
+    SN_TRANSDUCER_ERROR     "Givarfel"
+    SN_PUMP_ERROR           "Pumpmotorfel"
+    SN_AIR_IN_TUBING        "Luft i slanguppsättningen"
+    SN_TEMPERATURE_FAULT    "TEMPERATURGRÄNS"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_TEMPERATURE_ERROR    "Temperaturfel"
+    SN_SYSTEM_RESOURCE_ERROR "Systemresursfel"
+    SN_PINCH_VALVE_ERROR    "Klämventilsfel"
+    SN_NO_INSTRUMENT_DETECTED "Inget instrument detekterat"
+    SN_APPLICATION_VERSION  "Programversion"
+    SN_MOTOR_CONTROLLER_VERSION "Motorstyrenhetsversion"
+    SN_REMOTE_CONTROLL_ERROR "Fjärrkontrollsfel"
+    SN_OUTFLOW_CONTROL      "Utflödesstyrning"
+    SN_LOAD_CASSETTE        "Sätt i kassett"
+    SN_BLADE_SPEED          "Bladhastighet"
+    SN_CUSTOM_SETTINGS_SAVE_FAILURE "Kan ej spara anpassade inställningar"
+    SN_CUSTOM_SETTINGS_RETRIEVE_FAILURE "Kan ej hämta anpassade inställningar"
+    SN_BATTERY_FAILURE      "Anpassade inställningar förlorade"
+    SN_ERROR                "Fel"
+    SN_REMOVE_CASSETTE      "Ta ut kassett"
+    SN_NO_CASSETTE          "Ingen kassett"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_INSERT_CASSETTE      "Sätt i kassett"
+    SN_PRESSURE_APPLIED     "Tryck pålagt - INGET FLÖDE"
+    SN_TEST_COMPLETE        "Test klart"
+    SN_FLOW_TEST            "Flödestest"
+    SN_PRESSURE_P1_MMHG     "Tryck P1 mmHg"
+    SN_PRESSURE_P2_MMHG     "Tryck P2 mmHg"
+    SN_END_TEST             "  \r LÄTTA PÅ\r\r      trycket\r      Ta ut kassetten\r      Ta ut USB-nyckel\r      Slå av strömmen till enheten"
+    SN_FRENCH               "Français"
+    SN_GERMAN               "Deutsch"
+    SN_ITALIAN              "Italiano"
+    SN_SPANISH              "Español"
+    SN_WRONG_NO_INSTRUMENT  "Fel/inget instrument"
+    SN_LANGUAGE_SELECTION   "Språkval"
+    SN_LANGUAGE_TEXT        "Är du säker på att du vill ändra visat språk till <?"
+    SN_YES                  "Ja"
+    SN_NO                   "Nej"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_STANDARD_SINGLE_LINE "Standard\rkanyl"
+    SN_SWEDISH              "Svenska"
+    SN_DANISH               "Dansk"
+    SN_DUTCH                "Nederlands"
+    SN_NORWEGIAN            "Norsk"
+    SN_PORTUGUESE           "Português"
+    SN_INCOMPLETE_CASSETTE_INSERTION "KASSETTINFÖRINGS-/TRYCKOFFSETFEL"
+    SN_RESTART_CONTROL      "   - AVLÄGSNA KASSETTEN\r   - STARTA OM STYRENHETEN\r   - SÄTT IN KASSETTEN HELT OCH HÅLLET"
+    SN_HIGH_FLOW            "Högt\rflöde"
+    SN_MEDIUM_FLOW          "Medium\rflöde"
+    SN_LOW_FLOW             "Lågt\rflöde"
+    SN_LOW_FLOW_CANNULA     "Lågt flöde\rKanyl"
+    SN_MEDIUM_FLOW_CANNULA  "Medium flöde\rKanyl"
+    SN_HIGH_FLOW_CANNULA    "Högt flöde\rKanyl"
+    SN_REMOTE_CONTROL_BATTERY_LOW "Fjärrkontrollens batteri lågt"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_SHAVER_MODEL_NUMBER  "72200873"
+    SN_WINDOW               "Fönster"
+    SN_RPM                  "VARV/MIN"
+    SN_SPEED                "Hastighet %"
+    SN_DYONICS_POWER_SHAVER "DYONICS POWER II styrsystem"
+    SN_OSCILLATE_MODE       "Oscilleringsläge"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_BUR                  "Borr"
+    SN_STRAIGHT             "Rak"
+    SN_FAST_BUR             "Snabbt borr"
+    SN_CURVED               "Böjd"
+    SN_BLADE_INVALID        "Ogiltigt blad"
+    SN_PORT_CONTROL         "Portkontroll"
+    SN_PORTA                "Port A"
+    SN_PORTB                "Port B"
+    SN_INTERFACE            "Gränssnitt för pump"
+    SN_INVALID_BLADE_ID     "Okänt blad"
+    SN_INVALID_DEVICE_ID    "Okänt shaverhandtag"
+    SN_INVALID_HALL_PATTERN "Fel i shaverhandtagets sensor"
+    SN_MOTOR_STALL          "Shaverhandtaget har stannat"
+    SN_MOTOR_TAC_FAULT      "Fel i shaverhandtagets motor"
+    SN_SHORT_CIRCUIT_DETECTED "Kortslutning har upptäckts"
+    SN_FOOT_STUCK_PEDAL     "Fel i fotpedalen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_DEFAULT_PAREN        "(Standard)"
+    SN_FOOTSWITCH           "Fotpedal"
+    SN_DEFAULT              "Standard"
+    SN_OSCILLATE_MODE1      "Oscilleringsläge 1"
+    SN_OSCILLATE_MODE2      "Oscilleringsläge 2"
+    SN_SECONDS              "Sekunder"
+    SN_REVOLUTIONS          "Varv"
+    SN_MODE                 "  Läge"
+    SN_FORWARD              "Framåt"
+    SN_HAND_CONTROL_OVERRIDE "Handkontroll\rFörbikoppling"
+    SN_ON_OFF               "På/Av"
+    SN_VARIABLE             "Variabel"
+    SN_LEFT                 "L"
+    SN_RIGHT                "R"
+    SN_ON                   "På"
+    SN_OFF                  "Av"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_FOOT_LOW_BATTERY     "Svagt batteri i fotpedalen"
+    SN_TEMPERATURE_FAULT_DETAIL 
+                            "Överhettad enhet. Kontrollera om ventilationen blockerats. Kontrollera fläktarna."
+    SN_OK                   "OK"
+    SN_WARNING              "Varning!"
+    SN_MOTOR_STALL_DETAIL   "Shaverhandtagets motor går inte. Prova ett annat shaverhandtag."
+    SN_MOTOR_TAC_FAULT_DETAIL 
+                            "Prova en annan port. Prova ett annat shaverhandtag om problemet kvarstår."
+    SN_MOTOR_CURRENT_LIMIT  "Shaverhandtaget har överbelastats"
+    SN_MOTOR_TORQUE_LIMIT   "Gräns för motormomentet"
+    SN_SET_SPEEDS_SAVE_FAILURE "Kan inte spara inställda hastigheter."
+    SN_SET_SPEEDS_RETRIEVE_FAILURE "Kan inte hämta inställda hastigheter."
+    SN_INVALID_DEVICE_ID_DETAIL 
+                            "Shaverhandtaget kan inte identifieras/stöds inte. Prova ett annat shaverhandtag."
+    SN_INVALID_BLADE_ID_DETAIL 
+                            "Bladtypen stöds inte för anslutet handstycke. Shaverhandtaget körs i säkert läge."
+    SN_SHORT_CIRCUIT_DETAIL "Kortslutning har upptäckts i shaverhandtaget eller porten. Prova ett annat shaverhandtag. Skicka in enheten för reparation, om problemet kvarstår."
+    SN_UNKNOWN_FOOT_ID      "Okänd fotpedal"
+    SN_UNKNOWN_FOOT_ID_DETAIL 
+                            "Kan inte kommunicera med fotpedalen. Prova en annan fotpedal."
+    SN_HAND_STUCK_BUTTON    "Fel på shaverhandtaget"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_HAND_STUCK_BUTTON_DETAIL 
+                            "Kontrollera om det finns några intryckta knappar på shaverhandtaget. Prova ett annat shaverhandtag om det inte finns några intryckta knappar."
+    SN_FOOT_STUCK_PEDAL_DETAIL 
+                            "Kontrollera om någon av fotpedalerna eller kontakterna är nertryckts. Prova en annan fotpedal om det inte finns några."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT 
+                            "Timeout för överbelastning av shaverhandtaget."
+    SN_MOTOR_CURRENT_LIMIT_DETAIL 
+                            "Överbelastning av shaverhandtaget har upptäckts."
+    SN_MOTOR_CURRENT_LIMIT_TIMEOUT_DETAIL 
+                            "Överbelastning av shaverhandtaget har upptäckts. Prova ett annat shaverhandtag."
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT "Bladet har stannat"
+    SN_MOTOR_STALL_AND_CURRENT_LIMIT_DETAIL 
+                            "Shaverhandtaget eller bladet har stannat. Stoppa shaverhandtaget och kontrollera bladet."
+    SN_INVALID_HALL_PATTERN_DETAIL 
+                            "Fel i shaverhandtagets sensor. Shaverhandtaget körs i säkert läge."
+    SN_FOOT_LOW_BATTERY_DETAIL 
+                            "Ladda om batteriet för den trådlösa fotpedalen."
+    SN_FOOTSWITCH_REQUIRED  "Forpedal krävs"
+    SN_FOOTSWITCH_REQUIRED_DETAIL 
+                            "Shaverhandtaget har inga handreglage och kräver en fotpedal."
+    SN_IN_BLADE_DEFAULT     "Bladstandard"
+    SN_IN_BLADE_RECALL      "Sparad bladinst"
+    SN_SELECT_BLADE_DEFAULT "Välj\rbladstandard"
+    SN_SELECT_BLADE_RECALL  "Välj\rsparad bladins"
+    SN_FOOTSWITCH_VERSION   "Fotkontrollversion"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_ADJUST               "Justera"
+    SN_FACTORY_DEFAULT      "Systemåterst"
+    SN_ARE_YOU_SURE         "Vill du återställa alla sparade inställningar?"
+    SN_SET_OSCILLATE_PERIOD "Svängningstid"
+    SN_SET_NUMBER_REVOLUTIONS "Antal rotationsvarv"
+    SN_MODE1                "Läge 1"
+    SN_MODE2                "Läge 2"
+    SN_RATE                 "RATE"
+    SN_A                    "A"
+    SN_B                    "B"
+    SN_BLADE_RESET          "Bladåterst"
+    SN_SYSTEM_RESET         "Systemåterst"
+    SN_HANDPIECE_VERSION_PORTA "Handstycke, version port A"
+    SN_HANDPIECE_VERSION_PORTB "Handstycke, version port B"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_START_LOWER_CASE     "Start"
+    SN_READING_FLASH_DATA   "Läser Flash-data..."
+    SN_WRITING_FLASH_DATA   "Skriver Flash-data..."
+    SN_VERIFYING_FLASH_DATA "Bekräftar Flash-data..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_FLASH_DATA_FAILED "Läsning av Flash-data... misslyckades"
+    SN_WRITING_FLASH_DATA_FAILED "Skrivning av Flash-data... misslyckades"
+    SN_VERIFYING_FLASH_DATA_FAILED "Bekräftelse av Flash-data... misslyckades"
+    SN_REPAIR_COMPLETE      "Reparation klar."
+    SN_ALL_FLASH_DATA_CORRUPT_REPAIR_NOT_POSSIBLE 
+                            "Alla Flash-data är skadade.\rKan ej repareras."
+    SN_LOWER_FLASH_DATA_CORRUPT "Nedre Flash-data är skadade.\rReparerar..."
+    SN_UPPER_FLASH_DATA_CORRUPT "Övre Flash-data är skadade.\rReparerar..."
+    SN_SOFTWARE_UPGRADE_ERROR "Fel vid programuppgradering"
+    SN_SOFTWARE_UPGRADE     "Programuppgradering"
+    SN_DRIVER_INTERFACE_FAILED "Drivrutinsgränssnittet misslyckades"
+    SN_ERROR_READING_HEADER_TYPE "Fel vid läsning av bildrubrikstyp."
+    SN_HEADER_INVALID_CRC   "Bildrubriken har ingen giltig CRC (cyklisk redundanskontroll)."
+    SN_FAILED_SEEK_END_CE_UPDATE 
+                            "Kunde inte söka till slutet på systemuppdateringen."
+    SN_ERROR_ALLOCATING_MEMORY "Fel vid minnesallokering."
+    SN_ERROR_READING_IMAGE_DATA "Fel vid läsning av bilddata."
+    SN_SPLASH_DATA_INVALID_CRC "Splash-data har ingen giltig CRC."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_CE_INVALID_CRC       "Systemdata har ingen giltig CRC."
+    SN_FAILED_SEEK_END_MOTOR_UPDATE 
+                            "Kunde inte söka till slutet på motoruppdateringen."
+    SN_ERROR_READING_PROGRAM_FLASH_PAGE 
+                            "Fel vid läsning av programmets flash-sida."
+    SN_ERROR_WRITING_PROGRAM_FLASH_PAGE 
+                            "Fel vid skrivning av programmets flash-sida."
+    SN_CRC_ERROR_READING_PROGRAM_FLASH "Crc-fel vid läsning av program-flash"
+    SN_ERROR_READING_DATA_FLASH_PAGE "Fel vid läsning av data-flashsida."
+    SN_ERROR_WRITING_DATA_FLASH_PAGE "Fel vid skrivning av data-flashsida."
+    SN_CRC_ERROR_READING_DATA_FLASH "Crc-fel vid läsning av data-flash"
+    SN_UNKNOWN_IMAGE_HEADER_TYPE "Okänd bildrubrikstyp."
+    SN_FLASH_VERIFY_FAILED  "Flash/Bekräfta misslyckades."
+    SN_UPGRADE_SOFTWARE_OK_TO_CONTINUE 
+                            "Färdig att uppgradera programvaran.\nKlicka på OK för att fortsätta."
+    SN_UPGRADE_COMPLETE     "Uppgraderingen klar."
+    SN_WRITING_LOWER_FLASH_DATA "Skriver nedre Flash-data..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_WRITING_UPPER_FLASH_DATA "Skriver övre Flash-data..."
+    SN_VERIFYING_LOWER_FLASH_DATA "Bekräftar nedre Flash-data..."
+    SN_VERIFYING_UPPER_FLASH_DATA "Bekräftar övre Flash-data..."
+    SN_VERIFYING_LOWER_FLASH_DATA_FAILED 
+                            "Bekräftelse av nedre Flash-data...misslyckades"
+    SN_VERIFYING_UPPER_FLASH_DATA_FAILED 
+                            "Bekräftelse av övre Flash-data...misslyckades"
+    SN_WRITING_LOWER_FLASH_DATA_FAILED 
+                            "Skrivning av nedre Flash-data...misslyckades"
+    SN_WRITING_UPPER_FLASH_DATA_FAILED 
+                            "Skrivning av övre Flash-data...misslyckades"
+    SN_READING_CE_IMAGE_HEADER "Läser systembildrubrik..."
+    SN_INVALID_CE_HEADER_CRC "Ogiltig CRC för systembildrubrik."
+    SN_READING_CE_HEADER_FAILED "Läsning av systembildrubrik misslyckades."
+    SN_ERROR_ALLOCATING_MEM_CE_IMAGE 
+                            "Fel vid minnesallokering för systembild."
+    SN_READING_CE_IMAGE_DATA_FAILED "Läsning av systembilddata misslyckades."
+    SN_INVALID_SPLASH_DATA_CRC "Ogiltig CRC för Splash-data."
+    SN_INVALID_CE_DATA_CRC  "Ogiltig CRC för systemdata."
+    SN_READING_MOTOR_CONTROLLER_HEADER 
+                            "Läser bildrubrik för motorns styrenhet..."
+    SN_SKIPPING_MOTOR_CONTROLLER_HEADER 
+                            "Hoppar över bildrubrik för motorns styrenhet..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MOTOR_CONTROLLER_HEADER_FAILED 
+                            "Läsning av rubrik för motorns styrenhet misslyckades."
+    SN_INVALID_MOTOR_CONTROLLER_HEADER_CRC 
+                            "Ogiltig CRC för bildrubrik för motorns styrenhet."
+    SN_UPDATING_MOTOR_CONTROLLER_PROGRAM_FLASH 
+                            "Uppdaterar motorns styrhenhetsprogram-Flash..."
+    SN_READING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Läsning av motorns styrenhetsprogram-Flash misslyckades."
+    SN_WRITING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Skrivnings av motorns styrenhetsprogram-Flash misslyckades."
+    SN_INVALED_MOTOR_CONTROLLER_PROGRAM_FLASH_CRC 
+                            "Ogiltig CRC för motorns styrenhetsprogram-Flash."
+    SN_UPDATING_MOTOR_CONTROLLER_DATA_FLASH 
+                            "Uppdaterar motorns styrhenhetsdata-Flash..."
+    SN_READING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Läsning av motorns styrenhetsdata-Flash misslyckades."
+    SN_WRITING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Skrivning av motorns styrenhetsdata-Flash misslyckades."
+    SN_INVALID_MOTOR_CONTROLLER_DATA_FLASH_CRC 
+                            "Ogiltig CRC för motorns styrenhetsdata-Flash."
+    SN_READING_CE_IMAGE_DATA "Läser systembildsdata..."
+    SN_UPDATE_FAILED        "Uppdatering misslyckades.\r"
+    SN_UPDATE_COMPLETE      "Uppgraderingen klar.\r"
+    SN_PLEASE_REMOVE_USB_DRIVE "Ta ut USB-enheten."
+    SN_POWER_DOWN_SYSTEM    "Stäng av strömmen till systemet."
+    SN_UNKNOWN              "(Okänd)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_SYSTEM_SOFTWARE "Uppdatera systemprogramvaran:\r"
+    SN_TO                   "till"
+    SN_SYSTEM_SOFTWARE      "Systemprogramvaran:\r"
+    SN_NO_CHANGE            "(Ingen ändring)"
+    SN_UPDATE_MOTOR_CONTROLLER_SOFTWARE 
+                            "Uppdatera programvaran till motorns styrenhet:\r"
+    SN_MOTOR_CONTROLLER_SOFTWARE "Programvara till motorns styrenhet:\r"
+    SN_FLASH_DATA_REPAIR    "Flash-data reparation"
+    SN_CHECK_SERIAL_NUMBER  "Kontrollera serienummer"
+    SN_SERIAL_NUMBER        "Serienummer:\r"
+    SN_VERIFY_SERIAL_NUMBER "Verifiera att serienumret stämmer med numret på baksidan av enheten."
+    SN_ENTER_SERIAL_NUMBER  "Ange serienumret"
+    SN_SERIAL_NUMBER_INSTRUCTIONS 
+                            "Ange serienumret med knappsatsen till höger.\r\rGiltiga serienummer börjar med 5001 och innehåller inte mer än 7 numeriska siffror.\r\rTryck på Enter när du är klar."
+    SN_CHANGE               "Ändra"
+    SN_CONTINUE             "Fortsätt"
+    SN_UPDATE_CANCELLED     "Uppdateringen avbröts.\r"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

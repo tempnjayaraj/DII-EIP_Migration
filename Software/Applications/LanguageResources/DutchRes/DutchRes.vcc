@@ -1,0 +1,16 @@
+; CLW file contains information for the WCE MFC ClassWizard
+
+[General Info]
+Version=1
+ClassCount=1
+Class1=CDutchResApp
+LastClass=CDutchResApp
+NewFileInclude2=#include "DutchRes.h"
+ResourceCount=0
+NewFileInclude1=#include "stdafx.h"
+
+[CLS:CDutchResApp]
+Type=0
+HeaderFile=DutchRes.h
+ImplementationFile=DutchRes.cpp
+Filter=N

@@ -1,0 +1,16 @@
+; CLW file contains information for the WCE MFC ClassWizard
+
+[General Info]
+Version=1
+ClassCount=1
+Class1=CSwedishResApp
+LastClass=CSwedishResApp
+NewFileInclude2=#include "SwedishRes.h"
+ResourceCount=0
+NewFileInclude1=#include "stdafx.h"
+
+[CLS:CSwedishResApp]
+Type=0
+HeaderFile=SwedishRes.h
+ImplementationFile=SwedishRes.cpp
+Filter=N
