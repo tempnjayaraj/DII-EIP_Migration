@@ -1,0 +1,287 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TestRS485.rc2""  // non-Microsoft eMbedded Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""wceres.rc""         // WCE-specific components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TestRS485.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TESTRS485_DIALOG DIALOG DISCARDABLE  0, 0, 454, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "DII Footswitch Tester - Version 0.01.00"
+FONT 8, "System"
+BEGIN
+    CTEXT           "Device ID",IDC_STATIC_DEVICE_ID,16,21,56,22,NOT 
+                    WS_GROUP
+    CTEXT           "",IDC_TEXT_DEVICE_ID,7,50,72,22,NOT WS_GROUP
+    CTEXT           "Software Version",IDC_STATIC_SOFTWARE_VERSION,100,21,56,
+                    22,NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_SOFTWARE_VERSION,97,50,62,11,NOT WS_GROUP
+    PUSHBUTTON      "Calibrate",IDC_CALIBRATE,17,105,56,31
+    CTEXT           "",IDC_TEXT_CALIBRATE,80,105,82,28,NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_LEFT_PEDAL_PERCENT,269,50,36,11,NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_RIGHT_PEDAL_PERCENT,369,50,36,11,NOT 
+                    WS_GROUP
+    CTEXT           "",IDC_TEXT_MIDDLE_PEDAL_PERCENT,319,50,36,11,NOT 
+                    WS_GROUP
+    CTEXT           "Left",IDC_STATIC_LEFT_PEDAL,269,34,36,11,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CTEXT           "Middle",IDC_STATIC_MIDDLE_PEDAL,319,34,36,11,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "Right",IDC_STATIC_RIGHT_PEDAL,369,34,36,11,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    PUSHBUTTON      "Invalid Command Test",IDC_INVALID_COMMAND_TEST,17,143,
+                    56,36,BS_MULTILINE
+    PUSHBUTTON      "Footswitch Soft Reset",IDC_RESET,17,186,56,37,
+                    BS_MULTILINE
+    CTEXT           "",IDC_TEXT_LEFT_BUTTON,169,50,36,11,NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_RIGHT_BUTTON,219,50,36,11,NOT WS_GROUP
+    CTEXT           "Left",IDC_STATIC_LEFT_BUTTON,169,34,36,11,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "Right",IDC_STATIC_RIGHT_BUTTON,219,34,36,11,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "Foot Pedals",IDC_STATIC_FOOT_PEDALS,286,20,104,11,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "Buttons",IDC_STATIC_BUTTONS,171,21,81,11,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_INVALID_COMMAND,83,146,82,28,NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_RESET,80,188,82,28,NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_COMMAND_DURATION,339,121,67,13,NOT WS_GROUP
+    CTEXT           "Command Duration",IDC_STATIC_COMMAND_DURATION,339,95,68,
+                    22,SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_ERROR_COUNT,315,171,114,13,NOT WS_GROUP
+    CTEXT           "Error Count",IDC_STATIC_ERROR_COUNT,315,150,114,13,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CTEXT           "",IDC_TEXT_CONNECT_DURATION,263,121,67,13,NOT WS_GROUP
+    CTEXT           "Connect Duration",IDC_STATIC_CONNECT_DURATION,263,95,68,
+                    22,SS_CENTERIMAGE | NOT WS_GROUP
+END
+
+IDD_MESSAGE_BOX DIALOG DISCARDABLE  0, 0, 383, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "System"
+BEGIN
+    CTEXT           "",IDC_STATIC_TITLE,7,0,369,33,SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_MESSAGE_TEXT,20,40,343,97,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "No",IDC_BUTTON_CANCEL,227,154,50,14
+    CONTROL         "Yes",IDC_BUTTON_ACCEPT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,111,154,50,14
+    CONTROL         "OK",IDC_BUTTON_OK,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    168,154,50,14
+END
+
+IDD_SYSTEM_ERROR DIALOG DISCARDABLE  0, 0, 458, 274
+STYLE WS_POPUP
+FONT 8, "System"
+BEGIN
+    LTEXT           "",IDC_STATIC_TEXT1,41,46,368,28,NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_TEXT2,37,100,368,28,NOT WS_GROUP
+    LTEXT           "",IDC_STATIC_TEXT3,42,136,368,28,NOT WS_GROUP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Smith & Nephew, Inc.\0"
+            VALUE "FileDescription", "TestRS485 Test Application\0"
+            VALUE "FileVersion", "1, 0, 0, 2\0"
+            VALUE "InternalName", "TestRS485\0"
+            VALUE "LegalCopyright", "Copyright © 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TestRS485.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "TestRS485 Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 2\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TESTRS485_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 447
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_MESSAGE_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 376
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_SYSTEM_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 450
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          IDM_HELP,               VIRTKEY, NOINVERT
+    VK_F2,          IDM_DIALOG,             VIRTKEY, NOINVERT
+    VK_F3,          IDM_EXIT,               VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows CE sockets initialization failed."
+    IDS_UNKNOWN             "Unknown"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\TestRS485.rc2"  // non-Microsoft eMbedded Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "wceres.rc"         // WCE-specific components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

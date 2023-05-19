@@ -1,0 +1,414 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "NewRes.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""NewRes.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SOFTWAREUPGRADE_DIALOG DIALOG DISCARDABLE  0, 0, 458, 275
+STYLE DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    CTEXT           "",IDC_STATIC_TITLE,6,9,446,30,SS_CENTERIMAGE
+    CONTROL         "Cancel",IDC_BUTTON_CANCEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,13,235,50,26
+    CONTROL         "Start",IDC_BUTTON_START,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,178,235,50,26
+    CONTROL         "Done",IDC_BUTTON_DONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,343,235,50,26
+    CTEXT           "",IDC_STATIC_UPGRADE_STATUS1,3,54,446,48,SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_UPGRADE_STATUS3,6,186,446,48,
+                    SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_UPGRADE_STATUS2,6,119,446,48,
+                    SS_CENTERIMAGE
+END
+
+IDD_SOFTWAREREPAIR_DIALOG DIALOG DISCARDABLE  0, 0, 458, 275
+STYLE DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE
+FONT 8, "System"
+BEGIN
+    CTEXT           "",IDC_STATIC_TITLE,6,9,446,30,SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_REPAIR_STATUS1,3,79,446,76,SS_CENTERIMAGE
+    CONTROL         "Done",IDC_BUTTON_DONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,343,235,50,26
+    CTEXT           "",IDC_STATIC_REPAIR_STATUS2,6,158,446,30,SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_REPAIR_STATUS3,6,196,446,30,SS_CENTERIMAGE
+END
+
+IDD_SERIAL_NUMBER DIALOG DISCARDABLE  30, 20, 400, 230
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUP
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 8, "System"
+BEGIN
+    CTEXT           "No Serial Number Detected",IDC_STATIC_TITLE,7,5,387,29,
+                    SS_CENTERIMAGE
+    LTEXT           "Enter the Serial Number of the DYONICS POWER II System via the Keypad on the Right. Press Enter when you are done.",
+                    IDC_STATIC_MESSAGE_TEXT,20,93,199,118,0,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         "7",IDC_BUTTON_NUMPAD_7,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,45,43,43
+    CONTROL         "8",IDC_BUTTON_NUMPAD_8,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,45,43,43
+    CONTROL         "9",IDC_BUTTON_NUMPAD_9,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,45,43,43
+    CONTROL         "4",IDC_BUTTON_NUMPAD_4,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,89,43,43
+    CONTROL         "5",IDC_BUTTON_NUMPAD_5,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,89,43,43
+    CONTROL         "6",IDC_BUTTON_NUMPAD_6,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,89,43,43
+    CONTROL         "1",IDC_BUTTON_NUMPAD_1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,131,43,43
+    CONTROL         "2",IDC_BUTTON_NUMPAD_2,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,131,43,43
+    CONTROL         "3",IDC_BUTTON_NUMPAD_3,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,131,43,43
+    CONTROL         "Del",IDC_BUTTON_NUMPAD_DEL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,173,43,43
+    CONTROL         "0",IDC_BUTTON_NUMPAD_0,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,173,43,43
+    CONTROL         "Enter",IDC_BUTTON_NUMPAD_ENTER,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,334,173,43,43
+    CTEXT           "AAX",IDC_STATIC_MESSAGE_TEXT2,48,47,147,32,
+                    SS_CENTERIMAGE,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC2,234,39,150,184,0,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Smith & Nephew\0"
+            VALUE "FileDescription", "SoftwareUpgrade WCE MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SoftwareUpgrade\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SoftwareUpgrade.exe\0"
+            VALUE "ProductName", "SoftwareUpgrade Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SOFTWAREUPGRADE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_SOFTWAREREPAIR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_BK_BUTTON_UP BITMAP  DISCARDABLE     "Graphics\\BlackBtn.bmp"
+IDB_BITMAP_BK_BUTTON_DOWN BITMAP  DISCARDABLE     "Graphics\\BlackBtnPressed.bmp"
+IDB_BITMAP_GRAY_BUTTON_ROUND BITMAP  DISCARDABLE     "Graphics\\GrayBtnRound.bmp"
+IDB_BITMAP_GRAY_BUTTON_ROUND_PRESSED BITMAP  DISCARDABLE     "Graphics\\GrayBtnRoundPressed.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_DONE                 "Done"
+    SN_CANCEL               "Cancel"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_START_LOWER_CASE     "Start"
+    SN_READING_FLASH_DATA   "Reading Flash Data..."
+    SN_WRITING_FLASH_DATA   "Writing Flash Data..."
+    SN_VERIFYING_FLASH_DATA "Verifying Flash Data..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_FLASH_DATA_FAILED "Reading Flash Data... Failed"
+    SN_WRITING_FLASH_DATA_FAILED "Writing Flash Data... Failed"
+    SN_VERIFYING_FLASH_DATA_FAILED "Verifying Flash Data...Failed"
+    SN_REPAIR_COMPLETE      "Repair Complete."
+    SN_ALL_FLASH_DATA_CORRUPT_REPAIR_NOT_POSSIBLE 
+                            "All of Flash data is corrupt.\rRepair is not possible."
+    SN_LOWER_FLASH_DATA_CORRUPT "Lower flash data is corrupt.\rRepairing..."
+    SN_UPPER_FLASH_DATA_CORRUPT "Upper flash data is corrupt.\rRepairing..."
+    SN_SOFTWARE_UPGRADE_ERROR "Software Upgrade Error"
+    SN_SOFTWARE_UPGRADE     "Software Upgrade"
+    SN_DRIVER_INTERFACE_FAILED "Driver interface failed"
+    SN_ERROR_READING_HEADER_TYPE "Error reading image header type."
+    SN_HEADER_INVALID_CRC   "Image header does not have valid CRC."
+    SN_FAILED_SEEK_END_CE_UPDATE "Failed to seek to end of System update."
+    SN_ERROR_ALLOCATING_MEMORY "Error allocating memory."
+    SN_ERROR_READING_IMAGE_DATA "Error reading image data."
+    SN_SPLASH_DATA_INVALID_CRC "Splash data does not have valid CRC."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_CE_INVALID_CRC       "System data does not have valid CRC."
+    SN_FAILED_SEEK_END_MOTOR_UPDATE "Failed to seek to end of Motor update."
+    SN_ERROR_READING_PROGRAM_FLASH_PAGE "Error reading program flash page."
+    SN_ERROR_WRITING_PROGRAM_FLASH_PAGE "Error writing program flash page."
+    SN_CRC_ERROR_READING_PROGRAM_FLASH "Crc error while reading program flash"
+    SN_ERROR_READING_DATA_FLASH_PAGE "Error reading data flash page."
+    SN_ERROR_WRITING_DATA_FLASH_PAGE "Error writing data flash page."
+    SN_CRC_ERROR_READING_DATA_FLASH "Crc error while reading data flash"
+    SN_UNKNOWN_IMAGE_HEADER_TYPE "Unknown image header type."
+    SN_FLASH_VERIFY_FAILED  "Flash/Verify failed."
+    SN_UPGRADE_SOFTWARE_OK_TO_CONTINUE 
+                            "About to Upgrade Software.\nClick OK to continue."
+    SN_UPGRADE_COMPLETE     "Upgrade Complete"
+    SN_WRITING_LOWER_FLASH_DATA "Writing Lower Flash Data..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_WRITING_UPPER_FLASH_DATA "Writing Upper Flash Data..."
+    SN_VERIFYING_LOWER_FLASH_DATA "Verifying Lower Flash Data..."
+    SN_VERIFYING_UPPER_FLASH_DATA "Verifying Upper Flash Data..."
+    SN_VERIFYING_LOWER_FLASH_DATA_FAILED "Verifying Lower Flash Data...Failed"
+    SN_VERIFYING_UPPER_FLASH_DATA_FAILED "Verifying Upper Flash Data...Failed"
+    SN_WRITING_LOWER_FLASH_DATA_FAILED "Writing Lower Flash Data...Failed"
+    SN_WRITING_UPPER_FLASH_DATA_FAILED "Writing Upper Flash Data...Failed"
+    SN_READING_CE_IMAGE_HEADER "Reading System Image Header..."
+    SN_INVALID_CE_HEADER_CRC "Invalid System Image Header CRC."
+    SN_READING_CE_HEADER_FAILED "Reading System Image Header Failed."
+    SN_ERROR_ALLOCATING_MEM_CE_IMAGE 
+                            "Error allocating memory for System Image."
+    SN_READING_CE_IMAGE_DATA_FAILED "Reading System Image Data Failed."
+    SN_INVALID_SPLASH_DATA_CRC "Invalid Splash Data CRC."
+    SN_INVALID_CE_DATA_CRC  "Invalid System Data CRC."
+    SN_READING_MOTOR_CONTROLLER_HEADER "Reading Motor Board Image Header..."
+    SN_SKIPPING_MOTOR_CONTROLLER_HEADER "Skipping Motor Board Image Header..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MOTOR_CONTROLLER_HEADER_FAILED 
+                            "Reading Motor Board Header Failed."
+    SN_INVALID_MOTOR_CONTROLLER_HEADER_CRC 
+                            "Invalid Motor Board Image Header CRC."
+    SN_UPDATING_MOTOR_CONTROLLER_PROGRAM_FLASH 
+                            "Updating Motor Board Program Flash..."
+    SN_READING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Reading Motor Board Program Flash Failed."
+    SN_WRITING_MOTOR_CONTROLLER_PROGRAM_FLASH_FAILED 
+                            "Writing Motor Board Program Flash Failed."
+    SN_INVALED_MOTOR_CONTROLLER_PROGRAM_FLASH_CRC 
+                            "Invalid Motor Board Program Flash CRC."
+    SN_UPDATING_MOTOR_CONTROLLER_DATA_FLASH 
+                            "Updating Motor Board Data Flash..."
+    SN_READING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Reading Motor Board Data Flash Failed."
+    SN_WRITING_MOTOR_CONTROLLER_DATA_FLASH_FAILED 
+                            "Writing Motor Board Data Flash Failed."
+    SN_INVALID_MOTOR_CONTROLLER_DATA_FLASH_CRC 
+                            "Invalid Motor Board Data Flash CRC."
+    SN_READING_CE_IMAGE_DATA "Reading System Image Data..."
+    SN_UPDATE_FAILED        "Update Failed.\r"
+    SN_UPDATE_COMPLETE      "Update Complete.\r"
+    SN_PLEASE_REMOVE_USB_DRIVE "Please remove the USB drive."
+    SN_POWER_DOWN_SYSTEM    "Please power down the system."
+    SN_UNKNOWN              "(Unknown)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_SYSTEM_SOFTWARE "Update System Software:\r"
+    SN_TO                   "to"
+    SN_SYSTEM_SOFTWARE      "System Software:\r"
+    SN_NO_CHANGE            "(No Change)"
+    SN_UPDATE_MOTOR_CONTROLLER_SOFTWARE "Update Motor Board Software:\r"
+    SN_MOTOR_CONTROLLER_SOFTWARE "Motor Board Software:\r"
+    SN_FLASH_DATA_REPAIR    "Flash Data Repair"
+    SN_CHECK_SERIAL_NUMBER  "Check Serial Number"
+    SN_SERIAL_NUMBER        "Serial Number:\r"
+    SN_VERIFY_SERIAL_NUMBER "Verify the Serial Number matches the one on the back of the unit."
+    SN_ENTER_SERIAL_NUMBER  "Enter Serial Number"
+    SN_SERIAL_NUMBER_INSTRUCTIONS 
+                            "Enter the Serial Number via the keypad on the right.\r\rValid Serial Numbers start at 5001 and contain no more than 7 numeric digits.\r\rPress Enter when you are done."
+    SN_CHANGE               "Change"
+    SN_CONTINUE             "Continue"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_UPDATE_FOOTSWITCH_SOFTWARE "Update Footswitch Software:\r"
+    SN_FOOTSWITCH_SOFTWARE  "Footswitch Software:\r"
+    SN_NO_FOOTSWITCH_DETECTED "No Footswitch Detected."
+    SN_INVALID_UPGRADE_FILE "Invalid Upgrade File."
+    SN_READING_FOOTSWITCH_HEADER "Reading Footswitch Header..."
+    SN_SKIPPING_FOOTSWITCH_HEADER "Skipping Footswitch Header..."
+    SN_READING_FOOTSWITCH_HEADER_FAILED "Reading Footswitch Header Failed."
+    SN_INVALID_FOOTSWITCH_HEADER_CRC "Invalid Footswitch Image Header CRC."
+    SN_UPDATING_FOOTSWITCH_PROGRAM_FLASH 
+                            "Updating Footswitch Program Flash..."
+    SN_READING_FOOTSWITCH_PROGRAM_FLASH_FAILED 
+                            "Reading Footswitch Program Flash Failed."
+    SN_WRITING_FOOTSWITCH_PROGRAM_FLASH_FAILED 
+                            "Writing Footswitch Program Flash Failed."
+    SN_INVALID_FOOTSWITCH_PROGRAM_FLASH_CRC 
+                            "Invalid Footswitch Program Flash CRC."
+    SN_RESETTING_FOOTSWITCH "Resetting Footswitch..."
+    SN_RESETTING_FOOTSWITCH_FAILED "Resetting Footswitch Failed."
+    SN_MDU_SOFTWARE         "MDU Software:\r"
+    SN_NO_MDU_DETECTED      "No MDU Detected."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SN_READING_MDU_HEADER   "Reading MDU Header..."
+    SN_SKIPPING_MDU_HEADER  "Skipping MDU Header..."
+    SN_READING_MDU_HEADER_FAILED "Reading MDU Header Failed."
+    SN_INVALID_MDU_HEADER_CRC "Invalid MDU Image Header CRC."
+    SN_UPDATING_MDU_PROGRAM_FLASH "Updating MDU Program Flash..."
+    SN_READING_MDU_PROGRAM_FLASH_FAILED 
+                            "Reading Footswitch Program Flash Failed."
+    SN_WRITING_MDU_PROGRAM_FLASH_FAILED "Writing MDU Program Flash Failed."
+    SN_INVALID_MDU_PROGRAM_FLASH_CRC "Invalid MDU Program Flash CRC."
+    SN_RESETTING_MDU        "Resetting MDU..."
+    SN_RESETTING_MDU_FAILED "Resetting MDU Failed."
+    SN_UPDATE_MDU_SOFTWARE  "Update MDU Software:\r"
+    SN_UPDATE_CANCELLED     "Update Cancelled.\r"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
