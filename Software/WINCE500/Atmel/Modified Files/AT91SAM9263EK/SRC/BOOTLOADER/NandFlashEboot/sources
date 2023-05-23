@@ -1,0 +1,21 @@
+TARGETNAME=NandFlash_Eboot_FMD
+TARGETTYPE=LIBRARY
+RELEASETYPE=PLATFORM
+WINCEOEM=1
+ADEFINES=-pd "_TGTCPU SETS \"$(_TGTCPU)\"" $(ADEFINES)
+CDEFINES=$(CDEFINES) -DEBOOT
+LDEFINES=-subsystem:native /DEBUG /DEBUGTYPE:CV /FIXED:NO
+INCLUDES= \
+  $(INCLUDES);$(_WINCEROOT)\public\common\oak\drivers\block\msflashfmd\inc; \
+  $(_WINCEROOT)\PLATFORM\COMMON\SRC\ARM\ATMEL\AT91SAM926x\BOOTLOADER\NandFlashEBOOT
+
+
+SOURCES= \
+    NandFlash.c
+
+# KW - Always build this so EBOOT will compile.
+#!IF ("$(BSP_AT91SAM9263EK_NANDFLASH)" != "1") && ("$(BSP_BIN)" != "1")
+#SKIPBUILD=1
+#!ENDIF
+
+

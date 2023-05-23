@@ -1,0 +1,7 @@
+
+
++ Install AT91SAM9263EK_CE5_v100.msi
++ Install Patch_AT91SAM9263EK_SRC_v100_24072007.msi
++ Edit C:\WINCE500\PLATFORM\COMMON\SRC\ARM\dirs and the directory ATMEL to it
++ Open C:\WINCE500\PLATFORM\AT91SAM9263EK\AT91SAM9263EK.cec with the CEC editor and add it to the catalog.
++ Install Modified Files in C:\WINCE500\PLATFORM and C:\WINCE500\PLATFORM\COMMON\SRC\ARM\ATMEL

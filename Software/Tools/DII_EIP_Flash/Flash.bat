@@ -1,0 +1,6 @@
+@echo off
+echo Programming Dsp FLASH...
+Bin\flash_over_jtag_v2 flash835.cfg "Motor Controller Boot.elf.S" "-tMotor Controller Application.elf.S" -fastport
+echo Programming Ce FLASH...
+"C:\Program Files\SEGGER\JLinkARM_V402\JFlashARM.exe" -openprjC:\DII_EIP_Flash\AT91SAM9263.jflash -erasechip -programverify
+

@@ -1,0 +1,17 @@
+;keys for the Touch MDD
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Touch]
+	"Priority256"=dword:64 ;hex value
+	"Order" = dword:1
+	"HighPriority256"=dword:64 ;hex value
+	
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\TOUCH]
+	"DriverName"="at91sam9263ek_touchscreen.dll"
+	"MaxCalError"=dword:10
+
+
+[HKEY_LOCAL_MACHINE\init]
+    "Launch70"="touchcalibrate1.exe"
+    "Depend70"=hex:14,00, 1e,00
+	
+; remember setting the InputConfig value to 3 in [HKEY_LOCAL_MACHINE\ControlPanel] in platform.reg
+	

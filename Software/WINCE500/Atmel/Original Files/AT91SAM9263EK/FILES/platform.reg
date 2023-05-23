@@ -1,0 +1,127 @@
+;
+; Copyright (c) 2005 Adeneo.  All rights reserved.
+;
+;
+
+;
+; Graphic Display Driver
+;
+; -----------------------------------------------------------------------------
+; @CESYSGEN IF CE_MODULES_DISPLAY
+IF BSP_AT91SAM9263EK_DISPLAY
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\Display\lcdc.reg"
+ENDIF BSP_AT91SAM9263EK_DISPLAY
+; @CESYSGEN ENDIF CE_MODULES_DISPLAY
+; -----------------------------------------------------------------------------
+
+; -----------------------------------------------------------------------------
+; USB Host Driver
+;
+IF BSP_AT91SAM9263EK_USBHOST
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\USBHcd\at91sam9263ek_ohcd.reg"
+ENDIF BSP_AT91SAM9263EK_USBHOST
+
+; -----------------------------------------------------------------------------
+; NandFlash Driver
+;
+IF BSP_AT91SAM9263EK_NANDFLASH
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\NandFlash\NandFlashDLL\Nandflash.reg"
+ENDIF BSP_AT91SAM9263EK_NANDFLASH
+
+; USB Function Driver
+;
+IF BSP_AT91SAM9263EK_USBFN
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\USBFN\at91sam9263ek_usbfn.reg"
+ENDIF BSP_AT91SAM9263EK_USBFN
+
+;
+; SPI Driver
+;
+IF BSP_AT91SAM9263EK_SPI
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\SPI\SPI.reg"
+ENDIF BSP_AT91SAM9263EK_SPI
+
+
+; -----------------------------------------------------------------------------
+; TouchScreen Driver
+;
+IF BSP_AT91SAM9263EK_TOUCHSCREEN
+	#include "$(_TARGETPLATROOT)\SRC\DRIVERS\TouchScreen\Dll\TouchScreen.reg"
+ENDIF BSP_AT91SAM9263EK_TOUCHSCREEN
+; -----------------------------------------------------------------------------
+
+; -----------------------------------------------------------------------------
+; SD Memory Driver
+;
+
+IF BSP_AT91SAM9263EK_SDCARD
+	#include "$(_TARGETPLATROOT)\SRC\DRIVERS\SDMemory\driver\at91sam9263ek_sdmemory.reg"
+	#include "$(_TARGETPLATROOT)\SRC\DRIVERS\SDMemory\loader\at91sam9263ek_sdmem_loader.reg"
+ENDIF BSP_AT91SAM9263EK_SDCARD
+
+;
+; Audio Driver
+;
+IF BSP_AT91SAM9263EK_WAVEDEV
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\Wavedev\at91sam9263ek_wavedev.reg"
+ENDIF BSP_AT91SAM9263EK_WAVEDEV
+
+; -----------------------------------------------------------------------------
+; Ethernet Driver
+;
+IF BSP_AT91SAM9263EK_EMACBNDIS
+IF IMGNOKITL
+	#include "$(_TARGETPLATROOT)\SRC\DRIVERS\EmacbNDIS\emacbNDIS.reg"
+ENDIF IMGNOKITL
+IF BSP_AT91SAM9263EK_KITL_ON_SERIAL
+	#include "$(_TARGETPLATROOT)\SRC\DRIVERS\EmacbNDIS\emacbNDIS.reg"
+ENDIF BSP_AT91SAM9263EK_KITL_ON_SERIAL
+ENDIF BSP_AT91SAM9263EK_EMACBNDIS
+
+;
+; AtapiEbi Driver
+;
+IF BSP_AT91SAM9263EK_ATAPIEBI
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\AtapiEbi\atapiebi.reg"
+ENDIF BSP_AT91SAM9263EK_ATAPIEBI
+
+;
+; I2C Driver
+;
+IF BSP_AT91SAM9263EK_I2C
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\I2C\at91sam9263ek_I2C.reg"
+ENDIF BSP_AT91SAM9263EK_I2C
+
+;
+; I2C EEPROM Driver
+;
+IF BSP_AT91SAM9263EK_EEPROM
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\EEPROM\at91sam9263ek_EEPROM.reg"
+ENDIF BSP_AT91SAM9263EK_EEPROM
+
+
+;
+; Pwmc Driver
+;
+IF BSP_AT91SAM9263EK_PWMC
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\Pwmc\Pwmc.reg"
+ENDIF BSP_AT91SAM9263EK_PWMC
+
+;
+; Serial Driver
+;
+IF BSP_AT91SAM9263EK_SERIAL
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\Serial\at91sam9263ek_serial_USART0.reg"
+ENDIF BSP_AT91SAM9263EK_SERIAL
+
+;
+; -----------------------------------------------------------------------------
+; Keypad Driver
+;
+IF BSP_AT91SAM9263EK_KEYPAD
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\Keypad\keypad.reg"
+ENDIF BSP_AT91SAM9263EK_KEYPAD
+; -----------------------------------------------------------------------------
+
+
+;#############################################

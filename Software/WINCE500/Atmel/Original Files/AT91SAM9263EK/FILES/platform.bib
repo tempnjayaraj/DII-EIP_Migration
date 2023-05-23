@@ -1,0 +1,100 @@
+;
+; Copyright (c) 2005 Adeneo.  All rights reserved.
+;
+;
+
+MODULES
+
+;   Name                        Path                                                     Memory Type
+;   --------------              ----------------------------------                       -----------
+
+; ------------------------------------------------------------------------------
+; Include the GPIO dll
+; ------------------------------------------------------------------------------
+gpio.dll $(_FLATRELEASEDIR)\gpio.dll        NK  SH
+
+IF BSP_AT91SAM9263EK_DISPLAY
+at91sam9263ek_DDI.dll  $(_FLATRELEASEDIR)\at91sam9263ek_DDI.dll        NK  SH
+ENDIF BSP_AT91SAM9263EK_DISPLAY
+
+IF BSP_AT91SAM9263EK_USBHOST
+at91sam9263ek_ohci.dll  $(_FLATRELEASEDIR)\at91sam9263ek_ohci.dll				NK  SH
+ENDIF BSP_AT91SAM9263EK_USBHOST
+
+IF BSP_AT91SAM9263EK_NANDFLASH
+at91sam9263ek_NandFlash.dll $(_FLATRELEASEDIR)\at91sam9263ek_NandFlash.dll        NK  SH
+ENDIF BSP_AT91SAM9263EK_NANDFLASH
+
+IF BSP_AT91SAM9263EK_SPI
+at91sam9263ek_spi.dll $(_FLATRELEASEDIR)\at91sam9263ek_spi.dll				NK  SH
+ENDIF BSP_AT91SAM9263EK_SPI
+
+; -----------------------------------------------------------------------------
+IF BSP_AT91SAM9263EK_TOUCHSCREEN
+	at91sam9263ek_touchscreen.dll $(_FLATRELEASEDIR)\at91sam9263ek_touchscreen.dll        NK  SH
+	TouchCalibrate1.exe		$(_FLATRELEASEDIR)\TouchCalibrate1.exe			NK
+ENDIF BSP_AT91SAM9263EK_TOUCHSCREEN
+; -----------------------------------------------------------------------------
+
+; -----------------------------------------------------------------------------
+IF BSP_AT91SAM9263EK_SDCARD
+	at91sam9263ek_sdmemory.dll			$(_FLATRELEASEDIR)\at91sam9263ek_sdmemory.dll			NK  SH
+	at91sam9263ek_sdmem_loader.dll		$(_FLATRELEASEDIR)\at91sam9263ek_sdmem_loader.dll		NK  SH
+ENDIF BSP_AT91SAM9263EK_SDCARD
+; -----------------------------------------------------------------------------
+
+IF BSP_AT91SAM9263EK_WAVEDEV
+at91sam9263ek_wavedev.dll  $(_FLATRELEASEDIR)\at91sam9263ek_wavedev.dll        NK  SH
+ENDIF BSP_AT91SAM9263EK_WAVEDEV
+
+
+IF BSP_AT91SAM9263EK_USBFN
+at91sam9263ek_usbfn.dll  $(_FLATRELEASEDIR)\at91sam9263ek_usbfn.dll        NK  SH
+ENDIF BSP_AT91SAM9263EK_USBFN
+
+
+; -----------------------------------------------------------------------------
+IF BSP_AT91SAM9263EK_EMACBNDIS
+IF IMGNOKITL
+	at91sam9263ek_emacbndis.dll			$(_FLATRELEASEDIR)\at91sam9263ek_emacbndis.dll		NK  SH
+ENDIF IMGNOKITL
+IF BSP_AT91SAM9263EK_KITL_ON_SERIAL
+	at91sam9263ek_emacbndis.dll			$(_FLATRELEASEDIR)\at91sam9263ek_emacbndis.dll		NK  SH
+ENDIF BSP_AT91SAM9263EK_KITL_ON_SERIAL
+ENDIF BSP_AT91SAM9263EK_EMACBNDIS
+; -----------------------------------------------------------------------------
+
+IF BSP_AT91SAM9263EK_ATAPIEBI
+AT91SAM9263EK_atapiebi.dll		$(_FLATRELEASEDIR)\at91sam9263ek_atapiebi.dll		NK  SH
+ENDIF BSP_AT91SAM9263EK_ATAPIEBI
+
+
+IF BSP_AT91SAM9263EK_I2C
+at91sam9263ek_i2c.dll			$(_FLATRELEASEDIR)\at91sam9263ek_i2c.dll			NK  SH
+ENDIF BSP_AT91SAM9263EK_I2C
+
+
+IF BSP_AT91SAM9263EK_EEPROM
+at91sam9263ek_eeprom.dll			$(_FLATRELEASEDIR)\at91sam9263ek_eeprom.dll			NK  SH
+ENDIF BSP_AT91SAM9263EK_EEPROM
+
+
+IF BSP_AT91SAM9263EK_PWMC
+at91sam9263ek_Pwmc.dll			$(_FLATRELEASEDIR)\at91sam9263ek_Pwmc.dll		NK  SH
+ENDIF BSP_AT91SAM9263EK_PWMC
+
+
+IF BSP_AT91SAM9263EK_SERIAL
+at91sam9263ek_serial.dll			$(_FLATRELEASEDIR)\at91sam9263ek_serial.dll		NK  SH
+ENDIF BSP_AT91SAM9263EK_SERIAL
+
+IF BSP_AT91SAM9263EK_KEYPAD
+at91sam9263ek_keypad.dll			$(_FLATRELEASEDIR)\at91sam9263ek_keypad.dll		NK  SH
+ENDIF BSP_AT91SAM9263EK_KEYPAD
+
+;**********************************
+
+
+;FILES
+
+

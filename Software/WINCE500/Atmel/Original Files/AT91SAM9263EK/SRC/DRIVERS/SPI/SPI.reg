@@ -1,0 +1,65 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Use SPI0 and CS0
+
+[HKEY_LOCAL_MACHINE\Drivers\SPIControler0]
+	"ControllerIndex"=dword:0	; Index of the SPI controller HW block
+	"ChipSelectDecode"=dword:0	; 0=Chip Selects are connected directly to a peripheral device
+								; 1=The four chip selects are connected to a 4to16 bits decoder !! Not tested !!
+	"ModeFaultDetection"=dword:1 ; Mode Fault detection disabled
+	"LoopBackEnable"=dword:0	; Local Loopback disable
+	"DelayBetweenChipSelects"=dword:0 	; if ClockSelection (Div32) is 0 : Delay = DelayBetweenChipSelects/MCK
+										; if ClockSelection (Div32) is 1 : Delay = (DelayBetweenChipSelects * 32)/MCK
+	"TxBufferSize"=dword:400	;max transmit buffer size is 1Kbytes 
+	"RxBufferSize"=dword:400	;max receive buffer size is 1Kbytes 
+
+;[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SPICS0]
+;    "Index"=dword:0
+;    "SPIController"=dword:0     ; use SPIController0
+;    "SPICS"=dword:0				; Chip select 0
+;    "Dll" = "at91sam9263ek_spi.Dll"
+;    "Prefix" = "SPI"
+;    "Order" = dword:0
+;    "FriendlyName" = "SPI0 Driver on CS0, not connected"    
+;;    "UsePIOCS"="A3" 	;Use PIOA 3 as the chip select (this may be useful in case you want to use another line than NPCSx however itdoesn't seem to work properly with the AT91SAM9261 (because of a glitch on the SPI clock at the very beginning of the transfer))
+;    "CSSetup"=dword:04040582	; See AT91 SPI_CSR Register (value in hexa)
+								; CPOL   = 0 -> The inactive state value of SPCK is logic level zero
+								; NCPHA  = 1 -> Data is captured on the leading edge of SPCK and changed on the following edge of SPCK
+								; CSAAT  = 0 -> 0 = The Peripheral Chip Select Line rises as soon as the last transfer is achieved
+								;               1 = The Peripheral Chip Select does not rise after the last transfer is achieved
+								; BITS   = 16 bits
+								; SCBR   = 5   -> Baud Rate = 10 MHz if MCK is 50 MHz / Max for TSC2200 is 33 MHz
+								; DLYBS  = 0x4 -> Delay = 4 x 1/MCK
+								; DLYBCT = 0x4 -> Delay = 4 x 32/MCK
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; TSC2200 chip controlling the touchscreen and the temperature sensor
+; Use SPI1 and CS2
+
+[HKEY_LOCAL_MACHINE\Drivers\SPIControler1]
+	"ControllerIndex"=dword:1	; Index of the SPI controller HW block
+	"ChipSelectDecode"=dword:0	; 0=Chip Selects are connected directly to a peripheral device
+								; 1=The four chip selects are connected to a 4to16 bits decoder !! Not tested !!
+	"ModeFaultDetection"=dword:1 ; Mode Fault detection disabled
+	"LoopBackEnable"=dword:0	; Local Loopback disable
+	"DelayBetweenChipSelects"=dword:10 	; if ClockSelection (Div32) is 0 : Delay = DelayBetweenChipSelects/MCK
+										; if ClockSelection (Div32) is 1 : Delay = (DelayBetweenChipSelects * 32)/MCK
+	"TxBufferSize"=dword:400	;max transmit buffer size is 1Kbytes 
+	"RxBufferSize"=dword:400	;max receive buffer size is 1Kbytes 
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SPICS2]
+    "Index"=dword:2
+    "SPIController"=dword:0     ; use SPIController0
+    "SPICS"=dword:3				; use Chip select 3
+    "Dll" = "at91sam9263ek_spi.dll"
+    "Prefix" = "SPI"
+    "Order" = dword:0
+    "FriendlyName" = "SPI0 Driver on CS3, connected to ADS7843"
+;	"UsePIOCS"="B11" 	;Use PIOA 3 as the chip select (this may be useful in case you want to use another line than NPCSx however itdoesn't seem to work properly with the AT91SAM9261 (because of a glitch on the SPI clock at the very beginning of the transfer))
+    "CSSetup"=dword:FFFFFF0A	;See AT91 SPI_CSR Register (value in hexa)
+								; CPOL = 0
+								; CPHA = 1
+								; CSAAT = 1 -> NPCS rise right when LASTXFER is set instead of after a PDC transfer complted
+								; BITS = 8 Bits
+								; SCBR = 58 (50 is the minimum divider when running with MCK at 100MHz)
+								; DLYBS = 0x18 -> Delay = 0x18 x 1/MCK (=350 ns if MCK is 69 MHz)
+								; DLYBCT = 0x17 -> Delay = 0x17 x 1/MCK (=333 ns if MCK is 69 MHz)

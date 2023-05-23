@@ -1,0 +1,37 @@
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SneDriver]
+    "Prefix"="SNE"
+    "Dll"="SneDriver.dll"
+    "Order"=dword:0
+    "Index"=dword:1
+
+[HKEY_LOCAL_MACHINE\System\StorageManager]
+    "PNPUnloadDelay"=dword:0        ; 0 ms (default 4096 ms)
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\Mass_Storage_Class]
+    "ResetTimeout"=dword:32			; 50ms (default 4s)
+    "CommandBlockTimeout"=dword:32	; 50ms (default 4s)
+    "CommandStatusTimeout"=dword:32	; 50ms (default 4s)
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\Mass_Storage_Class\2]
+    "DLL"="USBDISK6.DLL"
+    "Prefix"="DSK"
+    "Folder"="USB Disk"
+    "MediaPollInterval"=dword:432   ; Media poll interval (1250 ms)
+    "ReadSectorTimeout"=dword:7D0   ; Read sector timeout 2s (default 10s)
+    "WriteSectorTimeout"=dword:7D0  ; Write sector timeout 2s (default 10s)
+    "ScsiCommandTimeout"=dword:32   ; 50ms (default 5s)
+    "UnitAttnRepeat"=dword:2        ; 2 trys (default 10 trys)
+    "IOCTL"=dword:4
+    "IClass"="{A4E7EDDA-E575-4252-9D6B-4195D48BB865}"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\Mass_Storage_Class\6]
+    "DLL"="USBDISK6.DLL"
+    "Prefix"="DSK"
+    "Folder"="USB Disk"
+    "MediaPollInterval"=dword:432   ; Media poll interval (1250 ms)
+    "ReadSectorTimeout"=dword:7D0   ; Read sector timeout 2s (default 10s)
+    "WriteSectorTimeout"=dword:7D0  ; Write sector timeout 2s (default 10s)
+    "ScsiCommandTimeout"=dword:32   ; 50ms (default 5s)
+    "UnitAttnRepeat"=dword:2        ; 2 trys (default 10 trys)
+    "IOCTL"=dword:4
+    "IClass"="{A4E7EDDA-E575-4252-9D6B-4195D48BB865}"

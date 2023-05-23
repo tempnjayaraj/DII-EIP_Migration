@@ -1,0 +1,1 @@
+Debug\24To16Bmp ..\..\Applications\Shaver\Graphics.24 ..\..\Applications\Shaver\Graphics

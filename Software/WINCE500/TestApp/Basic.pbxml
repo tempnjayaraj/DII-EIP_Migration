@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<Workspace PlatformName="Basic" Template="Custom Device" CoreOs="CEBASE" PlatformGuid="87e63d7d-071a-4e7a-a51c-1af969f7cae7" ActiveConfiguration="AT91SAM9263EK_Debug" xmlns="urn:PBCommon-schema">
+  <PBProjectCollection Name="PBProjects" EnforceUniqueItems="True">
+    <PBProject Name="Item" Filename="C:\VSS\R_D\DII-EIP\Software\WINCE500\StartCE\StartCE.pbpxml" UserAdded="1" />
+    <PBProject Name="Item" Filename="C:\VSS\R_D\DII-EIP\Software\WINCE500\SneDriver\SneDriver.pbpxml" UserAdded="1" />
+    <PBProject Name="Item" Filename="C:\VSS\R_D\DII-EIP\Software\WINCE500\TouchCalibrate\TouchCalibrate.pbpxml" UserAdded="1" />
+  </PBProjectCollection>
+  <FeatureCollection Name="AnchoredFeatures" EnforceUniqueItems="True">
+    <Feature Name="Item" FeatureVariable="SYSGEN_STDIO" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_STDIOA" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_CORESTRA" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_DISPLAY" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_SERDEV" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_FMTRES" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_MSGQUEUE" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_FSRAMROM" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_FSREGRAM" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_FATFS" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_FONTS_TAHOMA_1_07" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_CORELOC" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_MINGWES" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_MINGDI" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_MININPUT" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_MINWMGR" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_COMMDLG" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_ETHERNET" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_PLATMAN" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_USB" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_USB_STORAGE" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_COMMCTRL" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_MINICOM" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_WININET" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_CURSOR" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_USB_HID_CLIENTS" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_BTH_USB_ONLY" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_BTH_PAN" Anchored="True" />
+    <Feature Name="Item" FeatureVariable="SYSGEN_WINSOCK" Anchored="True" />
+  </FeatureCollection>
+  <ConfigurationCollection Name="Configurations" EnforceUniqueItems="False">
+    <Configuration Name="Item" TargetBinFilename="nk.bin" BuildType="Retail" FriendlyName="AT91SAM9263EK_Release">
+      <FeatureCollection Name="BspFeatures" EnforceUniqueItems="True">
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_DDI.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_DISPLAY</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_SPI.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_SPI</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK">
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_TOUCHSCREEN</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_SERIAL.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_SERIAL</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_OHCI.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_USBHOST</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK">
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_EMACBNDIS</String>
+          </StringCollectionEX>
+        </Feature>
+      </FeatureCollection>
+      <FeatureCollection Name="FeaturesExcludedFromImage" EnforceUniqueItems="True" />
+      <BuildOptionCollection Name="BuildOptions" EnforceUniqueItems="True">
+        <BuildOption Name="Item" OptionName="IMGNOTALLKMODE" OptionValue="True" />
+        <BuildOption Name="Item" OptionName="IMGNODEBUGGER" OptionValue="True" />
+        <BuildOption Name="Item" OptionName="IMGNOKITL" OptionValue="True" />
+        <BuildOption Name="Item" OptionName="IMGEBOOT" OptionValue="True" />
+      </BuildOptionCollection>
+      <StringDictionary Name="EnvironmentVariables">
+        <Entry Name="fake_strongarm">1</Entry>
+      </StringDictionary>
+      <LocaleInfo Name="LocaleInformation" UseStrictLocalization="False" LocalizeTheBuild="True" DefaultLocale="1033">
+        <LocaleCollection Name="Locales" EnforceUniqueItems="False">
+          <Locale Name="Item" LCID="127" DefaultCodePage="1252" DefaultEbcdicCodePage="37" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="1027" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1030" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1031" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2055" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3079" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4103" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5127" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1033" DefaultCodePage="1252" DefaultEbcdicCodePage="37" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="2057" DefaultCodePage="1252" DefaultEbcdicCodePage="20285" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3081" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4105" DefaultCodePage="1252" DefaultEbcdicCodePage="37" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5129" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="6153" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="7177" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="8201" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="9225" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="10249" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="11273" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="12297" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="13321" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="1034" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2058" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3082" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4106" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5130" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="6154" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="7178" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="8202" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="9226" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="10250" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="11274" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="12298" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="13322" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="14346" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="15370" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="16394" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="17418" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="18442" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="19466" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="20490" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1035" DefaultCodePage="1252" DefaultEbcdicCodePage="20278" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1036" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2060" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3084" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4108" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5132" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="6156" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1039" DefaultCodePage="1252" DefaultEbcdicCodePage="20871" DefaultMacCodePage="10079" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1040" DefaultCodePage="1252" DefaultEbcdicCodePage="20280" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2064" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1043" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2067" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1044" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2068" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1046" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2070" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1053" DefaultCodePage="1252" DefaultEbcdicCodePage="20278" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2077" DefaultCodePage="1252" DefaultEbcdicCodePage="20278" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1057" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1069" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1078" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1080" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10079" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1086" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2110" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1089" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="1110" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+        </LocaleCollection>
+        <CodePageCollection Name="CodePages" EnforceUniqueItems="False" />
+      </LocaleInfo>
+      <CustomBuildActions Name="CustomBuildActions" />
+      <PBPEntryCollection Name="PBProjectOptions" EnforceUniqueItems="False">
+        <PBPEntry Name="Item" AlwaysBuildDebug="False" ExcludedFromBuild="False" ExcludedFromImage="False" PBProjectPath="C:\VSS\R_D\DII-EIP\Software\WINCE500\StartCE\StartCE.pbpxml" />
+        <PBPEntry Name="Item" AlwaysBuildDebug="False" ExcludedFromBuild="False" ExcludedFromImage="False" PBProjectPath="C:\VSS\R_D\DII-EIP\Software\WINCE500\SneDriver\SneDriver.pbpxml" />
+        <PBPEntry Name="Item" AlwaysBuildDebug="False" ExcludedFromBuild="False" ExcludedFromImage="False" PBProjectPath="C:\VSS\R_D\DII-EIP\Software\WINCE500\TouchCalibrate\TouchCalibrate.pbpxml" />
+      </PBPEntryCollection>
+      <BoardSupportPackage Name="Bsp" PlatformFolder="AT91SAM9263EK" FriendlyName="AT91SAM9263EK" />
+      <Cpu Name="Cpu" CpuName="ARMV4I" />
+    </Configuration>
+    <Configuration Name="Item" TargetBinFilename="nk.bin" BuildType="Debug" FriendlyName="AT91SAM9263EK_Debug">
+      <FeatureCollection Name="BspFeatures" EnforceUniqueItems="True">
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_DDI.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_DISPLAY</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_SPI.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_SPI</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK">
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_TOUCHSCREEN</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_SERIAL.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_SERIAL</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK" ModuleName="AT91SAM9263EK_OHCI.DLL">
+          <CpuCollection Name="SupportedCpus" EnforceUniqueItems="False">
+            <Cpu Name="Item" CpuName="ARMV4I" />
+          </CpuCollection>
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_USBHOST</String>
+          </StringCollectionEX>
+        </Feature>
+        <Feature Name="Item" Anchored="True" SupportedBSP="AT91SAM9263EK">
+          <StringCollectionEX Name="AdditionalVariables">
+            <String>BSP_AT91SAM9263EK_EMACBNDIS</String>
+          </StringCollectionEX>
+        </Feature>
+      </FeatureCollection>
+      <FeatureCollection Name="FeaturesExcludedFromImage" EnforceUniqueItems="True" />
+      <BuildOptionCollection Name="BuildOptions" EnforceUniqueItems="True">
+        <BuildOption Name="Item" OptionName="IMGNOTALLKMODE" OptionValue="True" />
+        <BuildOption Name="Item" OptionName="IMGNODEBUGGER" OptionValue="True" />
+        <BuildOption Name="Item" OptionName="IMGNOKITL" OptionValue="True" />
+      </BuildOptionCollection>
+      <StringDictionary Name="EnvironmentVariables">
+        <Entry Name="fake_strongarm">1</Entry>
+      </StringDictionary>
+      <LocaleInfo Name="LocaleInformation" UseStrictLocalization="False" LocalizeTheBuild="True" DefaultLocale="1033">
+        <LocaleCollection Name="Locales" EnforceUniqueItems="False">
+          <Locale Name="Item" LCID="127" DefaultCodePage="1252" DefaultEbcdicCodePage="37" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="1027" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1030" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1031" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2055" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3079" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4103" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5127" DefaultCodePage="1252" DefaultEbcdicCodePage="20273" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1033" DefaultCodePage="1252" DefaultEbcdicCodePage="37" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="2057" DefaultCodePage="1252" DefaultEbcdicCodePage="20285" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3081" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4105" DefaultCodePage="1252" DefaultEbcdicCodePage="37" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5129" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="6153" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="7177" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="8201" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="9225" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="10249" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="11273" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="12297" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="13321" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="1034" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2058" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3082" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4106" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5130" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="6154" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="7178" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="8202" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="9226" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="10250" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="11274" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="12298" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="13322" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="14346" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="15370" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="16394" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="17418" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="18442" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="19466" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="20490" DefaultCodePage="1252" DefaultEbcdicCodePage="20284" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1035" DefaultCodePage="1252" DefaultEbcdicCodePage="20278" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1036" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2060" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="3084" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="4108" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="5132" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="6156" DefaultCodePage="1252" DefaultEbcdicCodePage="20297" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1039" DefaultCodePage="1252" DefaultEbcdicCodePage="20871" DefaultMacCodePage="10079" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1040" DefaultCodePage="1252" DefaultEbcdicCodePage="20280" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2064" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1043" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2067" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1044" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2068" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1046" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2070" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1053" DefaultCodePage="1252" DefaultEbcdicCodePage="20278" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2077" DefaultCodePage="1252" DefaultEbcdicCodePage="20278" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1057" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1069" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1078" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1080" DefaultCodePage="1252" DefaultEbcdicCodePage="20277" DefaultMacCodePage="10079" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1086" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="2110" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+          <Locale Name="Item" LCID="1089" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="437" />
+          <Locale Name="Item" LCID="1110" DefaultCodePage="1252" DefaultEbcdicCodePage="500" DefaultMacCodePage="10000" DefaultOemCodePage="850" />
+        </LocaleCollection>
+        <CodePageCollection Name="CodePages" EnforceUniqueItems="False" />
+      </LocaleInfo>
+      <CustomBuildActions Name="CustomBuildActions" />
+      <PBPEntryCollection Name="PBProjectOptions" EnforceUniqueItems="False">
+        <PBPEntry Name="Item" AlwaysBuildDebug="False" ExcludedFromBuild="False" ExcludedFromImage="False" PBProjectPath="C:\VSS\R_D\DII-EIP\Software\WINCE500\StartCE\StartCE.pbpxml" />
+        <PBPEntry Name="Item" AlwaysBuildDebug="False" ExcludedFromBuild="False" ExcludedFromImage="False" PBProjectPath="C:\VSS\R_D\DII-EIP\Software\WINCE500\SneDriver\SneDriver.pbpxml" />
+        <PBPEntry Name="Item" AlwaysBuildDebug="False" ExcludedFromBuild="False" ExcludedFromImage="False" PBProjectPath="C:\VSS\R_D\DII-EIP\Software\WINCE500\TouchCalibrate\TouchCalibrate.pbpxml" />
+      </PBPEntryCollection>
+      <BoardSupportPackage Name="Bsp" PlatformFolder="AT91SAM9263EK" FriendlyName="AT91SAM9263EK" />
+      <Cpu Name="Cpu" CpuName="ARMV4I" />
+    </Configuration>
+  </ConfigurationCollection>
+</Workspace>

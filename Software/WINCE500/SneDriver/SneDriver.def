@@ -1,0 +1,13 @@
+LIBRARY SNE
+
+EXPORTS
+    SNE_Init
+    SNE_Deinit
+    SNE_Open
+    SNE_Close
+    SNE_Read
+    SNE_Write
+    SNE_Seek
+    SNE_IOControl
+    SNE_PowerDown
+    SNE_PowerUp

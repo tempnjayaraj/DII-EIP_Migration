@@ -1,0 +1,38 @@
+WINCEOEM=1
+WINCEPROJ=COMMON
+WINCETREE=winceos
+RELEASETYPE=LOCAL
+_COMMONPUBROOT=$(_PUBLICROOT)\common
+__PROJROOT=$(_PUBLICROOT)\$(WINCEPROJ)
+WARNISERROR=1
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;$(_WINCEROOT)\public\common\ddk\inc;
+WINCEREL=1
+TARGETNAME=SneDriver
+TARGETTYPE=DYNLINK
+DLLENTRY=SNE_DllEntry
+TARGETLIBS= \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+  $(_SYSGENOAKROOT)\lib\$(_CPUINDPATH)\ceddk.lib \
+  $(_SYSGENOAKROOT)\lib\$(_CPUINDPATH)\nk.lib \
+
+SOURCELIBS= \
+
+CDEFINES=$(CDEFINES)
+DEFFILE=SneDriver.def
+SOURCES= \
+  Flash.c \
+  Msg.c \
+  SneDriver.c \
+  Can.c \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  SnTypes.h \
+  SnIoctl.h \
+  SneDriver.h \
+
+FILE_VIEW_PARAMETER_FOLDER= \
+  SneDriver.bib \
+  SneDriver.reg \
+
+CPPBROWSE=1

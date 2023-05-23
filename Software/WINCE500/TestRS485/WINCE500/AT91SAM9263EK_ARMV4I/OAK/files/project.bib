@@ -1,0 +1,22 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+MODULES
+;  Name                 Path                                                                                                    Memory Type
+;  ----------------     -------------------------------------------------------------------------------------------------       -----------
+   KbdNopUS.dll         $(_FLATRELEASEDIR)\KbdNopUS.dll                                                                         NK
+   SoftwareUpgrade.exe  $(_FLATRELEASEDIR)\..\..\..\..\Applications\SoftwareUpgrade\ARMV4IRel\SoftwareUpgrade.exe               NK
+   TestRS485.exe        $(_FLATRELEASEDIR)\..\..\..\..\Applications\TestRS485\ARMV4IRel\TestRS485.exe                           NK
+   EnglishRes.dll       $(_FLATRELEASEDIR)\..\..\..\..\Applications\LanguageResources\EnglishRes\ARMV4IRel\EnglishRes.dll       NK
+
+FILES
+;  Name            Path                                           Memory Type
+;  --------------  ---------------------------------------------  -----------
+

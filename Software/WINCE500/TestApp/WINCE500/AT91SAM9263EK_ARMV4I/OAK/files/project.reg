@@ -1,0 +1,70 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;
+; Use of this source code is subject to the terms of the Microsoft end-user
+; license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+; If you did not accept the terms of the EULA, you are not authorized to use
+; this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+; install media.
+;
+[HKEY_LOCAL_MACHINE\Ident]
+    "Name"=LOC_DEFAULTDEVICENAME
+    "Desc"=LOC_DEFAULTDEVICEDESC
+
+
+; Redirector settings
+[HKEY_LOCAL_MACHINE\Comm\Redir]
+    ; Expose \NETWORK dir for mapped resources
+    "RegisterFSRoot"=dword:1
+
+
+; Set memory thresholds for Hibernate
+[HKEY_LOCAL_MACHINE\SYSTEM\Hibernate]
+	"Bytes"=dword:20000
+	"Pages"=dword:28
+
+IF BSP_DISPLAY_MQ200 !
+; CS_SAVEBITS implemented.  GWES restores screen bits on power on
+; Options here are:
+;   0 : OAL must deal with saving/invalidating bits between power on/off
+;   1 : GWES will restore screen bits on power on
+;   2 : Entire screen invalidated on power on
+[HKEY_LOCAL_MACHINE\system\gwe]
+	"PORepaint"=dword:1
+ENDIF BSP_DISPLAY_MQ200 !
+
+; Let Start/Settings/Control Panel Auto Expand
+[HKEY_LOCAL_MACHINE\Explorer]
+    "ExpandControlPanel"=dword:0
+
+[HKEY_LOCAL_MACHINE\init]
+    "Launch40"="StartCE.exe"
+    "Depend40"=hex:14,00
+    "Launch60"="TestApp.exe"
+    "Depend60"=hex:1e,00
+    "Launch80"="SoftwareUpgrade.exe"
+    "Depend80"=hex:1e,00
+
+; Setup for a NOP US Keyboard - Needed if a USB Keyboard is attached
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\KEYBD]
+    "DriverName"="KbdNopUS.dll"
+    "CalVKey"=dword:0
+    "ContLessVKey"=dword:0
+    "ContMoreVKey"=dword:0
+    "TaskManVKey"=dword:2E
+    "Keyboard Type"=dword:4
+    "Keyboard SubType"=dword:0
+    "Keyboard Function Keys"=dword:c
+    "Keyboard Layout"="00000409"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Layouts\00000409]
+	"Layout File"="KbdNopUS.dll"
+	"Layout Text"="US"
+	"PS2_AT"="KbdNopUS.dll"
+
+[HKEY_CURRENT_USER\Keyboard Layout\Preload\4]
+    @="00000409"
+
+[HKEY_LOCAL_MACHINE\Windows CE Tools]
+    "Platform"="{87e63d7d-071a-4e7a-a51c-1af969f7cae7}"

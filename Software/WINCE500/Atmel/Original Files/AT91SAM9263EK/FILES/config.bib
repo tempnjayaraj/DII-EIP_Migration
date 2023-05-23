@@ -1,0 +1,94 @@
+;
+; Copyright (c) 2005 Adeneo.  All rights reserved.
+;
+;
+
+
+; Memory Map
+; ----------
+
+; 8000.0000 -+
+; -----------| 
+; -----------| RESERVED (used by the bootloader. This section can be regained by using pNKEnumExtensionDRAM)
+; -----------| 
+; 8005.8000 -+
+;            | Ethernet Buffer				  (76KB)
+; 8006.b000 -+
+;            | drivers global                 (4KB)
+; 8006.c000 -+
+;            | 
+;            | OS (NK) Code (1MB)
+;            |
+; 8015.E000 -+   if (AUTOSIZE = ON) then this thresold will change depending of the image's content.
+;            |
+;            | OS (NK) RAM (13.6 MB)
+;            |
+; 80f0.0000 -+
+;			 | Video Memory (1 MB)
+; 8100.0000 -+
+
+
+
+;
+
+MEMORY
+
+;   Name     Start     Size      Type
+;   -------  --------  --------  ----
+    BLDR     80000000  00058000  RESERVED
+	EMACBUF  80058000  00013000  RESERVED
+    DRVGLOB  8006b000  00001000  RESERVED
+    NK       8006c000  00200000  RAMIMAGE
+IF IS_MISTRAL
+    RAM      8016c000  00D94000  RAM
+	VIDEOMEM 80F00000  00100000  RESERVED
+ELSE
+    RAM      8026c000  03B94000  RAM
+	VIDEOMEM 83e00000  00200000  RESERVED
+
+ENDIF
+CONFIG
+
+    AUTOSIZE=ON
+    KERNELFIXUPS=ON
+
+
+; @CESYSGEN IF !NK_NKNOCOMP
+   COMPRESSION=ON
+; @CESYSGEN ENDIF !NK_NKNOCOMP
+; @CESYSGEN IF NK_NKNOCOMP
+   COMPRESSION=OFF
+; @CESYSGEN ENDIF NK_NKNOCOMP
+
+IF IMGPROFILER   
+    PROFILE=ON
+ELSE
+    PROFILE=OFF
+ENDIF
+
+;
+; ROMFLAGS is a bitmask of options for the kernel
+;   ROMFLAGS    0x0001      Disallow Paging
+;   ROMFLAGS    0x0002      Not all KMode
+;   ROMFLAGS    0x0010      Trust Module only
+;
+IF IMGTRUSTROMONLY
+    IF IMGNOTALLKMODE
+       ROMFLAGS=12
+    ELSE
+       ROMFLAGS=10
+    ENDIF
+ELSE
+    IF IMGNOTALLKMODE
+       ROMFLAGS=02
+    ELSE
+       ROMFLAGS=00
+    ENDIF
+ENDIF
+
+
+   
+;ROMSTART=8006c000
+;ROMWIDTH=32
+;ROMSIZE=01000000
+

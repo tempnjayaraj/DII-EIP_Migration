@@ -1,0 +1,23 @@
+WINCEREL=1
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+TARGETNAME=TouchCalibrate
+FILE_VIEW_ROOT_FOLDER= \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+  StdAfx.h \
+
+SOURCES= \
+  TouchCalibrate.cpp \
+
+TARGETTYPE=PROGRAM
+EXEENTRY=mainWCRTStartup
+TARGETLIBS= \
+  $(_PROJECTROOT)\cesysgen\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+
+FILE_VIEW_PARAMETER_FOLDER= \
+  TouchCalibrate.bib \
+

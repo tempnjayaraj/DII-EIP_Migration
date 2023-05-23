@@ -1,0 +1,56 @@
+[HKEY_LOCAL_MACHINE\Comm\EMACB]
+	 "DisplayName"="EMACB Adapter"
+	 "Group"="NDIS"
+	 "ImagePath"="at91sam9263ek_emacbndis.dll"
+
+ [HKEY_LOCAL_MACHINE\Comm\EMACB\Linkage]
+	 "Route"=multi_sz:"EMACB1"
+
+ [HKEY_LOCAL_MACHINE\Comm\EMACB1]
+	 "DisplayName"="EMACB Adapter"
+	 "Group"="NDIS"
+	 "ImagePath"="at91sam9263ek_emacbndis.dll"
+
+ [HKEY_LOCAL_MACHINE\Comm\Tcpip\Linkage]
+	 "Bind"="EMACB"
+
+ [HKEY_LOCAL_MACHINE\Comm\EMACB1\Parms]
+	 "BusNumber"=dword:0
+	 "BusType"=dword:0
+	 "XmitBuffer"=dword:10
+	 "RecvBuffer"=dword:F0
+	 "IrqNumber"=dword:15
+	 ;"SYSINTR" = dword:11
+	 "MemBaseAddress"=dword:30000000
+	 "NetworkAddress"="02-02-04-09-05-05"
+	 "VendorID"=dword:1
+	 "ProductID"=dword:1
+
+[HKEY_LOCAL_MACHINE\Comm\EMACB1\Parms\TcpIp]
+	 "EnableDHCP"=dword:0
+	 "UseZeroBroadcast"=dword:0
+	 "DefaultGateway"="192.168.1.2"
+	 "IpAddress"="192.168.1.25"
+	 "Subnetmask"="255.255.255.0"
+	 "DNS"="192.168.1.2"
+	 "WINS"="192.168.1.2"
+	 "BootSettings"=dword:0 ;1: bootloader settings, 0:registry settings           
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\NDIS]
+   "Dll"="NDIS.Dll"
+   "Prefix"="NDS"
+   "Index"=dword:0
+   "Order"=dword:1
+   ; Indicate NDS is a power manageable interface
+   "IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"
+
+[HKEY_LOCAL_MACHINE\Drivers\Virtual]
+    "Dll"="RegEnum.dll"
+    "Order"=dword:1
+    "Flags"=dword:1
+
+[HKEY_LOCAL_MACHINE\Drivers\Virtual\NDIS]
+    "Dll"="NDIS.dll"
+    "Order"=dword:1
+    "Prefix"="NDS"
+    "Index"=dword:0

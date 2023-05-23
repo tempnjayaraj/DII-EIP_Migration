@@ -1,0 +1,85 @@
+# Link map of Finit_MC56F83xx_
+
+# Unreferenced symbols:
+
+
+
+# .interrupt_code
+
+# .boot_code
+  00020000 00000004 startup.text Finit_MC56F83xx_	(MC56F83xx_init.asm)
+  00020000 00000004 startup.text startup.text	(MC56F83xx_init.asm)
+  00020004 00000080 startup.text Fg_pbCrcTable	(SnFlash.c)
+  00020084 00000010 startup.text Fg_tFlashFuncTable	(SnFlash.c)
+  00020094 00000036 startup.text FInitFlash	(SnFlash.c)
+  000200CA 00000023 startup.text FProtectFlash	(SnFlash.c)
+  000200ED 0000000C startup.text FGetFlashPageSize	(SnFlash.c)
+  000200F9 0000000B startup.text FIsFlashInProgramSpace	(SnFlash.c)
+  00020104 00000016 startup.text FGetFlashNumPages	(SnFlash.c)
+  0002011A 00000018 startup.text FGetFlashBaseAddr	(SnFlash.c)
+  00020132 00000088 startup.text FReadFlashPage	(SnFlash.c)
+  000201BA 0000011C startup.text FDoFlashCmd	(SnFlash.c)
+  000202D6 0000001A startup.text FEraseFlashPage	(SnFlash.c)
+  000202F0 000000DD startup.text FWriteFlashPage	(SnFlash.c)
+  000203CD 00000021 startup.text FCopyCrcTable	(SnFlash.c)
+  000203EE 000000D6 startup.text FComputeFlashVersion	(SnBoot.c)
+  000204C4 000001E6 startup.text FCopyFlashHalf	(SnBoot.c)
+  000206AA 0000009B startup.text FBoot	(SnBoot.c)
+  00020745 00000018 startup.text Fmain	(SnBoot.c)
+  0002075D 00000143 startup.text Fcontinue_init_	(continue_init.asm)
+  0002075D 00000143 startup.text startup.text	(continue_init.asm)
+  000208A0 00000003 .text   FAsmReadProgramSpaceWord	(SnFlash.c)
+  000208A3 00000003 .text   FAsmWriteProgramSpaceWord	(SnFlash.c)
+  000208A6 00000003 .text   FAsmReadProgramSpaceWord	(SnBoot.c)
+  000208A9 0000000D .text   Fmemset	(MSL C 56800E.lib mem.o          )
+  000208B6 000000B5 .text   F__fill_mem	(MSL C 56800E.lib mem_funcs.o    )
+  0002096B 0000000C .text   F__init_sections	(Runtime 56800E.Lib initsections.o )
+
+# .executing_code
+#>000000A4          __pROM_data_start (linker command file)
+
+# .data_in_xROM
+
+# .data_in_p_flash_ROM
+#>00000001          __xRAM_data_start (linker command file)
+#>00000001          __xRAM_data_end (linker command file)
+#>00000000          __data_size (linker command file)
+
+# .data
+#>00000001          _START_BSS (linker command file)
+#>00000001          _END_BSS (linker command file)
+#>00000004          _HEAP_ADDR (linker command file)
+#>00000100          _HEAP_SIZE (linker command file)
+#>00000104          _HEAP_END (linker command file)
+#>00000800          _min_stack_size (linker command file)
+#>00000104          _stack_addr (linker command file)
+#>00000904          _stack_end (linker command file)
+#>00000004          F_heap_addr (linker command file)
+#>00000104          F_heap_end (linker command file)
+#>00000104          F_Lstack_addr (linker command file)
+#>00000000          F_Ldata_size (linker command file)
+#>00000001          F_Ldata_RAM_addr (linker command file)
+#>000000A4          F_Ldata_ROM_addr (linker command file)
+#>00000000          F_xROM_to_xRAM (linker command file)
+#>00000001          F_pROM_to_xRAM (linker command file)
+#>00000001          F_start_bss (linker command file)
+#>00000001          F_end_bss (linker command file)
+
+
+# Memory map:
+  v_addr   p_addr   size     name
+  00000000 00000000 00000000 .p_interrupts_ROM
+  000000A4 000000A4 00000000 .p_flash_ROM
+  00000001 00000001 00000000 .p_flash_ROM_data
+  00020000 00020000 00000977 .p_boot_flash_ROM
+  0002F800 0002F800 00000800 .p_internal_RAM
+  00030000 00030000 00000000 .p_external_RAM
+  00000001 00000001 00000903 .x_internal_RAM
+  00002000 00002000 00000000 .x_flash_ROM
+  00003000 00003000 00004FFF .x_sdm_external_RAM
+  0000F000 0000F000 00001000 .x_onchip_peripherals
+  00010000 00010000 00FEFF00 .x_external_RAM_2
+  00FFFF00 00FFFF00 00000000 .x_EOnCE
+
+# Link start time: Tue Nov 03 10:04:36 2020
+# Link end time: Tue Nov 03 10:04:36 2020
